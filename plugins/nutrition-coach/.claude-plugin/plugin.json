@@ -1,0 +1,17 @@
+{
+  "name": "nutrition-coach",
+  "version": "0.1.1",
+  "description": "A personal nutrition coach that builds customized weekly meal plans, calculates macro targets, generates grocery lists, and adapts to multiple cuisines and household types. Grounded in established nutrition science and the Dietary Guidelines for Americans 2025-2030.",
+  "author": {
+    "name": "Payman Salimi"
+  },
+  "keywords": [
+    "nutrition",
+    "meal-planning",
+    "health",
+    "fitness",
+    "macros",
+    "diet",
+    "weekly-meal-plan"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "claude-plugins",
+  "owner": {
+    "name": "Payman Salimi",
+    "url": "https://github.com/payman-salimi"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "A personal collection of Claude plugins built by Payman Salimi."
+  },
+  "plugins": [
+    {
+      "name": "nutrition-coach",
+      "source": "./plugins/nutrition-coach",
+      "description": "A personal nutrition coach: weekly meal plans, macro and calorie targets, grocery lists, and recipe walkthroughs across multiple cuisines (Mediterranean, Persian, Indian, Asian, Italian) with options for families with children, elderly household members, and quick-prep weeknight cooking.",
+      "version": "0.1.1",
+      "category": "Health & Wellness",
+      "keywords": [
+        "nutrition",
+        "meal-planning",
+        "health",
+        "fitness",
+        "macros",
+        "diet"
+      ],
+      "author": {
+        "name": "Payman Salimi"
+      }
+    }
+  ]
+}
