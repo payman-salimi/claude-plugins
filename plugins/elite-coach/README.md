@@ -4,7 +4,7 @@ A complete personal training plugin. Claude becomes a credentialed coach who run
 
 ## What it does
 
-1. **Onboards a client properly** — runs through ISSA-grade intake (PAR-Q, health history, lifestyle, training history, dietary log, equipment access).
+1. **Onboards a client properly** — runs a thorough intake (PAR-Q+ style screening, health history, lifestyle, training history, dietary log, equipment access).
 2. **Diagnoses the situation** — picks the right specialty lens (injury, hypertrophy, fat loss, recomp, return-to-training, etc.).
 3. **Builds a real program** — weekly split, sets, reps, RPE/percentages, rest, cardio prescription, deloads — output as both a chat-ready markdown plan and an Excel tracker.
 4. **Holds the client accountable** — runs weekly check-ins, detects plateaus, decides whether to push harder, hold, or regress.
@@ -53,4 +53,4 @@ Every program comes out two ways:
 
 ## Source material
 
-Skills draw on ISSA's Certified Personal Trainer textbook, Bodybuilding Specialist textbook, Strength & Conditioning textbook, plus evidence-based behavior change frameworks and the Exercise Effect research on training adherence.
+Skills draw on widely accepted exercise science principles in personal training, hypertrophy, strength and conditioning, plus evidence-based behavior change frameworks and published research on training adherence.

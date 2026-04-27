@@ -8,7 +8,7 @@ All files in this plugin directory — `SKILL.md` files, `plugin.json`, `README.
 
 ## Source material acknowledgments
 
-The skills draw on widely accepted exercise science principles taught in major personal training certifications (ISSA CPT, NSCA CSCS, NASM, ACE) and the published evidence base in strength and conditioning. No copyrighted course materials are bundled in this plugin — only the methodology distilled into original instructions.
+The skills draw on widely accepted exercise science principles taught across major personal training certifications and the published evidence base in strength and conditioning. No copyrighted course materials are bundled in this plugin — only methodology distilled into original instructions.
 
 Where specific frameworks are referenced (e.g., RPE / RIR autoregulation, block periodization, Schoenfeld volume guidelines), those are general scientific concepts in the public domain of the field.
 

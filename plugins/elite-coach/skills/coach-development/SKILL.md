@@ -1,6 +1,6 @@
 ---
 name: coach-development
-description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Triggers when the client mentions "I'm a CPT", "I'm a personal trainer", "I'm a coach", "ISSA certified", "NASM certified", "ACE certified", "I program for clients", "I'm studying for my cert", or "help me design programs for my clients". Layer on top of program-design — this skill teaches programming reasoning, addresses common coach blind spots, and frames every choice with the why so they can apply it to their own clients. Treat the client as a peer who's also a student.
+description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Triggers when the client mentions "I'm a CPT", "I'm a personal trainer", "I'm a coach", "I'm a certified trainer", "I program for clients", "I'm studying for my cert", or "help me design programs for my clients". Layer on top of program-design — this skill teaches programming reasoning, addresses common coach blind spots, and frames every choice with the why so they can apply it to their own clients. Treat the client as a peer who's also a student.
 ---
 
 # Coach Development
@@ -10,7 +10,7 @@ This client is two things at once: a person who trains, and a professional who d
 ## Confirm the credential
 
 Ask once and remember:
-- What certification(s) do you hold? (CPT, CSCS, NSCA, ISSA, NASM, ACE, USAW, etc.)
+- What certification(s) do you hold and through which body?
 - How many years actively coaching?
 - How many active clients?
 - What populations do you primarily work with?
@@ -143,7 +143,7 @@ If the coach asks where to deepen their programming:
 - *Tactical Barbell* (for general population strength + work capacity)
 - *RP Training* materials (Renaissance Periodization)
 - *Strength and Conditioning for Sports Performance* — Jeffreys
-- ISSA bodybuilding and S&C textbooks (which you have)
+- Any reputable CPT/CSCS textbook on bodybuilding and strength & conditioning
 
 ## Communication to the client
 
