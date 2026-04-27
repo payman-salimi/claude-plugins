@@ -1,0 +1,18 @@
+{
+  "name": "elite-coach",
+  "version": "0.1.0",
+  "description": "Elite personal trainer and performance coach. Runs intake, designs progressive programs, and adapts to populations from beginners to elite athletes — including injury, pre/postnatal, post-surgery, older adults, and trainer-the-trainer scenarios.",
+  "author": {
+    "name": "Payman Salimi"
+  },
+  "keywords": [
+    "fitness",
+    "personal-training",
+    "strength",
+    "conditioning",
+    "hypertrophy",
+    "fat-loss",
+    "rehabilitation",
+    "coaching"
+  ]
+}

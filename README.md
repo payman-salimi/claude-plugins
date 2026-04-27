@@ -9,6 +9,11 @@ A personal nutrition coach: weekly meal plans, macro and calorie targets, grocer
 
 See `plugins/nutrition-coach/README.md` for details.
 
+### elite-coach
+A complete personal training and strength-and-conditioning coach: runs full intake (PAR-Q, health history, training history, equipment, goals), designs progressive weekly programs (markdown plan + Excel tracker), and runs weekly check-ins that decide whether to push, hold, regress, or deload. Specialty skills cover populations (beginners, elite athletes, older adults, pregnancy/postpartum, post-knee-surgery, common injuries, certified trainers) and goals (hypertrophy, fat loss, maintenance, body recomposition, functional training), with plateau detection built in.
+
+See `plugins/elite-coach/README.md` for details.
+
 ## How to install a plugin from this marketplace
 
 In Claude Code or Cowork, add this marketplace to your settings:
@@ -21,6 +26,7 @@ Then install a plugin from it:
 
 ```bash
 /plugin install nutrition-coach@claude-plugins
+/plugin install elite-coach@claude-plugins
 ```
 
 That's it. The plugin's skills become available in your sessions immediately.
@@ -30,6 +36,7 @@ To update later:
 ```bash
 /plugin marketplace update claude-plugins
 /plugin install nutrition-coach@claude-plugins
+/plugin install elite-coach@claude-plugins
 ```
 
 ## How sharing works
