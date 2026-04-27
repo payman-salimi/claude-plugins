@@ -25,8 +25,8 @@ In Claude Code or Cowork, add this marketplace to your settings:
 Then install a plugin from it:
 
 ```bash
-/plugin install nutrition-coach@claude-plugins
-/plugin install elite-coach@claude-plugins
+/plugin install nutrition-coach@payman-plugins
+/plugin install elite-coach@payman-plugins
 ```
 
 That's it. The plugin's skills become available in your sessions immediately.
@@ -34,9 +34,9 @@ That's it. The plugin's skills become available in your sessions immediately.
 To update later:
 
 ```bash
-/plugin marketplace update claude-plugins
-/plugin install nutrition-coach@claude-plugins
-/plugin install elite-coach@claude-plugins
+/plugin marketplace update payman-plugins
+/plugin install nutrition-coach@payman-plugins
+/plugin install elite-coach@payman-plugins
 ```
 
 ## How sharing works
