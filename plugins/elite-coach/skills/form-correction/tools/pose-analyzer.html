@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Form Analyzer — Elite Coach</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 { font-size: 18px; font-weight: 600; color: #fff; }
+    header span { font-size: 13px; color: #888; }
+
+    .badge {
+      background: #1d4ed8;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    main { display: grid; grid-template-columns: 340px 1fr; min-height: calc(100vh - 57px); }
+
+    aside {
+      background: #141414;
+      border-right: 1px solid #2a2a2a;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .upload-zone {
+      border: 2px dashed #333;
+      border-radius: 10px;
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .upload-zone:hover, .upload-zone.drag-over {
+      border-color: #1d4ed8;
+      background: rgba(29, 78, 216, 0.06);
+    }
+
+    .upload-zone .icon { font-size: 32px; margin-bottom: 10px; }
+    .upload-zone p { font-size: 13px; color: #aaa; line-height: 1.5; }
+    .upload-zone strong { color: #ddd; }
+    .upload-zone input { display: none; }
+
+    .field-group { display: flex; flex-direction: column; gap: 8px; }
+
+    label { font-size: 13px; color: #bbb; }
+
+    select, input[type="text"] {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e8e8e8;
+      font-size: 14px;
+      padding: 9px 12px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    select:focus, input[type="text"]:focus { border-color: #1d4ed8; }
+
+    .radio-group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .radio-btn {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #bbb;
+      font-size: 12px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .radio-btn:hover { border-color: #555; color: #e8e8e8; }
+    .radio-btn.selected { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+
+    .btn {
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 20px;
+      width: 100%;
+      transition: all 0.15s;
+    }
+
+    .btn-primary {
+      background: #1d4ed8;
+      color: #fff;
+    }
+    .btn-primary:hover:not(:disabled) { background: #1e40af; }
+    .btn-primary:disabled { background: #1e2d5a; color: #6b8ad6; cursor: not-allowed; }
+
+    .btn-export {
+      background: #065f46;
+      color: #d1fae5;
+    }
+    .btn-export:hover:not(:disabled) { background: #047857; }
+    .btn-export:disabled { background: #1a2e26; color: #4a7c6a; cursor: not-allowed; }
+
+    .status-bar {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #888;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status-bar.active { color: #60a5fa; }
+    .status-bar.done { color: #34d399; }
+    .status-bar.error { color: #f87171; }
+
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid #333;
+      border-top-color: #60a5fa;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .progress-wrap {
+      background: #1f1f1f;
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background: #1d4ed8;
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s;
+      border-radius: 4px;
+    }
+
+    /* Right panel */
+    .canvas-panel {
+      display: flex;
+      flex-direction: column;
+      background: #0a0a0a;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    #mainCanvas {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .canvas-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .canvas-placeholder .icon { font-size: 48px; }
+
+    /* Key frames strip */
+    .frames-strip {
+      background: #111;
+      border-top: 1px solid #2a2a2a;
+      padding: 16px;
+    }
+
+    .frames-strip h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .frames-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+
+    .key-frame-card {
+      flex-shrink: 0;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 160px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .key-frame-card:hover { border-color: #1d4ed8; }
+    .key-frame-card.active { border-color: #1d4ed8; }
+
+    .key-frame-card canvas {
+      width: 100%;
+      display: block;
+    }
+
+    .key-frame-card .kf-label {
+      padding: 6px 8px;
+      font-size: 11px;
+      color: #888;
+    }
+
+    .kf-label strong { display: block; color: #ccc; font-size: 12px; margin-bottom: 2px; }
+
+    /* Angles table */
+    .angles-panel {
+      background: #111;
+      border-top: 1px solid #2a2a2a;
+      padding: 16px;
+    }
+
+    .angles-panel h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .angles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+    }
+
+    .angle-chip {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 8px 12px;
+    }
+
+    .angle-chip .name { font-size: 11px; color: #666; margin-bottom: 2px; }
+    .angle-chip .value { font-size: 18px; font-weight: 700; color: #e8e8e8; }
+    .angle-chip .value span { font-size: 12px; color: #888; }
+    .angle-chip.flag-warn .value { color: #fbbf24; }
+    .angle-chip.flag-bad .value { color: #f87171; }
+    .angle-chip.flag-good .value { color: #34d399; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">ELITE COACH</div>
+  <h1>Exercise Form Analyzer</h1>
+  <span>MediaPipe Pose Landmarker + Claude Vision</span>
+</header>
+
+<main>
+  <aside>
+    <!-- Upload -->
+    <div>
+      <div class="section-label">1. Upload Video</div>
+      <div class="upload-zone" id="uploadZone">
+        <div class="icon">🎬</div>
+        <p><strong>Click to upload</strong> or drag & drop<br>MP4, MOV, WebM · max 5 min</p>
+        <input type="file" id="videoInput" accept="video/*">
+      </div>
+    </div>
+
+    <!-- Exercise -->
+    <div>
+      <div class="section-label">2. Exercise</div>
+      <div class="field-group">
+        <select id="exerciseSelect">
+          <option value="">— Select exercise —</option>
+          <optgroup label="Lower body">
+            <option value="back_squat_low_bar">Back Squat (Low Bar)</option>
+            <option value="back_squat_high_bar">Back Squat (High Bar)</option>
+            <option value="front_squat">Front Squat</option>
+            <option value="goblet_squat">Goblet Squat</option>
+            <option value="box_squat">Box Squat</option>
+            <option value="conventional_deadlift">Deadlift (Conventional)</option>
+            <option value="sumo_deadlift">Deadlift (Sumo)</option>
+            <option value="romanian_deadlift">Romanian / RDL</option>
+            <option value="hip_thrust">Hip Thrust</option>
+            <option value="lunge">Lunge / Split Squat</option>
+          </optgroup>
+          <optgroup label="Upper body">
+            <option value="bench_press">Bench Press</option>
+            <option value="overhead_press">Overhead Press</option>
+            <option value="pullup">Pull-up / Chin-up</option>
+            <option value="barbell_row">Barbell Row</option>
+            <option value="cable_row">Cable / DB Row</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="custom">Other (type below)</option>
+          </optgroup>
+        </select>
+        <input type="text" id="exerciseCustom" placeholder="Custom exercise name..." style="display:none">
+      </div>
+    </div>
+
+    <!-- Camera angle -->
+    <div>
+      <div class="section-label">3. Camera Angle</div>
+      <div class="radio-group" id="cameraGroup">
+        <div class="radio-btn selected" data-value="side">Side (90°)</div>
+        <div class="radio-btn" data-value="front">Front</div>
+        <div class="radio-btn" data-value="diagonal">Diagonal</div>
+        <div class="radio-btn" data-value="unknown">Unknown</div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div>
+      <div class="section-label">Status</div>
+      <div class="status-bar" id="statusBar">
+        Ready — upload a video to begin.
+      </div>
+      <div style="margin-top: 8px;">
+        <div class="progress-wrap">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analyze -->
+    <button class="btn btn-primary" id="analyzeBtn" disabled>Analyze Form</button>
+
+    <!-- Export -->
+    <div>
+      <div class="section-label">4. Export for Claude</div>
+      <button class="btn btn-export" id="exportBtn" disabled>Export JSON + Instructions</button>
+      <p style="font-size: 12px; color: #666; margin-top: 8px; line-height: 1.5;">
+        Downloads <code style="color:#888">form-analysis.json</code>. Then screenshot the key frames below and upload both to Claude with the <strong>form-correction</strong> skill.
+      </p>
+    </div>
+  </aside>
+
+  <div class="canvas-panel">
+    <div class="canvas-wrap" id="canvasWrap">
+      <div class="canvas-placeholder" id="placeholder">
+        <div class="icon">📐</div>
+        <div>Upload a video and click Analyze<br>to see pose landmarks overlaid</div>
+      </div>
+      <canvas id="mainCanvas" style="display:none"></canvas>
+    </div>
+
+    <div class="frames-strip" id="framesStrip" style="display:none">
+      <h3>Key Frames — click to inspect · screenshot each for Claude</h3>
+      <div class="frames-row" id="framesRow"></div>
+    </div>
+
+    <div class="angles-panel" id="anglesPanel" style="display:none">
+      <h3>Joint Angles at Selected Frame</h3>
+      <div class="angles-grid" id="anglesGrid"></div>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+// ─── MediaPipe — static ESM import (avoids file:// CORS issue with script tags) ──
+import { PoseLandmarker, FilesetResolver }
+  from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs";
+
+const WASM_PATH = "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm";
+const MODEL_URL = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task";
+
+// MediaPipe landmark indices
+const LM = {
+  L_SHOULDER: 11, R_SHOULDER: 12,
+  L_ELBOW: 13,    R_ELBOW: 14,
+  L_WRIST: 15,    R_WRIST: 16,
+  L_HIP: 23,      R_HIP: 24,
+  L_KNEE: 25,     R_KNEE: 26,
+  L_ANKLE: 27,    R_ANKLE: 28,
+  L_HEEL: 29,     R_HEEL: 30,
+  L_FOOT: 31,     R_FOOT: 32,
+};
+
+// Skeleton connections for drawing
+const CONNECTIONS = [
+  [11,12],[11,13],[13,15],[12,14],[14,16],
+  [11,23],[12,24],[23,24],
+  [23,25],[25,27],[27,29],[27,31],
+  [24,26],[26,28],[28,30],[28,32],
+];
+
+// ─── State ──────────────────────────────────────────────────────────────────
+let poseLandmarker = null;
+let videoFile = null;
+let analysisResult = null;
+let selectedFrameIdx = 0;
+let cameraAngle = "side";
+
+// ─── DOM ────────────────────────────────────────────────────────────────────
+const uploadZone   = document.getElementById("uploadZone");
+const videoInput   = document.getElementById("videoInput");
+const exerciseSel  = document.getElementById("exerciseSelect");
+const exerciseCustom = document.getElementById("exerciseCustom");
+const analyzeBtn   = document.getElementById("analyzeBtn");
+const exportBtn    = document.getElementById("exportBtn");
+const statusBar    = document.getElementById("statusBar");
+const progressBar  = document.getElementById("progressBar");
+const mainCanvas   = document.getElementById("mainCanvas");
+const placeholder  = document.getElementById("placeholder");
+const framesStrip  = document.getElementById("framesStrip");
+const framesRow    = document.getElementById("framesRow");
+const anglesPanel  = document.getElementById("anglesPanel");
+const anglesGrid   = document.getElementById("anglesGrid");
+const cameraGroup  = document.getElementById("cameraGroup");
+
+// ─── UI helpers ─────────────────────────────────────────────────────────────
+function setStatus(msg, type = "") {
+  statusBar.className = "status-bar" + (type ? ` ${type}` : "");
+  statusBar.innerHTML = type === "active"
+    ? `<div class="spinner"></div><span>${msg}</span>`
+    : msg;
+}
+
+function setProgress(pct) {
+  progressBar.style.width = pct + "%";
+}
+
+function getExerciseName() {
+  const val = exerciseSel.value;
+  if (val === "custom") return exerciseCustom.value.trim() || "unknown";
+  return val || "unknown";
+}
+
+// ─── Upload zone ────────────────────────────────────────────────────────────
+uploadZone.addEventListener("click", () => videoInput.click());
+uploadZone.addEventListener("dragover", e => { e.preventDefault(); uploadZone.classList.add("drag-over"); });
+uploadZone.addEventListener("dragleave", () => uploadZone.classList.remove("drag-over"));
+uploadZone.addEventListener("drop", e => {
+  e.preventDefault();
+  uploadZone.classList.remove("drag-over");
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith("video/")) onFileSelected(file);
+});
+videoInput.addEventListener("change", () => {
+  if (videoInput.files[0]) onFileSelected(videoInput.files[0]);
+});
+
+function onFileSelected(file) {
+  videoFile = file;
+  analysisResult = null;
+  exportBtn.disabled = true;
+  framesStrip.style.display = "none";
+  anglesPanel.style.display = "none";
+  mainCanvas.style.display = "none";
+  placeholder.style.display = "flex";
+  setProgress(0);
+  setStatus(`📁 ${file.name} loaded (${(file.size / 1024 / 1024).toFixed(1)} MB)`);
+  analyzeBtn.disabled = false;
+}
+
+// ─── Exercise selector ──────────────────────────────────────────────────────
+exerciseSel.addEventListener("change", () => {
+  exerciseCustom.style.display = exerciseSel.value === "custom" ? "block" : "none";
+});
+
+// ─── Camera angle ───────────────────────────────────────────────────────────
+cameraGroup.querySelectorAll(".radio-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    cameraGroup.querySelectorAll(".radio-btn").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+    cameraAngle = btn.dataset.value;
+  });
+});
+
+// ─── Load MediaPipe ─────────────────────────────────────────────────────────
+async function loadMediaPipe() {
+  setStatus("Loading MediaPipe WASM...", "active");
+  const fs = await FilesetResolver.forVisionTasks(WASM_PATH);
+  const opts = {
+    baseOptions: { modelAssetPath: MODEL_URL },
+    runningMode: "IMAGE",
+    numPoses: 1,
+    minPoseDetectionConfidence: 0.5,
+    minPosePresenceConfidence: 0.5,
+    minTrackingConfidence: 0.5,
+  };
+  try {
+    poseLandmarker = await PoseLandmarker.createFromOptions(fs, {
+      ...opts, baseOptions: { modelAssetPath: MODEL_URL, delegate: "GPU" },
+    });
+  } catch {
+    // GPU delegate unavailable — fall back to CPU
+    poseLandmarker = await PoseLandmarker.createFromOptions(fs, {
+      ...opts, baseOptions: { modelAssetPath: MODEL_URL, delegate: "CPU" },
+    });
+  }
+}
+
+// ─── Angle math ─────────────────────────────────────────────────────────────
+function angleDeg(a, b, c) {
+  if (!a || !b || !c) return null;
+  const ba = { x: a.x - b.x, y: a.y - b.y };
+  const bc = { x: c.x - b.x, y: c.y - b.y };
+  const dot = ba.x * bc.x + ba.y * bc.y;
+  const mag = Math.sqrt(ba.x**2 + ba.y**2) * Math.sqrt(bc.x**2 + bc.y**2);
+  if (mag < 1e-9) return null;
+  return Math.acos(Math.max(-1, Math.min(1, dot / mag))) * (180 / Math.PI);
+}
+
+function spineLean(lms) {
+  const ms = midpoint(lms[LM.L_SHOULDER], lms[LM.R_SHOULDER]);
+  const mh = midpoint(lms[LM.L_HIP], lms[LM.R_HIP]);
+  const dy = Math.abs(mh.y - ms.y);
+  const dx = Math.abs(mh.x - ms.x);
+  return Math.atan2(dx, dy) * (180 / Math.PI);
+}
+
+function midpoint(a, b) {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
+
+function computeAngles(lms) {
+  const l = lms;
+  return {
+    leftKnee:      round(angleDeg(l[LM.L_HIP],      l[LM.L_KNEE],      l[LM.L_ANKLE])),
+    rightKnee:     round(angleDeg(l[LM.R_HIP],      l[LM.R_KNEE],      l[LM.R_ANKLE])),
+    leftHip:       round(angleDeg(l[LM.L_SHOULDER], l[LM.L_HIP],       l[LM.L_KNEE])),
+    rightHip:      round(angleDeg(l[LM.R_SHOULDER], l[LM.R_HIP],       l[LM.R_KNEE])),
+    leftElbow:     round(angleDeg(l[LM.L_SHOULDER], l[LM.L_ELBOW],     l[LM.L_WRIST])),
+    rightElbow:    round(angleDeg(l[LM.R_SHOULDER], l[LM.R_ELBOW],     l[LM.R_WRIST])),
+    leftShoulder:  round(angleDeg(l[LM.L_ELBOW],   l[LM.L_SHOULDER],  l[LM.L_HIP])),
+    rightShoulder: round(angleDeg(l[LM.R_ELBOW],   l[LM.R_SHOULDER],  l[LM.R_HIP])),
+    spineLean:     round(spineLean(l)),
+  };
+}
+
+function round(v) { return v == null ? null : Math.round(v * 10) / 10; }
+
+// ─── Video processing ────────────────────────────────────────────────────────
+const SAMPLE_FPS = 5;
+
+async function processVideo(file) {
+  const video = document.createElement("video");
+  video.muted = true;
+  video.playsInline = true;
+  video.src = URL.createObjectURL(file);
+
+  await new Promise((res, rej) => {
+    video.onloadedmetadata = res;
+    video.onerror = rej;
+  });
+
+  const W = video.videoWidth;
+  const H = video.videoHeight;
+  const duration = video.duration;
+
+  const offCanvas = document.createElement("canvas");
+  offCanvas.width = W;
+  offCanvas.height = H;
+  const offCtx = offCanvas.getContext("2d");
+
+  const interval = 1 / SAMPLE_FPS;
+  const totalFrames = Math.floor(duration * SAMPLE_FPS);
+  const frames = [];
+
+  for (let i = 0; i <= totalFrames; i++) {
+    const t = i * interval;
+    if (t > duration) break;
+
+    await seekTo(video, t);
+    offCtx.drawImage(video, 0, 0, W, H);
+
+    let result;
+    try {
+      result = poseLandmarker.detect(offCanvas);
+    } catch {
+      continue;
+    }
+
+    if (!result.landmarks || result.landmarks.length === 0) continue;
+
+    const lms = result.landmarks[0];
+    const wlms = result.worldLandmarks ? result.worldLandmarks[0] : null;
+    const angles = computeAngles(lms);
+
+    frames.push({
+      t: parseFloat(t.toFixed(2)),
+      landmarks: lms.map(lm => ({
+        x: round4(lm.x), y: round4(lm.y),
+        z: round4(lm.z), visibility: round4(lm.visibility || 0),
+      })),
+      worldLandmarks: wlms ? wlms.map(lm => ({
+        x: round4(lm.x), y: round4(lm.y), z: round4(lm.z),
+      })) : null,
+      angles,
+    });
+
+    setProgress(Math.round((i / totalFrames) * 80));
+    await tick();
+  }
+
+  URL.revokeObjectURL(video.src);
+  return { frames, width: W, height: H, duration };
+}
+
+function seekTo(video, time) {
+  return new Promise(resolve => {
+    const handler = () => { video.removeEventListener("seeked", handler); resolve(); };
+    video.addEventListener("seeked", handler);
+    video.currentTime = time;
+  });
+}
+
+function tick() { return new Promise(r => setTimeout(r, 0)); }
+function round4(v) { return v == null ? null : Math.round(v * 10000) / 10000; }
+
+// ─── Key frame selection ─────────────────────────────────────────────────────
+function selectKeyFrames(frames) {
+  if (!frames.length) return [];
+
+  const avgKnee = f => ((f.angles.leftKnee || 180) + (f.angles.rightKnee || 180)) / 2;
+  const avgHip  = f => ((f.angles.leftHip  || 180) + (f.angles.rightHip  || 180)) / 2;
+
+  const byKnee    = [...frames].sort((a, b) => avgKnee(a) - avgKnee(b));
+  const byKneeMax = [...frames].sort((a, b) => avgKnee(b) - avgKnee(a));
+  const bySpine   = [...frames].sort((a, b) => (b.angles.spineLean || 0) - (a.angles.spineLean || 0));
+  const byAsym    = [...frames].sort((a, b) => {
+    const da = Math.abs((a.angles.leftKnee || 0) - (a.angles.rightKnee || 0));
+    const db = Math.abs((b.angles.leftKnee || 0) - (b.angles.rightKnee || 0));
+    return db - da;
+  });
+
+  const bottom = byKnee[0];
+  const top    = byKneeMax[0];
+
+  // mid ascending: frame with knee angle closest to midpoint between bottom and top
+  const midTarget = (avgKnee(bottom) + avgKnee(top)) / 2;
+  const midAsc = frames
+    .filter(f => f.t > bottom.t && f.t < top.t)
+    .sort((a, b) => Math.abs(avgKnee(a) - midTarget) - Math.abs(avgKnee(b) - midTarget))[0] || null;
+
+  const worstSpine = bySpine[0];
+  const worstAsym  = byAsym[0];
+
+  const result = [
+    { label: "start",        frame: frames[0] },
+    { label: "bottom",       frame: bottom     },
+    midAsc ? { label: "mid",    frame: midAsc  } : null,
+    { label: "top",          frame: top         },
+    { label: "worst_spine",  frame: worstSpine  },
+    { label: "worst_asym",   frame: worstAsym   },
+    { label: "end",          frame: frames[frames.length - 1] },
+  ]
+    .filter(Boolean)
+    .filter((v, i, arr) => arr.findIndex(x => x.frame.t === v.frame.t) === i) // dedupe
+    .sort((a, b) => a.frame.t - b.frame.t);
+
+  return result;
+}
+
+// ─── Summary stats ───────────────────────────────────────────────────────────
+function computeSummary(frames) {
+  const leftKnees  = frames.map(f => f.angles.leftKnee).filter(v => v != null);
+  const rightKnees = frames.map(f => f.angles.rightKnee).filter(v => v != null);
+  const leftHips   = frames.map(f => f.angles.leftHip).filter(v => v != null);
+  const rightHips  = frames.map(f => f.angles.rightHip).filter(v => v != null);
+  const spines     = frames.map(f => f.angles.spineLean).filter(v => v != null);
+  const leftSh     = frames.map(f => f.angles.leftShoulder).filter(v => v != null);
+  const rightSh    = frames.map(f => f.angles.rightShoulder).filter(v => v != null);
+
+  const min = arr => arr.length ? Math.round(Math.min(...arr) * 10) / 10 : null;
+  const max = arr => arr.length ? Math.round(Math.max(...arr) * 10) / 10 : null;
+  const avg = arr => arr.length ? Math.round((arr.reduce((a,b)=>a+b,0)/arr.length)*10)/10 : null;
+
+  const kneeAsymFrames = frames.map(f => {
+    const lk = f.angles.leftKnee, rk = f.angles.rightKnee;
+    return (lk != null && rk != null) ? Math.abs(lk - rk) : null;
+  }).filter(v => v != null);
+
+  const hipAsymFrames = frames.map(f => {
+    const lh = f.angles.leftHip, rh = f.angles.rightHip;
+    return (lh != null && rh != null) ? Math.abs(lh - rh) : null;
+  }).filter(v => v != null);
+
+  const shAsymFrames = frames.map(f => {
+    const ls = f.angles.leftShoulder, rs = f.angles.rightShoulder;
+    return (ls != null && rs != null) ? Math.abs(ls - rs) : null;
+  }).filter(v => v != null);
+
+  return {
+    minKneeAngle: { left: min(leftKnees), right: min(rightKnees) },
+    maxKneeAngle: { left: max(leftKnees), right: max(rightKnees) },
+    minHipAngle:  { left: min(leftHips),  right: min(rightHips)  },
+    maxHipAngle:  { left: max(leftHips),  right: max(rightHips)  },
+    avgSpineLean_deg: avg(spines),
+    maxSpineLean_deg: max(spines),
+    asymmetry: {
+      knee_deg:     max(kneeAsymFrames),
+      hip_deg:      max(hipAsymFrames),
+      shoulder_deg: max(shAsymFrames),
+    },
+  };
+}
+
+// ─── Drawing ─────────────────────────────────────────────────────────────────
+function drawFrame(frame, label, targetCanvas) {
+  const lms = frame.landmarks;
+  const W = targetCanvas.width;
+  const H = targetCanvas.height;
+  const ctx = targetCanvas.getContext("2d");
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = "#0a0a0a";
+  ctx.fillRect(0, 0, W, H);
+
+  // skeleton lines
+  ctx.strokeStyle = "rgba(29, 78, 216, 0.7)";
+  ctx.lineWidth = Math.max(1.5, W / 400);
+  for (const [i, j] of CONNECTIONS) {
+    if (!lms[i] || !lms[j]) continue;
+    if ((lms[i].visibility || 0) < 0.3 || (lms[j].visibility || 0) < 0.3) continue;
+    ctx.beginPath();
+    ctx.moveTo(lms[i].x * W, lms[i].y * H);
+    ctx.lineTo(lms[j].x * W, lms[j].y * H);
+    ctx.stroke();
+  }
+
+  // joints
+  for (const lm of lms) {
+    const vis = lm.visibility || 0;
+    if (vis < 0.3) continue;
+    const r = Math.max(3, W / 200);
+    ctx.beginPath();
+    ctx.arc(lm.x * W, lm.y * H, r, 0, Math.PI * 2);
+    ctx.fillStyle = vis > 0.7 ? "#60a5fa" : "#f59e0b";
+    ctx.fill();
+  }
+
+  // angle labels for key joints
+  const LABEL_JOINTS = [
+    { joint: LM.L_KNEE,  angle: frame.angles.leftKnee,      color: "#34d399" },
+    { joint: LM.R_KNEE,  angle: frame.angles.rightKnee,     color: "#34d399" },
+    { joint: LM.L_HIP,   angle: frame.angles.leftHip,       color: "#a78bfa" },
+    { joint: LM.R_HIP,   angle: frame.angles.rightHip,      color: "#a78bfa" },
+    { joint: LM.L_ELBOW, angle: frame.angles.leftElbow,     color: "#f472b6" },
+    { joint: LM.R_ELBOW, angle: frame.angles.rightElbow,    color: "#f472b6" },
+  ];
+
+  const fontSize = Math.max(11, W / 60);
+  ctx.font = `bold ${fontSize}px -apple-system, sans-serif`;
+  for (const { joint, angle, color } of LABEL_JOINTS) {
+    if (angle == null || !lms[joint]) continue;
+    const x = lms[joint].x * W;
+    const y = lms[joint].y * H;
+    const text = Math.round(angle) + "°";
+    const tw = ctx.measureText(text).width;
+    ctx.fillStyle = "rgba(0,0,0,0.65)";
+    ctx.fillRect(x + 5, y - fontSize - 2, tw + 8, fontSize + 6);
+    ctx.fillStyle = color;
+    ctx.fillText(text, x + 9, y - 2);
+  }
+
+  // frame label
+  ctx.font = `bold ${Math.max(12, W / 55)}px -apple-system, sans-serif`;
+  const lblText = label.toUpperCase().replace("_", " ");
+  ctx.fillStyle = "rgba(0,0,0,0.7)";
+  ctx.fillRect(8, 8, ctx.measureText(lblText).width + 16, 28);
+  ctx.fillStyle = "#e8e8e8";
+  ctx.fillText(lblText, 16, 27);
+
+  // spine lean indicator
+  const spineDeg = frame.angles.spineLean;
+  if (spineDeg != null) {
+    const msh = midpoint(lms[LM.L_SHOULDER], lms[LM.R_SHOULDER]);
+    const mhp = midpoint(lms[LM.L_HIP], lms[LM.R_HIP]);
+    ctx.strokeStyle = spineDeg > 55 ? "#f87171" : "#fbbf24";
+    ctx.lineWidth = Math.max(2, W / 300);
+    ctx.setLineDash([4, 3]);
+    ctx.beginPath();
+    ctx.moveTo(msh.x * W, msh.y * H);
+    ctx.lineTo(mhp.x * W, mhp.y * H);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+}
+
+// ─── Thumbnail cards ─────────────────────────────────────────────────────────
+function buildThumbnail(keyFrame, idx, W, H, resultData) {
+  const card = document.createElement("div");
+  card.className = "key-frame-card" + (idx === 0 ? " active" : "");
+
+  const thumbCanvas = document.createElement("canvas");
+  const THUMB_W = 160;
+  const THUMB_H = Math.round(H / W * THUMB_W);
+  thumbCanvas.width = THUMB_W;
+  thumbCanvas.height = THUMB_H;
+
+  drawFrame(keyFrame.frame, keyFrame.label, thumbCanvas);
+
+  const label = document.createElement("div");
+  label.className = "kf-label";
+  label.innerHTML = `
+    <strong>${keyFrame.label.replace(/_/g, " ")}</strong>
+    t = ${keyFrame.frame.t}s
+  `;
+
+  card.appendChild(thumbCanvas);
+  card.appendChild(label);
+
+  card.addEventListener("click", () => {
+    document.querySelectorAll(".key-frame-card").forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+    selectedFrameIdx = idx;
+    renderMainFrame(keyFrame, W, H);
+    renderAnglesPanel(keyFrame.frame.angles);
+  });
+
+  return card;
+}
+
+function renderMainFrame(keyFrame, W, H) {
+  mainCanvas.width = W;
+  mainCanvas.height = H;
+  mainCanvas.style.display = "block";
+  placeholder.style.display = "none";
+  drawFrame(keyFrame.frame, keyFrame.label, mainCanvas);
+}
+
+function renderAnglesPanel(angles) {
+  anglesPanel.style.display = "block";
+  anglesGrid.innerHTML = "";
+
+  const fields = [
+    { key: "leftKnee",      label: "Left Knee",       target: [90, 110], invert: true  },
+    { key: "rightKnee",     label: "Right Knee",      target: [90, 110], invert: true  },
+    { key: "leftHip",       label: "Left Hip",        target: [85, 120]                },
+    { key: "rightHip",      label: "Right Hip",       target: [85, 120]                },
+    { key: "leftElbow",     label: "Left Elbow",      target: [75, 165]                },
+    { key: "rightElbow",    label: "Right Elbow",     target: [75, 165]                },
+    { key: "leftShoulder",  label: "Left Shoulder",   target: [45, 90]                 },
+    { key: "rightShoulder", label: "Right Shoulder",  target: [45, 90]                 },
+    { key: "spineLean",     label: "Spine Lean",      target: [0, 50],   invert: false, warnHigh: 55, badHigh: 70 },
+  ];
+
+  for (const f of fields) {
+    const val = angles[f.key];
+    if (val == null) continue;
+
+    const chip = document.createElement("div");
+    chip.className = "angle-chip";
+
+    if (f.warnHigh != null && val > f.badHigh) chip.classList.add("flag-bad");
+    else if (f.warnHigh != null && val > f.warnHigh) chip.classList.add("flag-warn");
+    else if (val >= f.target[0] && val <= f.target[1]) chip.classList.add("flag-good");
+    else if (f.invert && val < f.target[0]) chip.classList.add("flag-warn");
+
+    chip.innerHTML = `
+      <div class="name">${f.label}</div>
+      <div class="value">${Math.round(val)}<span>°</span></div>
+    `;
+    anglesGrid.appendChild(chip);
+  }
+}
+
+// ─── Analyze button ──────────────────────────────────────────────────────────
+analyzeBtn.addEventListener("click", async () => {
+  if (!videoFile) return;
+
+  analyzeBtn.disabled = true;
+  exportBtn.disabled = true;
+  setProgress(0);
+
+  try {
+    if (!poseLandmarker) {
+      setStatus("Loading MediaPipe...", "active");
+      await loadMediaPipe();
+    }
+
+    setStatus("Analyzing video frames...", "active");
+    const { frames, width, height, duration } = await processVideo(videoFile);
+
+    if (!frames.length) throw new Error("No pose detected in video. Try a clearer shot with the full body visible.");
+
+    setStatus("Selecting key frames...", "active");
+    setProgress(85);
+    await tick();
+
+    const keyFrames = selectKeyFrames(frames);
+    const summary   = computeSummary(frames);
+
+    analysisResult = {
+      exercise:     getExerciseName(),
+      cameraAngle,
+      videoInfo: {
+        filename:       videoFile.name,
+        duration_s:     Math.round(duration * 10) / 10,
+        framesAnalyzed: frames.length,
+        sampledFps:     SAMPLE_FPS,
+        resolution:     `${width}×${height}`,
+      },
+      summary,
+      keyFrames: keyFrames.map((kf, i) => ({
+        label:          kf.label,
+        timestamp_s:    kf.frame.t,
+        screenshotIndex: i + 1,
+        angles:         kf.frame.angles,
+        landmarks:      kf.frame.landmarks,
+      })),
+    };
+
+    // Render UI
+    framesRow.innerHTML = "";
+    keyFrames.forEach((kf, idx) => {
+      framesRow.appendChild(buildThumbnail(kf, idx, width, height, analysisResult));
+    });
+
+    renderMainFrame(keyFrames[0], width, height);
+    renderAnglesPanel(keyFrames[0].frame.angles);
+
+    framesStrip.style.display = "block";
+    setProgress(100);
+    setStatus(`✅ Done — ${frames.length} frames analyzed, ${keyFrames.length} key frames selected.`, "done");
+    exportBtn.disabled = false;
+
+  } catch (err) {
+    setStatus(`❌ ${err.message}`, "error");
+    analyzeBtn.disabled = false;
+  }
+});
+
+// ─── Export ──────────────────────────────────────────────────────────────────
+exportBtn.addEventListener("click", () => {
+  if (!analysisResult) return;
+
+  const json = JSON.stringify(analysisResult, null, 2);
+  const blob = new Blob([json], { type: "application/json" });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement("a");
+  a.href     = url;
+  a.download = `form-analysis-${analysisResult.exercise}-${Date.now()}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+
+  setStatus("✅ JSON exported. Now screenshot the key frames below and upload both to Claude with the form-correction skill.", "done");
+});
+</script>
+
+</body>
+</html>
