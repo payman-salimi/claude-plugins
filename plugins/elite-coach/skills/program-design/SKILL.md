@@ -1,6 +1,6 @@
 ---
 name: program-design
-description: Master programming skill. Takes a completed intake plus the relevant specialty lenses and produces a concrete, periodized weekly program — split, exercises, sets/reps/RPE, rest, cardio prescription, deload schedule. Trigger phrases include "build my program", "give me a plan", "design my week", "what should I do at the gym", "make my training plan", "weekly program", or any request for actual programming after intake is on file. Always run client-intake first if profile data is missing. Layer in specialty skills (injury-prep, hypertrophy, fat-loss, beginner-foundations, prenatal-postpartum, post-knee-surgery, older-adults, elite-athlete, body-recomp, maintenance, functional-training, coach-development) as the client's situation dictates. Output both a markdown plan in chat AND an Excel tracker workbook.
+description: Master programming skill. Takes a completed intake plus the relevant specialty lenses and produces a concrete, periodized weekly program — split, exercises, sets/reps/RPE, rest, cardio prescription, deload schedule — as both a markdown plan and an Excel tracker. Use this whenever a client asks for actual programming ("build my program", "give me a plan", "design my week", "what should I do at the gym", "make my training plan", "new block", "rebuild my plan"), even if they only describe a goal and expect you to fill in the workouts. Run client-intake first if profile data is missing. Layer in every specialty skill that fits the client (injury-prep, hypertrophy, fat-loss, beginner-foundations, prenatal-postpartum, post-knee-surgery, older-adults, elite-athlete, body-recomp, maintenance, functional-training, coach-development) rather than writing generic programming.
 ---
 
 # Program Design
@@ -16,7 +16,7 @@ This is the engine. Intake produced the picture of the client; this skill produc
 
 ## Layering specialty skills
 
-The 13 specialties are not standalone — they're modifiers on top of this engine. Read the client's situation and pull the right ones:
+The specialty skills are not standalone — they're modifiers on top of this engine. Read the client's situation and pull the right ones:
 
 | Client situation | Layer in |
 |---|---|
@@ -33,8 +33,11 @@ The 13 specialties are not standalone — they're modifiers on top of this engin
 | Goal: simultaneous gain + lose | `body-recomp` |
 | Goal: functional / movement only | `functional-training` |
 | Stalled progress diagnosed | `plateau-detection` |
+| Client sends lifting video or asks about technique | `form-correction` |
 
 You can layer multiple — e.g., a postpartum client with a low-back issue who wants to lose fat: `prenatal-postpartum` + `injury-prep` + `fat-loss` all apply.
+
+When two lenses disagree on a number (volume, protein, deload cadence), the more conservative one wins, and the shared reference at `../../references/training-standards.md` (relative to this skill; the plugin's `references/` folder) is the tiebreaker. Read it when you need to reconcile numbers; the defaults below already match it.
 
 ## The decision tree
 
@@ -107,14 +110,14 @@ Pick one and tell the client which:
 ### 7. Deload schedule
 
 - Beginner: every 8–12 weeks or as needed
-- Intermediate: every 4–6 weeks, 1 deload week (50–60% volume, ~70% intensity)
+- Intermediate: every 4–6 weeks, 1 deload week (50–60% volume, ~70% intensity — same movements, less of them, so skill stays sharp while fatigue clears)
 - Advanced: every 3–5 weeks, planned
 
 ## The output — TWO formats every time
 
 ### Format 1: Markdown in chat
 
-Use the exact format from the project instructions for each session you prescribe. Don't deviate from this layout — the client expects it.
+Use this layout for every session you prescribe. Consistency matters here: the client learns to read the plan at a glance, and `weekly-checkin` relies on the same structure when it edits the block.
 
 ```
 🏋️ [WORKOUT NAME] — Week [N], Day [N]
@@ -143,13 +146,17 @@ Show the full week (every training day). Show the cardio days separately if they
 
 ### Format 2: Excel tracker
 
-Generate an `.xlsx` workbook with one tab per training day plus a "Weekly Cardio" tab plus a "Progress Log" tab. Use the `xlsx` skill to build it. Required columns per training day tab:
+The tracker is what turns a plan into data for `weekly-checkin`. Build it with the bundled script rather than hand-writing a workbook each time:
 
-| Exercise | Set 1 reps | Set 1 wt | Set 1 RPE | Set 2 reps | Set 2 wt | Set 2 RPE | Set 3 reps | Set 3 wt | Set 3 RPE | Set 4 reps | Set 4 wt | Set 4 RPE | Notes |
+1. Write the program as JSON in the shape documented at the top of `scripts/build_tracker.py` (client, week, days → exercises with sets/reps/RPE/rest/notes, cardio sessions, recovery targets). Save it next to the tracker so `weekly-checkin` can edit and rebuild it for the next week.
+2. Run:
+   ```bash
+   python3 <this-skill-dir>/scripts/build_tracker.py program.json --out programs/<client-name>/week-<N>-tracker.xlsx
+   ```
+   It needs `openpyxl` (`pip install openpyxl`). If Python isn't available, an `xlsx` skill is an acceptable fallback; either way the workbook needs one tab per training day (Exercise, Target, then reps / weight / RPE per set, Notes), a "Weekly Cardio" tab, and a "Progress Log" tab.
+3. Tell the client where the file is. Default location is a `programs/<client-name>/` folder in the current working directory unless the user has named somewhere else.
 
-Pre-fill the Exercise column and target reps. Leave the rest empty for the client to fill as they train.
-
-Save the file to `/Users/paymansalimi/Documents/Claude/Projects/Personal Trainer/programs/[client-name]/week-[N]-tracker.xlsx` and share the `computer://` link.
+Pre-fill exercises and targets; leave the per-set cells empty for the client to fill in as they train.
 
 ## Ordering rules
 
@@ -159,7 +166,7 @@ Within a session: **strength before cardio**, unless the goal is sport-specific 
 
 Always include — even if the client doesn't ask:
 - **Sleep target**: 7–9 hours, prioritize consistency over total
-- **Protein**: 1.6–2.2 g/kg/day for hypertrophy & body recomp, 1.4–1.8 for general
+- **Protein**: 1.4–1.8 g/kg/day for general health, 1.6–2.2 for hypertrophy, 2.0–2.4 for fat loss or body recomp (a deficit raises the floor because the body has fewer calories to spare muscle)
 - **Hydration**: ~35 mL/kg/day baseline + 500 mL per hour of training
 - **Stress management**: 1+ low-intensity activity/week (walk, mobility, yoga)
 
@@ -167,7 +174,7 @@ Always include — even if the client doesn't ask:
 
 After writing the program:
 1. Post the markdown plan
-2. Post the link to the .xlsx tracker
+2. Point the client to the .xlsx tracker
 3. End with: **"Run this for [N] weeks. We'll check in [date] to review progression and decide whether to push, hold, or deload. Anything in this plan you want to adjust before you start?"**
 
 Never deliver a program and disappear. Always pin the next check-in.

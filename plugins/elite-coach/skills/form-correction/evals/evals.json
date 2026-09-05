@@ -1,0 +1,17 @@
+{
+  "skill_name": "form-correction",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's the JSON from the pose analyzer for my back squat (side view). Summary: minKneeAngle L 78 R 91, maxSpineLean_deg 61, asymmetry knee_deg 13. Screenshots attached. Thoughts?",
+      "expected_output": "Reads the actual export fields (spineLean, asymmetry.knee_deg), flags forward lean and L/R asymmetry, computes a form score, gives at most 2 fixes with a short tactile cue and a drill each, notes side-view reliability, includes the disclaimer, under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "can you check my deadlift form? [two photos attached, no JSON]",
+      "expected_output": "Coaches from the images with the same output format, notes the visual-estimation limitation, and points the client to the pose-analyzer tool with the path for precise angles.",
+      "files": []
+    }
+  ]
+}

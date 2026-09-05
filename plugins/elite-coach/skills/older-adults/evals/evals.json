@@ -1,0 +1,17 @@
+{
+  "skill_name": "older-adults",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm 72, reasonably active (walk daily), never lifted. Osteopenia on my last scan. My doctor says weights are fine. What should my week look like?",
+      "expected_output": "Requires/confirms clearance, builds a 3-day plan with strength, mandatory power and balance work, Zone 2 cardio, and osteopenia-specific rules (no loaded spinal flexion), without patronizing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My mom is 66 and has fallen twice this year. She's scared of the gym. How would you train her?",
+      "expected_output": "Prioritizes balance and reactive work, glute med and ankle strength, clearance, and a confidence-building frame rather than 'senior fitness' minimalism.",
+      "files": []
+    }
+  ]
+}

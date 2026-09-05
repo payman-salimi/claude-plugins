@@ -1,6 +1,6 @@
 ---
 name: hypertrophy
-description: Programming specialty for muscle gain. Triggers when the client states the goal as building muscle, "gain muscle", "get bigger", "build size", "put on mass", "hypertrophy", "lean bulk", "muscle gain", "body building", "I want to look bigger", "build my arms/shoulders/legs/chest/back", or any explicit muscle-growth goal. Layer on top of program-design — this skill sets volume, intensity, frequency, and exercise selection rules optimized for hypertrophy. Drives the program toward muscle-group-specific volume, mechanical tension, and metabolic stress.
+description: Programming specialty for muscle gain. Use this whenever the client's goal is building muscle — "gain muscle", "get bigger", "build size", "put on mass", "hypertrophy", "lean bulk", "bulk", "muscle gain", "bodybuilding", "I want to look bigger", "build my arms/shoulders/legs/chest/back", "fill out my shirt" — or any goal that amounts to growth, even if phrased casually. Layer on top of program-design — this skill sets volume landmarks, intensity, frequency, and exercise selection optimized for hypertrophy. If they also want to lose fat at the same time, body-recomp takes the lead instead.
 ---
 
 # Hypertrophy

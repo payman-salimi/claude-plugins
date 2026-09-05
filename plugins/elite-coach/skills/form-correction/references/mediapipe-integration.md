@@ -6,12 +6,12 @@ Technical reference for the pose-analyzer.html tool. Describes the MediaPipe mod
 
 ## Model
 
-**Package**: `@mediapipe/tasks-vision` v0.10.x  
-**Model**: `pose_landmarker_lite` (float16) — balance of speed and accuracy; runs in browser via WASM  
+**Package**: `@mediapipe/tasks-vision` v0.10.14 (pinned in the tool; loaded as an ES module so it works from `file://`)  
+**Model**: `pose_landmarker_lite` (float16) — balance of speed and accuracy; runs in browser via WASM, GPU delegate with CPU fallback  
 **Inference mode**: `IMAGE` — each video frame processed independently  
 **Running mode**: client-side only — no data leaves the browser  
-**CDN**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/vision_bundle.js`  
-**WASM path**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/wasm`  
+**CDN**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs`  
+**WASM path**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm`  
 **Model file**: `https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task`
 
 ---
@@ -119,17 +119,17 @@ Note: Because y increases downward in image coordinates, `midHip.y > midShoulder
 
 ## Key frame selection
 
-The analyzer selects 6–8 frames to export:
+The analyzer selects up to 7 frames to export (duplicates collapse when two labels land on the same frame), sorted by timestamp:
 
 | Label | Selection logic |
 |---|---|
+| `start` | First analyzed frame |
 | `bottom` | Frame with the minimum average knee angle (L+R)/2 |
-| `top` / `lockout` | Frame with the maximum average knee angle |
-| `mid_ascending` | Frame at ~50% of the ascending phase between bottom and top |
+| `mid` | Frame between bottom and top whose knee angle is closest to their midpoint (ascending phase) |
+| `top` | Frame with the maximum average knee angle |
 | `worst_spine` | Frame with the maximum spine lean value |
-| `start` | First frame with visibility > 0.7 on key landmarks |
-| `end` | Last frame with visibility > 0.7 on key landmarks |
-| `asymmetry_peak` | Frame with the largest L/R knee or hip delta |
+| `worst_asym` | Frame with the largest L/R knee or hip delta |
+| `end` | Last analyzed frame |
 
 ---
 
@@ -143,7 +143,8 @@ The analyzer selects 6–8 frames to export:
     "filename": "string",
     "duration_s": "number",
     "framesAnalyzed": "integer",
-    "sampledFps": 5
+    "sampledFps": 5,
+    "resolution": "1920×1080"
   },
   "summary": {
     "minKneeAngle": { "left": 0, "right": 0 },

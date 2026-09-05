@@ -1,0 +1,17 @@
+{
+  "skill_name": "functional-training",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I don't care about looking jacked, I want to be able to hike 15 miles with a pack, carry my kids, and not hurt my back moving furniture. 4 days a week.",
+      "expected_output": "Programs around the seven movement patterns with heavy compounds, unilateral and rotational work, carries, conditioning, and mobility; no gimmick equipment.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Is a BOSU ball squat more functional than a barbell squat?",
+      "expected_output": "Explains why unstable-surface work is generally worse for building real-world capacity and when it does earn a place (balance rehab).",
+      "files": []
+    }
+  ]
+}

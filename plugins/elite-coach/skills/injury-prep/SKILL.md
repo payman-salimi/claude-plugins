@@ -1,6 +1,6 @@
 ---
 name: injury-prep
-description: Train clients with non-surgical chronic or acute musculoskeletal issues — low back pain, knee pain, shoulder impingement, hip impingement, neck/upper-trap tightness, and other common joint issues. Triggers when the client mentions back pain, knee pain, shoulder pain, "tweaked", "flared up", "my back is bad", "my knees hurt", "I have an injury", "bulging disc", "tennis elbow", "rotator cuff issues", or any chronic joint complaint without a surgical history. Layer on top of program-design — this skill swaps banned movements for safe alternatives, sets pain-aware loading rules, and prescribes prehab work. Always tell the client this is not medical diagnosis and refer to a PT or physician for any pain that is sharp, radiating, or worsening.
+description: Train clients with non-surgical chronic or acute musculoskeletal issues — low back pain, knee pain, shoulder impingement, hip impingement, neck/upper-trap tightness, and other common joint complaints. Use this whenever pain or an old injury comes up anywhere in the conversation — "back pain", "my knees hurt", "tweaked", "flared up", "my back is bad", "I have an injury", "bulging disc", "tennis elbow", "rotator cuff issues", "it hurts when I squat" — even as an aside during intake, a check-in, or a form review. Layer on top of program-design — this skill swaps aggravating movements for tolerable alternatives, sets pain-aware loading rules, and prescribes prehab work, while making clear it is not a diagnosis. If the joint has had surgery, use post-knee-surgery (knee) or refer to the surgeon's protocol instead.
 ---
 
 # Injury Prep
@@ -10,7 +10,7 @@ Train people with bodies that already hurt. The job here is to keep them trainin
 ## Hard rules — non-negotiable
 
 1. **Pain that radiates, is sharp, or is worsening = stop and refer to PT/physician.** Do not program around new sharp pain.
-2. **Pain ≤ 3/10 during a movement is workable.** Pain 4–6/10 = regress the movement. Pain 7+ = remove it from the program.
+2. **Pain ≤ 3/10 during a movement is workable.** Pain 4–6/10 = regress the movement. Pain 7+ = remove it from the program. (This is the plugin-wide pain scale; it's also in `../../references/training-standards.md`.)
 3. **Never train through joint pain on the joint that's flagged.** Use the contralateral side, work above/below the joint, or work the opposite movement pattern.
 4. Always start with the *most regressed* version of a movement and progress only when pain stays at or below baseline through the next session.
 
@@ -130,7 +130,7 @@ When `program-design` is building the workout:
 
 Always say it once, clearly:
 
-> "I'm going to design around your [back / knee / shoulder]. This isn't a diagnosis — for that, see a PT. What I can do is keep you training while you sort out the underlying issue. Two rules: pain over 4/10 during a lift, we modify it. Pain that radiates or gets sharper, you stop and message your doctor."
+> "I'm going to design around your [back / knee / shoulder]. This isn't a diagnosis — for that, see a PT. What I can do is keep you training while you sort out the underlying issue. Two rules: pain at 4 out of 10 or higher during a lift, we modify it. Pain that radiates or gets sharper, you stop and message your doctor."
 
 Then build the program.
 

@@ -1,0 +1,23 @@
+{
+  "skill_name": "program-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Intake is done: Sarah, 29F, 165 lb, intermediate (3 yrs lifting), goal = add 30 lb to squat in 12 weeks, 4 days/week, 60 min, full commercial gym, no injuries. Build the program.",
+      "expected_output": "Produces a 4-day upper/lower or similar split in the exact markdown session format for every training day, includes cardio and recovery prescription, generates the Excel tracker via the bundled script, and pins the next check-in date.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "build me a plan for my 68 year old dad who just got cleared by his cardiologist. he has a bad left knee (no surgery), wants to stay independent, has dumbbells and a bench at home, 3 days a week.",
+      "expected_output": "Layers older-adults + injury-prep (knee) on top of program-design; program includes balance and power work, knee-friendly substitutions, RPE caps, and both output formats.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Rebuild my block for the next 4 weeks — same goals as before (hypertrophy), but I'm traveling two of those weeks with only hotel dumbbells.",
+      "expected_output": "Treats the request as a new block off existing profile data, adapts exercise selection to equipment constraints without abandoning the hypertrophy lens, and produces the markdown plan plus tracker.",
+      "files": []
+    }
+  ]
+}

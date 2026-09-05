@@ -1,6 +1,6 @@
 ---
 name: form-correction
-description: Analyze exercise form from video using MediaPipe Pose Landmarker + Claude vision. Triggers when a user uploads a video of themselves exercising, asks "can you check my form", "how does my squat look", "correct my deadlift", "analyze my technique", "review my lift", "my form feels off", "is my back rounding", "check my movement", "critique my rep", or any request to evaluate exercise mechanics from video footage. The user runs pose-analyzer.html first to extract biomechanical landmark data, then uploads the exported JSON + 2–3 key frame screenshots to Claude. Claude outputs prioritized form corrections with coaching cues and corrective drills. Always layer with injury-prep if the client reports pain.
+description: Analyze exercise form from video or photos and return prioritized corrections with coaching cues and drills. Use this whenever a client shares footage or stills of themselves lifting, pastes pose-analyzer JSON, or asks anything about their technique — "can you check my form", "how does my squat look", "correct my deadlift", "review my lift", "my form feels off", "is my back rounding", "why does my knee cave" — even if they haven't run the pose-analyzer tool yet (guide them to it, or coach from the images). The bundled tools/pose-analyzer.html extracts MediaPipe joint angles in the browser; the client uploads the exported JSON plus key-frame screenshots. Layer with injury-prep whenever pain is mentioned.
 ---
 
 # Form Correction
@@ -11,15 +11,15 @@ Turn video into coaching. The client runs their footage through the pose-analyze
 
 ### Step 1 — Client runs the pose analyzer
 
-Direct the client to open `tools/pose-analyzer.html` from the elite-coach plugin folder in Chrome (Chrome recommended; Safari may block local WASM). Steps:
+The tool lives at `tools/pose-analyzer.html` inside this skill's folder. Give the client the full path (resolve it from wherever this SKILL.md was loaded; offer to open it for them if you have a browser or `open` command available). It runs entirely in the browser — no video leaves their machine. Steps:
 
-1. Open `pose-analyzer.html` directly in Chrome (no server needed for most uses)
+1. Open `pose-analyzer.html` in Chrome (recommended; Safari may block the WASM download on `file://` pages — if so, serve the folder with `python3 -m http.server` and open it via `localhost`)
 2. Upload their exercise video (MP4, MOV, WebM — under 5 min)
-3. Select the exercise type from the dropdown (or type it in)
-4. Click **Analyze** — the tool processes at 5 fps and overlays landmarks on each frame
-5. Review the key frames it highlights (bottom of rep, midpoint, lockout)
-6. Click **Export for Claude** — downloads `form-analysis.json`
-7. Screenshot 2–4 of the highlighted key frames directly from the tool
+3. Select the exercise type and camera angle (side / front / diagonal)
+4. Click **Analyze** — the tool samples 5 frames per second and overlays landmarks on each
+5. Review the key frames it highlights (start, bottom, mid, top, worst spine lean, worst asymmetry, end)
+6. Click **Export JSON + Instructions** — downloads `form-analysis-<exercise>-<timestamp>.json`
+7. Screenshot 2–4 of the highlighted key frames directly from the tool (the thumbnails are numbered; those numbers match `screenshotIndex` in the JSON)
 
 ### Step 2 — Client uploads to Claude
 
@@ -29,32 +29,37 @@ Client pastes the `form-analysis.json` contents and uploads the screenshots into
 
 ## What Claude receives — reading the JSON
 
-The JSON has five sections:
+The JSON has five sections (this mirrors what the tool actually emits; the full schema is in `references/mediapipe-integration.md`):
 
 ```
 {
   "exercise": "squat",
-  "side": "left" | "right" | "front" | "diagonal",
-  "videoInfo": { duration, framesAnalyzed, sampledFps },
+  "cameraAngle": "side" | "front" | "diagonal",
+  "videoInfo": { filename, duration_s, framesAnalyzed, sampledFps, resolution },
   "summary": {
-    "minKneeAngle": { left, right },      // degrees — bottom of rep
-    "maxKneeAngle": { left, right },      // degrees — lockout
-    "minHipAngle": { left, right },       // hip crease angle at depth
-    "spineLeadAngle_deg": number,         // trunk forward lean from vertical (avg at bottom)
-    "asymmetry": { knee, hip, shoulder }  // L vs R angle delta in degrees
+    "minKneeAngle": { left, right },        // degrees — bottom of rep
+    "maxKneeAngle": { left, right },        // degrees — lockout
+    "minHipAngle":  { left, right },        // hip crease angle at depth
+    "maxHipAngle":  { left, right },
+    "avgSpineLean_deg": number,             // trunk lean from vertical, averaged over all frames
+    "maxSpineLean_deg": number,             // worst single-frame lean
+    "asymmetry": { knee_deg, hip_deg, shoulder_deg }  // max L vs R delta seen
   },
-  "keyFrames": [                          // 6–8 frames at diagnostic moments
+  "keyFrames": [                            // up to 7 frames at diagnostic moments
     {
-      "label": "bottom" | "mid" | "top" | "worst_spine",
+      "label": "start" | "bottom" | "mid" | "top" | "worst_spine" | "worst_asym" | "end",
       "timestamp_s": number,
-      "angles": { leftKnee, rightKnee, leftHip, rightHip, leftElbow, rightElbow, spineLean, trunkForwardLean },
+      "screenshotIndex": number,            // matches the numbered thumbnail the client screenshots
+      "angles": { leftKnee, rightKnee, leftHip, rightHip, leftElbow, rightElbow, leftShoulder, rightShoulder, spineLean },
       "landmarks": [ { x, y, z, visibility } × 33 ]
     }
   ]
 }
 ```
 
-Landmarks follow MediaPipe's 33-point schema — see `references/mediapipe-integration.md` for the index map. Angles are in degrees, computed from normalized (x, y) coordinates. Z is depth (less reliable without stereo camera — treat as supporting signal only).
+Angles are in degrees, computed from normalized (x, y) coordinates. `spineLean` is 0° upright and 90° horizontal — it is the trunk forward lean referred to throughout this skill. Z is estimated depth (unreliable without a stereo camera — treat as a supporting signal only). Any angle where a contributing landmark has `visibility < 0.5` is `null`; when a key angle is null, say so rather than guessing. Landmarks follow MediaPipe's 33-point schema — the index map is in `references/mediapipe-integration.md`.
+
+If the client's camera angle is `front`, sagittal angles (spine lean, hip angle) are unreliable but valgus and asymmetry are trustworthy; from a `side` view it's the reverse. Weight your read accordingly (details in `references/joint-angle-standards.md`, "Camera angle quality notes").
 
 ---
 
@@ -65,7 +70,7 @@ Landmarks follow MediaPipe's 33-point schema — see `references/mediapipe-integ
 Read in this order at the **bottom frame**:
 
 1. **Knee angle** — target ≥ 90° parallel (thigh parallel to floor). Below 70° = deep squat, check intentionality. Above 100° = not reaching depth.
-2. **Knee tracking** — visually from screenshots, does the knee track over the second toe? JSON asymmetry.knee > 10° = one knee caving.
+2. **Knee tracking** — visually from screenshots, does the knee track over the second toe? JSON `asymmetry.knee_deg` > 10° = one knee caving (most reliable from a front camera angle).
 3. **Hip angle** — target 90–110° at depth for upright torso squat. Higher number = more forward lean.
 4. **Spine lean (trunk forward lean)** — target < 45° from vertical for back squat; < 30° for front/goblet. Above 60° = "good morning" — bar path is compromised.
 5. **Depth consistency** — compare min knee angle across reps. > 15° variation = inconsistent depth.
@@ -76,7 +81,7 @@ Read in this order at the **bottom frame**:
 | Error | Landmark signature | Cue |
 |---|---|---|
 | Knee cave (valgus) | asymmetry.knee > 10°, knee x-coordinate moves medial | "Spread the floor with your feet. Push your knees out into your elbows on the way up." |
-| Forward lean | trunkForwardLean > 55° | "Chest up. Imagine a string pulling the top of your head to the ceiling." |
+| Forward lean | spineLean > 55° at the bottom frame | "Chest up. Imagine a string pulling the top of your head to the ceiling." |
 | Butt wink | spine inflects at bottom (Z-landmarks shift) | "Stop the descent 5° before your pelvis tucks. Work ankle mobility — couch stretch daily." |
 | Heels rising | ankle landmarks shift anterior | "Elevate heels 1–2 cm with plates and work calf/ankle mobility." |
 | Not reaching depth | minKneeAngle > 100° | "Box squat to a target depth. Hip flexor and ankle mobility are likely the limiters." |
@@ -191,7 +196,7 @@ Step 2: [The foundational drill to rebuild the pattern — sets × reps × frequ
 Re-film when this feels automatic.
 ```
 
-Never list more than 2 fixes per session — clients fix one thing at a time. Never skip acknowledging what's working. Keep the entire response under 150 words.
+Cap it at 2 fixes per session: motor learning research and every coach's experience agree that a lifter can hold one or two cues in their head under load, not five. Always name something that's working — a client who only hears faults stops sending video. Keep the entire response under 150 words so it fits on a phone screen at the gym.
 
 ---
 

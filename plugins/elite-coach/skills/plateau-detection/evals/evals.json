@@ -1,0 +1,17 @@
+{
+  "skill_name": "plateau-detection",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Bench has been stuck at 185x5 for 5 weeks. Everything else moves. Sleep's fine, eating enough, hitting every session.",
+      "expected_output": "Walks the diagnostic order out loud, lands on a single-lift technical/stimulus cause, prescribes one change (e.g., pause bench, frequency, rep range) with a re-evaluation date, and does not rebuild the program.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Is this program still working? Scale hasn't moved in 3 weeks on my cut.",
+      "expected_output": "Recognizes the indirect plateau question, checks adherence/intake/NEAT/sleep before blaming the program, and suggests a diet break or small adjustment rather than a drastic cut.",
+      "files": []
+    }
+  ]
+}

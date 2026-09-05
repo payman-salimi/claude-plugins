@@ -1,0 +1,17 @@
+{
+  "skill_name": "fat-loss",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Goal: lose 20 lb in 16 weeks. I'm 38F, 175 lb, lift 3x/week already. Please don't make me run every day.",
+      "expected_output": "Keeps strength training central with 10–15 sets/muscle, sets a moderate deficit anchored to 0.5–1%/week, prescribes Zone 2 + walking with capped HIIT, protein 2.0–2.4 g/kg, tracking metrics, and refers to RD/nutrition for exact macros.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm cutting and my squat dropped 30 lb in 3 weeks. Is that normal?",
+      "expected_output": "Identifies the deficit as too steep, pulls the deficit back, and reinforces strength preservation as the signal of a good cut.",
+      "files": []
+    }
+  ]
+}

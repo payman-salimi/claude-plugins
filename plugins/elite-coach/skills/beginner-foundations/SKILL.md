@@ -1,6 +1,6 @@
 ---
 name: beginner-foundations
-description: Train true novices — clients who have never lifted weights, are returning after 2+ years off, or are intimidated by the gym. Triggers when the client mentions "I'm new", "never lifted before", "starting from zero", "I haven't trained in years", "I'm a beginner", "I don't know what I'm doing", "intimidated by the gym", "first time", or describes very low training history. Layer on top of program-design — this skill prioritizes movement quality, simple progression, builds confidence, and uses simple, repeatable templates that drive fast progress for the first 6–12 months. Always patient. Never overcomplicate.
+description: Train true novices — clients who have never lifted weights, are returning after 2+ years off, or are intimidated by the gym. Use this whenever the client says "I'm new", "never lifted before", "starting from zero", "I haven't trained in years", "I'm a beginner", "I don't know what I'm doing", "intimidated by the gym", "first time", or their training history is clearly minimal even if they never call themselves a beginner. Layer on top of program-design — this skill replaces fancy splits with a simple full-body linear-progression template that drives fast progress for the first 6–12 months. Not for someone with a solid base who's only been off a few months; program-design defaults handle them.
 ---
 
 # Beginner Foundations
@@ -96,7 +96,7 @@ Two missed sessions doesn't mean restarting from zero. Re-enter the program at t
 ### Pitfall: not eating enough
 
 Strength training without enough food = no progress. Tell them:
-- Eat protein at every meal: 0.8–1g per lb bodyweight per day target
+- Eat protein at every meal: 1.6–2.2 g per kg bodyweight per day (roughly 0.7–1 g per lb)
 - Don't try to lose weight aggressively in the first 12 weeks — focus on getting strong
 - Sleep 7+ hours
 
@@ -134,7 +134,7 @@ This reduces the intimidation that makes them not show up.
 
 **Cardio:** 1–2 walks of 30 min/week.
 
-**Deload:** week 8 if needed (50% volume, 70% intensity for one week).
+**Deload:** week 8 if needed (50–60% volume, ~70% intensity for one week).
 
 After 12 weeks, reassess. Move to an intermediate template (4-day upper/lower or push/pull/legs) only when linear progression has clearly stalled across multiple lifts.
 

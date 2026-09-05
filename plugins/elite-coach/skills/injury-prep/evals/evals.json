@@ -1,0 +1,17 @@
+{
+  "skill_name": "injury-prep",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My lower back tweaks every time I deadlift from the floor. No radiating pain, just tight and sore for 2 days after. Still want to train legs hard.",
+      "expected_output": "Gives the not-a-diagnosis disclaimer once, swaps floor pulls for trap bar/rack pulls and front squats, adds the low-back prehab block, caps spinal loading at RPE 6–7, and sets progression criteria.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Shoulder pinches on overhead press and I get tingling down my arm sometimes.",
+      "expected_output": "Recognizes radiating symptoms as a referral flag, tells the client to see a PT/physician, and offers only non-provocative work in the meantime rather than programming around it.",
+      "files": []
+    }
+  ]
+}

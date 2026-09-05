@@ -1,6 +1,6 @@
 ---
 name: prenatal-postpartum
-description: Train pregnant clients (any trimester) and postpartum clients (vaginal or C-section delivery, weeks 0 through 12+ months postpartum). Triggers when the client mentions pregnancy, "I'm pregnant", "I just had a baby", "postpartum", "post-baby", "after giving birth", "X weeks postpartum", "trying to conceive", "diastasis recti", "pelvic floor", "C-section", or any reference to current pregnancy or recent delivery. Layer on top of program-design — this skill enforces medical clearance, modifies banned movements, manages diastasis and pelvic floor, and structures return-to-training. Always require medical clearance from an OB/midwife before pushing intensity, especially in the first 6 weeks postpartum.
+description: Train pregnant clients (any trimester) and postpartum clients (vaginal or C-section delivery, from week 0 through 12+ months). Use this whenever pregnancy or a recent birth comes up in any form — "I'm pregnant", "expecting", "second trimester", "I just had a baby", "postpartum", "post-baby", "after giving birth", "X weeks/months postpartum", "trying to conceive", "diastasis recti", "pelvic floor", "leaking when I jump", "C-section", "breastfeeding" — even when the client's stated goal is something else like fat loss or getting back to lifting. Layer on top of program-design — this skill enforces OB/midwife clearance, bans and substitutes movements by phase, manages diastasis and pelvic floor, and structures the return to training.
 ---
 
 # Prenatal & Postpartum Training
@@ -53,7 +53,7 @@ This is the highest-stakes specialty in the plugin. You are training someone who
 
 ### Weeks 0–6 (or 0–8 C-section): Recovery only
 
-- No structured training program. Period.
+- No structured training program. The pelvic floor, abdominal wall, and (after a C-section) the incision are still healing, and loading them early is how prolapse and hernia happen.
 - Walking — short, slow, build daily duration as energy allows.
 - Diaphragmatic breathing (5–10 min/day) — the foundation of everything that comes back.
 - Pelvic floor connection (gentle Kegels with proper inhale-relax / exhale-engage timing — not just clenches)

@@ -1,0 +1,17 @@
+{
+  "skill_name": "hypertrophy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm 24, 150 lb at 5'10\", been training 1.5 years, eat okay. I want to put on size — especially arms and shoulders. 5 days a week available.",
+      "expected_output": "Prescribes hypertrophy volume landmarks (12–20 hard sets building across a block), 2–3x frequency per muscle, a split that fits 5 days with extra arm/shoulder volume, double progression, modest surplus and protein target.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Should I train to failure every set for max muscle growth?",
+      "expected_output": "Explains RPE 8–9 for most sets with failure used sparingly, and why (recovery cost vs stimulus).",
+      "files": []
+    }
+  ]
+}

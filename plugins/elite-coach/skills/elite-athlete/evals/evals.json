@@ -1,0 +1,17 @@
+{
+  "skill_name": "elite-athlete",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Competitive powerlifter, 83kg class, squat 265 / bench 165 / deadlift 290 (kg). Meet in 14 weeks. Need a block structure to peak.",
+      "expected_output": "Confirms advanced status against benchmarks, lays out hypertrophy → strength → peaking blocks with RPE/percentage prescriptions, deload placement, and recovery prescription, and speaks to the client as a peer.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm pretty advanced, been lifting 3 years, squat is 225 lb at 180 lb bodyweight. Give me an elite-level program.",
+      "expected_output": "Honestly identifies the client as intermediate rather than elite based on the benchmarks, explains why without condescension, and routes to program-design defaults.",
+      "files": []
+    }
+  ]
+}

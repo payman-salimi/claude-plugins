@@ -1,0 +1,17 @@
+{
+  "skill_name": "body-recomp",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I don't really care about the scale, I just want to look leaner and more muscular at the same weight. 31M, 185 lb, ~20% BF, 2 years training.",
+      "expected_output": "Sets honest expectations for an intermediate, prescribes maintenance-to-slight-deficit calories, 2.0–2.4 g/kg protein, hypertrophy-biased training with moderate cardio, and tracking via tape/photos/lifts rather than the scale.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm at 10% body fat and pretty advanced. Can I recomp?",
+      "expected_output": "Honestly steers an advanced lean client toward picking one goal at a time (build then cut) and explains why.",
+      "files": []
+    }
+  ]
+}

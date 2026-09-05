@@ -1,6 +1,6 @@
 ---
 name: client-intake
-description: Run a complete pre-training intake before any programming. Triggers when the user is starting fresh, returning after a long break, or any time core profile data (age, weight, height, goals, training history, equipment, injuries, medical clearance) is missing. Trigger phrases include "start training with you", "I want a coach", "build me a plan", "I'm new", "let's set up my profile", "I'm coming back from a break", or any first-time programming request. Always run this skill before program-design unless the data is already on file in the conversation or in the user's profile.
+description: Run a complete pre-training intake (PAR-Q+ screening, health and training history, goals, equipment, schedule, adherence) before any programming. Use this whenever someone asks for a training plan and their core profile data (age, weight, height, goals, training history, equipment, injuries, medical clearance) isn't already in the conversation — even if they only say "build me a plan" or "what should I do at the gym" and never mention intake. Also triggers on "start training with you", "I want a coach", "I'm new", "let's set up my profile", "I'm coming back from a break". Always run before program-design unless the data is already on file.
 ---
 
 # Client Intake
@@ -59,7 +59,7 @@ If any "yes": stop the program-build and recommend medical clearance. Offer to d
 
 ### 5. Goals — make them measurable
 
-Per project instructions, never accept vague goals. Convert every goal into:
+Never accept a vague goal — a goal you can't measure is a goal you can't coach toward, and `weekly-checkin` has nothing to compare against. Convert every goal into:
 
 - **Baseline** (where they are now)
 - **Target** (specific number)
@@ -85,14 +85,14 @@ This dictates exercise selection, period.
 ### 7. Time & schedule
 
 - Days available per week
-- Session length the realistically have (not aspirational)
+- Session length they realistically have (not aspirational)
 - Time of day they prefer to train
 - Travel days, busy weeks, known disruptions in next 8 weeks
 
 ### 8. Diet awareness (light touch — not a meal plan)
 
 - Are you tracking calories or protein? What target?
-- Approximate protein per day (estimate g/kg of bodyweight)
+- Approximate protein per day (estimate g/kg of bodyweight; targets by goal live in `../../references/training-standards.md`)
 - Hydration per day
 - 3-day food recall — at least mentally walk through yesterday's meals
 

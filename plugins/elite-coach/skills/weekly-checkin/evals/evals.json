@@ -1,0 +1,23 @@
+{
+  "skill_name": "weekly-checkin",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "week 3 update: hit all 4 sessions. squat 3x5 @ 245 felt like RPE 7, bench stalled at 165 for the second week (RPE 9 on the last set), sleeping about 6 hours. weight down 0.8 lb.",
+      "expected_output": "Collects any missing recovery/body markers, applies the decision rules (push squat, hold or address recovery for bench, flag sleep), communicates one clear call in the check-in format, and updates the tracker for next week.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "honestly rough week. got 1 of 4 workouts in, work exploded. feeling guilty.",
+      "expected_output": "Diagnoses rather than shames, calls HOLD (adherence <70%), re-anchors to the goal, and closes with a specific commitment question tied to their actual planned session count.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Everything's going up but my elbows have been achy for like two weeks and I feel beat up walking into the gym.",
+      "expected_output": "Recognizes accumulated-fatigue signals and calls DELOAD (50–60% volume, ~70% intensity) instead of pushing, and explains why.",
+      "files": []
+    }
+  ]
+}

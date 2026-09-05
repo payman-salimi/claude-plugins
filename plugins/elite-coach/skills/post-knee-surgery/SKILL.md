@@ -1,6 +1,6 @@
 ---
 name: post-knee-surgery
-description: Train clients returning to strength training after knee surgery — ACL reconstruction, meniscus repair or meniscectomy, total knee replacement (TKR), patellar tendon repair, MCL/LCL repair. Triggers when the client mentions "ACL surgery", "knee replacement", "meniscus surgery", "torn ACL", "I had knee surgery", "post-op knee", "ACL recovery", "return to lifting after knee", or similar. Layer on top of program-design — this skill phases progression strictly by post-op timeline and PT clearance, banning movements until surgical window allows them. Always require PT clearance and PT collaboration. Never push past PT-prescribed progressions without explicit clearance.
+description: Train clients returning to strength training after knee surgery — ACL reconstruction, meniscus repair or meniscectomy, total knee replacement (TKR), patellar tendon repair, MCL/LCL repair. Use this whenever a knee surgery is mentioned at any point — "ACL surgery", "knee replacement", "meniscus surgery", "torn ACL", "I had knee surgery", "post-op knee", "ACL recovery", "return to lifting after knee", "cleared by my PT" — including surgeries a year or more ago that still shape what the knee tolerates. Layer on top of program-design — this skill phases progression strictly by post-op timeline and physical-therapist clearance and substitutes banned movements until the surgical window allows them. Non-surgical knee pain belongs to injury-prep instead.
 ---
 
 # Post-Knee Surgery
@@ -9,7 +9,7 @@ Returning a client to training after knee surgery is **a partnership with their 
 
 ## Hard rules — non-negotiable
 
-1. **No programming without PT clearance.** Period. If the client has not been formally discharged or cleared for strength work, refer them back to their PT.
+1. **No programming without PT clearance.** The PT has seen the surgical report, the graft, and the joint; you haven't. If the client has not been formally discharged or cleared for strength work, refer them back to their PT and offer upper-body and non-operated-leg work in the meantime.
 2. **Surgical timelines control everything.** Tissue healing has a biological clock. ACL grafts take 9–12 months minimum to remodel. Meniscus repairs can take 4–6 months. Don't rush biology.
 3. **Bilateral asymmetry > 10% (operated leg vs. non-operated) on a single-leg movement = not ready to progress.**
 4. **Pain, swelling, or instability after a session = regress.** These are the body telling you the dose was too high.

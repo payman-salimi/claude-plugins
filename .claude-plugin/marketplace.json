@@ -30,8 +30,8 @@
     {
       "name": "elite-coach",
       "source": "./plugins/elite-coach",
-      "description": "A complete personal training and strength-and-conditioning coach: runs intake (PAR-Q, health history, training history, equipment, goals), designs progressive weekly programs with markdown plans and Excel trackers, and runs weekly check-ins to push, hold, regress, or deload. Specialty skills cover beginners, elite athletes, older adults, pregnancy/postpartum, post-knee-surgery, common injuries, certified trainers, hypertrophy, fat loss, maintenance, body recomposition, functional training, and plateau detection.",
-      "version": "0.1.0",
+      "description": "A complete personal training and strength-and-conditioning coach: runs intake (PAR-Q, health history, training history, equipment, goals), designs progressive weekly programs with markdown plans and Excel trackers, runs weekly check-ins to push, hold, regress, or deload, and analyzes lifting form from video with a bundled MediaPipe pose analyzer. Specialty skills cover beginners, elite athletes, older adults, pregnancy/postpartum, post-knee-surgery, common injuries, certified trainers, hypertrophy, fat loss, maintenance, body recomposition, functional training, and plateau detection.",
+      "version": "0.2.0",
       "category": "Health & Wellness",
       "keywords": [
         "fitness",

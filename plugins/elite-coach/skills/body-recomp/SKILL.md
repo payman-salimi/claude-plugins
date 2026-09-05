@@ -1,6 +1,6 @@
 ---
 name: body-recomp
-description: Programming specialty for clients who want to build muscle AND lose fat at the same time — body recomposition. Triggers when the client states both goals together, "build muscle and lose fat", "get lean and strong", "recomp", "I want to look better", "tone up while building", "drop body fat without losing muscle", "lean bulk", "stay the same weight but change my body", or any explicit recomp request. Layer on top of program-design — this skill manages the conflicting demands of growth and deficit, sets honest expectations about who can recomp, and structures training and nutrition for the slower but real result.
+description: Programming specialty for clients who want to build muscle AND lose fat at the same time — body recomposition. Use this whenever the client states both goals together or a goal that implies both — "build muscle and lose fat", "get lean and strong", "recomp", "I want to look better", "tone up", "get toned", "drop body fat without losing muscle", "stay the same weight but change my body" — even if they don't know the word recomp. Layer on top of program-design — this skill manages the conflicting demands of growth and deficit, sets honest expectations about who can recomp, and structures training and nutrition for the slower but real result. If the goal is only fat loss use fat-loss; only muscle gain (including "lean bulk") use hypertrophy.
 ---
 
 # Body Recomposition

@@ -1,6 +1,6 @@
 ---
 name: elite-athlete
-description: Train highly conditioned, advanced clients — competitive athletes, advanced powerlifters/bodybuilders, multi-year consistent lifters with plateau-resistant baselines. Triggers when the client mentions "elite", "advanced", "competitive", "I powerlift", "I compete", "national level", "I've been training 5+ years", "my squat is X" with X being clearly advanced (e.g., 1.5x BW+ for women, 2x BW+ for men), or describes training history and benchmarks that put them well past intermediate. Layer on top of program-design — this skill brings periodization, specificity, peaking blocks, and elite-level recovery prescription. Treat the client as a peer and don't waste their time with novice content.
+description: Train highly conditioned, advanced clients — competitive athletes, advanced powerlifters/bodybuilders, multi-year consistent lifters with plateau-resistant baselines. Use this whenever the client says "elite", "advanced", "competitive", "I powerlift", "I compete", "national level", "meet prep", "peaking", "I've been training 5+ years", quotes lifts that are clearly advanced (roughly 1.5x bodyweight squat for women, 2x for men), or asks for block periodization, RPE-based programming, or a peaking block — even if they never use the word elite. Layer on top of program-design — this skill brings periodization, specificity, peaking blocks, and elite-level recovery prescription, and first verifies the client is actually advanced rather than intermediate.
 ---
 
 # Elite Athlete
@@ -59,10 +59,12 @@ This builds in adaptation to daily readiness — non-negotiable at elite level.
 
 Track **hard sets per muscle group per week** as the primary volume metric (Schoenfeld / Helms / Israetel model):
 
-- Maintenance: 8–12 hard sets/week per muscle group
-- Hypertrophy progression: 14–22 hard sets/week per muscle group
-- Hypertrophy peak (briefly): 22–28 hard sets/week per muscle group
+- Maintenance: 6–10 hard sets/week per muscle group
+- Hypertrophy progression: 12–20 hard sets/week per muscle group, up to 22 for lifters whose recovery has earned it
+- Hypertrophy peak (briefly): 22–28 hard sets/week per muscle group, followed immediately by a deload
 - Above 28 sets is rarely productive without performance-enhancing context
+
+These match the plugin-wide landmarks in `../../references/training-standards.md`; read that file if a client's numbers seem to argue with them.
 
 A hard set = within 3 reps of failure (RPE 7+).
 

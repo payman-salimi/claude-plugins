@@ -1,6 +1,6 @@
 ---
 name: plateau-detection
-description: Diagnose why a client has stalled and prescribe specific modifications to break the plateau. Triggers when the client mentions "stuck", "plateau", "stopped progressing", "lifts haven't moved", "weight isn't changing", "I'm stalled", "no progress in weeks", "hit a wall", "lifts aren't going up", or any indication that the program has stopped working. Layer on top of program-design — this skill does NOT auto-rebuild the entire program; it identifies the cause, recommends targeted changes, and only escalates to a full re-program if the cause requires it.
+description: Diagnose why a client has stalled and prescribe the smallest change that will break the plateau. Use this whenever progress has stopped — "stuck", "plateau", "stopped progressing", "lifts haven't moved", "weight isn't changing", "I'm stalled", "no progress in weeks", "hit a wall" — and also when the client asks indirectly: "is this program still working?", "should I switch programs?", "why isn't the scale moving?", or a weekly-checkin shows the same numbers three weeks running. Layer on top of program-design — this skill works through adherence, recovery, nutrition, and stimulus in order, changes one variable at a time, and only escalates to a full re-program if the cause requires it.
 ---
 
 # Plateau Detection
@@ -85,7 +85,7 @@ If the above are all clean, you may have hit an actual training plateau — prog
 
 ### If recovery is the issue
 
-- Add a deload week immediately (50% volume, 70% intensity)
+- Add a deload week immediately (50–60% volume, ~70% intensity)
 - Drop one session if running 5–6 days
 - Address sleep: sleep target, no caffeine after noon, screen cutoff, sleep hygiene
 - Address stress: low-intensity work (walks, yoga), reduce gym intensity for 2–3 weeks

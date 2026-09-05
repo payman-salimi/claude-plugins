@@ -1,6 +1,6 @@
 ---
 name: functional-training
-description: Programming specialty for clients who want functional training only — movement quality, mobility, work capacity, real-world strength, no traditional bodybuilding. Triggers when the client states the goal as "functional", "functional fitness", "I want to move better", "real-world strength", "athletic", "I don't want to be a bodybuilder", "I just want to be able to do things", "everyday strength", "movement-based training", or any explicit functional goal. Layer on top of program-design — this skill structures training around movement patterns, mobility, work capacity, and unilateral / multi-planar work rather than bodybuilding-style isolation. Functional doesn't mean easy or unstructured.
+description: Programming specialty for clients who want functional training — movement quality, mobility, work capacity, real-world strength — rather than bodybuilding. Use this whenever the client says "functional", "functional fitness", "I want to move better", "real-world strength", "athletic", "I don't want to be a bodybuilder", "I just want to be able to do things", "everyday strength", "movement-based training", or describes a real-world capability goal (hiking, carrying kids, a physical job, recreational sport, getting up off the floor easily) without a physique or strength-number target. Layer on top of program-design — this skill structures training around the seven movement patterns, mobility, conditioning, and unilateral / multi-planar work, with heavy compound lifting still at the core.
 ---
 
 # Functional Training

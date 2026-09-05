@@ -1,0 +1,23 @@
+{
+  "skill_name": "client-intake",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ok so i've decided to actually get serious. 34M, desk job, haven't done anything besides the occasional hike since college. want to get stronger and lose the gut. can you build me a plan?",
+      "expected_output": "Runs the full intake (PAR-Q+, history, goals, equipment, schedule, adherence) instead of writing a program, converts 'lose the gut' into a measurable goal, and ends with the intake summary and a handoff to program-design.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Coming back after about 2 years off. I used to squat 315 and bench 225. I've got a garage gym with a rack, barbell, and 300 lb of plates. Ready to go — give me week 1.",
+      "expected_output": "Does not skip intake just because the client is experienced; still screens medical, current capacity, injuries, and schedule, notes the returning-lifter context, and only then hands to program-design.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm 45 and my doctor said I should exercise. I get some chest tightness when I climb stairs but it goes away. Where do I start?",
+      "expected_output": "Flags the PAR-Q 'yes' (chest pain with exertion), stops the program build, recommends medical clearance, and offers only a walking/light mobility holding plan.",
+      "files": []
+    }
+  ]
+}

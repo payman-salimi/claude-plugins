@@ -1,0 +1,17 @@
+{
+  "skill_name": "post-knee-surgery",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ACL reconstruction 14 weeks ago, PT cleared me for 'strength work' last week. I want to get back to squatting heavy.",
+      "expected_output": "Places the client in weeks 12–20 phase: bilateral squats progressing to goblet, leg press, leg curls, low step-ups, full-intensity non-operated leg, RPE 6–7 cap, no running/plyos, and asks for PT's specific clearance details.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Total knee replacement 2 months ago, 64 years old, still doing PT twice a week. Can you write me a gym program?",
+      "expected_output": "Declines to program the operated knee yet (months 0–3 = PT only), offers upper body and non-operated-leg work, and layers older-adults considerations.",
+      "files": []
+    }
+  ]
+}

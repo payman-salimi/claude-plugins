@@ -1,0 +1,17 @@
+{
+  "skill_name": "prenatal-postpartum",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm 22 weeks pregnant, been lifting for 5 years, OB says keep training. What changes now?",
+      "expected_output": "Applies second-trimester rules: removes supine and prone work, swaps to incline/sumo/trap bar, uses talk test not a 140 bpm cap, drills exhale-on-exertion, and monitors for coning.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Had my baby 4 weeks ago (vaginal delivery), feeling good, want to start getting my fitness back and lose the baby weight fast.",
+      "expected_output": "Holds the line at weeks 0–6: walking, breathing, pelvic floor connection only; explains why; sets up the 6-week clearance and pelvic-floor check; caps any future deficit if breastfeeding.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill_name": "beginner-foundations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've literally never touched a barbell. I'm 26, joined a gym last week and I just walked around confused and left. Can you give me something simple to follow?",
+      "expected_output": "Prescribes the 3-day full-body linear-progression template with five movement patterns, includes gym-orientation guidance, keeps the plan simple, and avoids splits or heavy cardio.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm a beginner but I found this 6-day PPL program online with like 8 exercises per day, should I do that?",
+      "expected_output": "Pushes back with reasoning (adherence, recovery, the novice linear-progression window) and offers the simpler template instead.",
+      "files": []
+    }
+  ]
+}

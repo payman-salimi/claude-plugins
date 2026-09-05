@@ -1,0 +1,17 @@
+{
+  "skill_name": "coach-development",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm a NASM CPT, 2 years in, 15 clients. I want a program for myself but I also want to understand why you're choosing what you choose so I can use it with clients.",
+      "expected_output": "Confirms credential details, runs intake → program-design with the reasoning layered in at a peer level (vocabulary like mechanical tension, RIR, undulating periodization), and flags relevant coach blind spots.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My client stalled on bench so I added two more chest days and more sets. Still stuck. What am I missing?",
+      "expected_output": "Identifies the 'always adding, never removing' blind spot and RPE/recovery reasoning, teaches the 5 levers and priority hierarchy, and suggests subtracting volume or deloading before adding.",
+      "files": []
+    }
+  ]
+}

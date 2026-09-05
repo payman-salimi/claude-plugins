@@ -1,0 +1,17 @@
+{
+  "skill_name": "maintenance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "New baby at home, sleep is chaos, I have maybe 3 x 40 min a week. I just don't want to lose what I've built over the last 3 years.",
+      "expected_output": "Frames maintenance as a real phase, prescribes 6–10 hard sets/muscle at high intensity across 3 short full-body sessions, keeps some cardio, and sets maintenance calories.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Between meets, what's the least I can do and hold my strength?",
+      "expected_output": "Gives the minimum-effective-dose strength template (1–2 sessions per lift, 2–3 sets at RPE 7–9) and explains why intensity is the lever that can't drop.",
+      "files": []
+    }
+  ]
+}

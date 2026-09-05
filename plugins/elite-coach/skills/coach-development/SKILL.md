@@ -1,6 +1,6 @@
 ---
 name: coach-development
-description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Triggers when the client mentions "I'm a CPT", "I'm a personal trainer", "I'm a coach", "I'm a certified trainer", "I program for clients", "I'm studying for my cert", or "help me design programs for my clients". Layer on top of program-design — this skill teaches programming reasoning, addresses common coach blind spots, and frames every choice with the why so they can apply it to their own clients. Treat the client as a peer who's also a student.
+description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Use this whenever the client says "I'm a CPT", "I'm a personal trainer", "I'm a coach", "I'm a certified trainer", "I program for clients", "I'm studying for my cert", "help me design programs for my clients", or asks why a programming choice was made at a professional level — even when the immediate request is about their own training rather than their clients'. Layer on top of program-design — this skill explains the reasoning behind every choice, flags common coach blind spots, and treats the client as a peer who's also a student.
 ---
 
 # Coach Development
@@ -32,9 +32,11 @@ Use the vocabulary: mechanical tension, metabolic stress, muscle damage, motor u
 ### 1. Over-prescribing volume
 
 Junior coaches often write more sets than the client can recover from. Anchor them to:
-- 8–12 sets/muscle/week as **maintenance**, not minimum effective
-- Hypertrophy progresses from 12 → 22 over a block, not start at 22
+- 6–10 hard sets/muscle/week holds what's been built (maintenance)
+- Hypertrophy progresses from 12 → 20 over a block (up to 22 for advanced lifters), not start at 22
 - Volume goes UP across a block, then deloads, then resets slightly higher
+
+The full set of landmarks the plugin uses — volume, RPE/RIR, protein, deload, cardio zones — lives in `../../references/training-standards.md`. Read it when teaching these numbers so the coach hears the same values from every skill.
 
 ### 2. Misunderstanding RPE
 

@@ -1,6 +1,6 @@
 ---
 name: fat-loss
-description: Programming specialty for fat loss — preserve muscle, drive a sustainable caloric deficit through training and lifestyle changes. Triggers when the client states the goal as losing weight, "lose fat", "drop body fat", "cut", "lean out", "lose X pounds", "get shredded", "fat loss", "weight loss", "drop weight", or any explicit fat-loss goal. Layer on top of program-design — this skill sets the cardio/strength split, intensity caps, and prescribes calorie/protein guidance to support the goal. Always preserve strength and muscle while losing fat. Aggressive cuts that crush strength are the wrong cut.
+description: Programming specialty for fat loss — preserve muscle and strength while driving a sustainable caloric deficit through training and lifestyle. Use this whenever the client's goal is losing weight or fat — "lose fat", "drop body fat", "cut", "lean out", "lose X pounds", "get shredded", "fat loss", "weight loss", "drop weight", "fit into my old jeans", "get ready for a wedding/beach" — even when they phrase it as a number on the scale rather than "fat loss". Layer on top of program-design — this skill sets the cardio/strength split, volume and intensity caps, and calorie/protein anchors. If they also want to build muscle at the same time, body-recomp takes the lead instead.
 ---
 
 # Fat Loss
@@ -12,7 +12,7 @@ Do this instead: **train for strength, eat for fat loss.** The deficit comes fro
 ## The non-negotiable principles
 
 1. **Strength training preserves muscle in a deficit.** Drop it and the scale goes down but the body looks worse.
-2. **Protein is the most important macro in a cut.** 2.0–2.5 g/kg bodyweight per day. Spread across the day.
+2. **Protein is the most important macro in a cut.** 2.0–2.4 g/kg bodyweight per day, spread across the day. A deficit means fewer calories to spare muscle, so the protein floor goes up, not down.
 3. **Cardio is a tool for the deficit, not a punishment.** Strategic, not unlimited.
 4. **Sleep, stress, and adherence beat training and macros.** Most fat-loss failures are adherence, not metabolism.
 5. **The deficit should be moderate.** 0.5–1.0% bodyweight per week is the sustainable rate. Faster than that = muscle loss + rebound risk.
@@ -155,7 +155,7 @@ Cap deficit at 250–300 cal. Aggressive cuts can drop milk supply. Read `prenat
 
 ### Older adults
 
-Cut at slower rate (0.25–0.5% bodyweight/week). Protein floor higher (2.2 g/kg). Read `older-adults`.
+Cut at slower rate (0.25–0.5% bodyweight/week). Protein floor at the top of the range (2.0–2.4 g/kg) because anabolic resistance rises with age. Read `older-adults`.
 
 ## Coaching the client through a cut
 
@@ -177,6 +177,6 @@ When they hit a stall:
 ## What this skill does NOT do
 
 - Does not prescribe specific macros (refer to RD or nutrition-coach skill)
-- Does not run aggressive 1500-cal female / 1800-cal male crash diets
+- Does not run very-low-calorie crash diets — they cost muscle, strength, and adherence, and the weight comes back
 - Does not abandon strength work for cardio
 - Does not work alongside hypertrophy goals at full intensity (use `body-recomp` if both are wanted)

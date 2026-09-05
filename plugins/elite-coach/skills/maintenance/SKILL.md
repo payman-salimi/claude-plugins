@@ -1,6 +1,6 @@
 ---
 name: maintenance
-description: Programming specialty for maintaining current strength, muscle, and conditioning — for clients who've reached a level they're happy with and want to hold without continuing to push for gains. Triggers when the client states the goal as "maintain", "hold what I have", "stay in shape", "I don't want to lose what I built", "between cuts and bulks", "between competition phases", "off-season", "I'm happy where I'm at", or any explicit maintenance/holding goal. Layer on top of program-design — this skill prescribes minimum effective volume, reduced frequency, and balanced training to preserve gains without burning out.
+description: Programming specialty for maintaining current strength, muscle, and conditioning with the minimum effective dose — for clients who've reached a level they're happy with, or whose life is too busy to push. Use this whenever the client says "maintain", "hold what I have", "stay in shape", "I don't want to lose what I built", "between cuts and bulks", "off-season", "I'm happy where I'm at", "I only have 2–3 short sessions a week right now", "crazy quarter at work / new baby, just don't want to slide", or any goal that amounts to holding rather than gaining. Layer on top of program-design — this skill prescribes reduced volume and frequency while keeping intensity high. A client who wants to progress but has stalled needs plateau-detection, not this.
 ---
 
 # Maintenance

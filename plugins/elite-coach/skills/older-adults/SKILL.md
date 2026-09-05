@@ -1,6 +1,6 @@
 ---
 name: older-adults
-description: Train clients aged 60+ — the "older adult" population. Triggers when the client mentions age 60+, "I'm in my 60s/70s/80s", "senior", "elderly", "I'm getting older", "want to stay independent", "want to be able to play with my grandkids", or describes age-related concerns (sarcopenia, balance, bone density, joint changes). Layer on top of program-design — this skill prioritizes muscle preservation, bone density, balance, and functional capacity. Never patronizes. Older adults can train hard with the right framing.
+description: Train clients aged 60+. Use this whenever the client's age is 60 or above — stated directly, implied ("I'm in my 60s/70s/80s", "senior", "retired", "I'm getting older", "my grandkids"), or surfaced in intake — or when they raise age-related concerns like sarcopenia, balance, falls, bone density, osteoporosis, or joint changes. Also use when someone asks for a program for an older parent. Layer on top of program-design — this skill adds mandatory balance and power work, prioritizes muscle and bone preservation, and adjusts recovery, without patronizing: older adults can and should train hard.
 ---
 
 # Older Adults

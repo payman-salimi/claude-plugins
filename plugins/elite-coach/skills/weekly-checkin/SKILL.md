@@ -1,6 +1,6 @@
 ---
 name: weekly-checkin
-description: Run a weekly accountability and progression review for a client on an active program. Triggers on phrases like "weekly check-in", "review my week", "how did this week go", "I trained 3 days this week", "log my workouts", "I weighed in", "update on my program", or any time a client reports back on training. Decides whether to push (add load/volume), hold (run another week of the same), regress (drop volume/load), or deload. Re-triggers program-design only if a structural change is warranted; otherwise updates the existing block.
+description: Run a weekly accountability and progression review for a client on an active program, and decide whether to push (add load/volume), hold, regress, or deload. Use this any time a client reports back on training — "weekly check-in", "review my week", "how did this week go", "I trained 3 days this week", "log my workouts", "I weighed in", "here are my numbers", "update on my program" — even a casual one-line update like "hit 225 on squat today" counts. Re-triggers program-design only if a structural change is warranted; otherwise updates the existing block and the tracker.
 ---
 
 # Weekly Check-in
@@ -14,7 +14,7 @@ By the end of the check-in you must land on **one** of these:
 1. **Push** — increase load, add a set, or shorten rest on lifts that hit the top of the rep range.
 2. **Hold** — run the same week again. Used when adherence was poor or recovery was poor.
 3. **Regress** — back off load 10% on lifts that stalled. Address why (sleep, nutrition, stress).
-4. **Deload** — fully reduce volume to ~50% and intensity to ~70% for one week. Used after 4–6 hard weeks or signs of accumulated fatigue.
+4. **Deload** — reduce volume to 50–60% and intensity to ~70% for one week. Used after 4–6 hard weeks or signs of accumulated fatigue.
 5. **Re-program** — the situation changed (injury, life event, goal shift, plateau). Re-run `program-design`.
 
 ## Data to collect
@@ -110,11 +110,11 @@ THIS WEEK
 NEXT CHECK-IN: [date, 7 days out]
 ```
 
-Then update the .xlsx tracker with the new targets for next week. Save the new tracker as `week-[N+1]-tracker.xlsx`.
+Then update the tracker for next week: edit the program JSON that `program-design` saved alongside the tracker (new loads, sets, or a deload multiplier) and rebuild it with `program-design/scripts/build_tracker.py --week [N+1]`. If the JSON isn't available, edit the workbook directly. Save as `week-[N+1]-tracker.xlsx` in the same folder.
 
 ## When the client is making excuses
 
-Per project instructions: don't shame, but don't co-sign. Re-anchor to the goal. Examples:
+Don't shame, but don't co-sign either. Shame makes clients hide data from you, and co-signing makes the goal drift. Re-anchor to the goal. Examples:
 
 - *"I was too busy"* → "What can you commit to this week that you'll actually do? Three 30-min sessions beats zero 60-min sessions."
 - *"I didn't feel like it"* → "Tell me what's going on. Motivation isn't a switch — there's usually something underneath. Sleep? Stress? Boredom with the program?"
@@ -123,7 +123,7 @@ Per project instructions: don't shame, but don't co-sign. Re-anchor to the goal.
 
 ## Closing this skill
 
-End every check-in with one specific question that the client has to answer: **"What's the one thing you'll do this week to make sure you hit at least 4 of the 5 sessions?"**
+End every check-in with one specific question that the client has to answer, tied to their actual plan: **"What's the one thing you'll do this week to make sure you hit [N] of your [M] sessions?"** (For a 4-day plan that might be "all 4"; for a client who managed 2 of 5, it might be "at least 4.")
 
 Their answer is their commitment. Reference it next week.
 
