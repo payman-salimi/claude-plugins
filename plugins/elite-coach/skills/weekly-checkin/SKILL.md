@@ -1,6 +1,6 @@
 ---
 name: weekly-checkin
-description: Run a weekly accountability and progression review for a client on an active program, and decide whether to push (add load/volume), hold, regress, or deload. Use this any time a client reports back on training — "weekly check-in", "review my week", "how did this week go", "I trained 3 days this week", "log my workouts", "I weighed in", "here are my numbers", "update on my program" — even a casual one-line update like "hit 225 on squat today" counts. Re-triggers program-design only if a structural change is warranted; otherwise updates the existing block and the tracker.
+description: Run a weekly accountability and progression review for a client on an active program, and decide whether to push (add load/volume), hold, regress, or deload. Use this any time a client reports back on training ("weekly check-in", "review my week", "how did this week go", "I trained 3 days this week", "log my workouts", "I weighed in", "here are my numbers", "update on my program"). Even a casual one-line update like "hit 225 on squat today" counts. Re-triggers program-design only if a structural change is warranted; otherwise updates the existing block and the tracker.
 ---
 
 # Weekly Check-in
@@ -11,21 +11,21 @@ This skill is the heartbeat of coaching. Programs only work when somebody actual
 
 By the end of the check-in you must land on **one** of these:
 
-1. **Push** — increase load, add a set, or shorten rest on lifts that hit the top of the rep range.
-2. **Hold** — run the same week again. Used when adherence was poor or recovery was poor.
-3. **Regress** — back off load 10% on lifts that stalled. Address why (sleep, nutrition, stress).
-4. **Deload** — reduce volume to 50–60% and intensity to ~70% for one week. Used after 4–6 hard weeks or signs of accumulated fatigue.
-5. **Re-program** — the situation changed (injury, life event, goal shift, plateau). Re-run `program-design`.
+1. **Push**, increase load, add a set, or shorten rest on lifts that hit the top of the rep range.
+2. **Hold**, run the same week again. Used when adherence was poor or recovery was poor.
+3. **Regress**, back off load 10% on lifts that stalled. Address why (sleep, nutrition, stress).
+4. **Deload**, reduce volume to 50–60% and intensity to ~70% for one week. Used after 4–6 hard weeks or signs of accumulated fatigue.
+5. **Re-program**, the situation changed (injury, life event, goal shift, plateau). Re-run `program-design`.
 
 ## Data to collect
 
-Walk the client through these in this order. Don't skip — every one of them feeds the decision.
+Walk the client through these in this order. Don't skip any. Every one of them feeds the decision.
 
 ### 1. Adherence
 
 - How many sessions did you actually do this week vs. planned?
 - Of the sessions you did, did you finish each one as written?
-- What got missed and why? (Don't shame — diagnose. Time? Energy? Pain? Motivation?)
+- What got missed and why? (Don't shame, diagnose. Time? Energy? Pain? Motivation?)
 
 ### 2. Performance
 
@@ -41,7 +41,7 @@ If they tracked in the .xlsx, ask them to share the numbers or a screenshot.
 - Stress level (1–10)
 - Energy level walking into sessions (1–10)
 - Any new pain or aggravation? Where? Which movement triggered it?
-- Soreness — normal/excessive/none
+- Soreness, normal/excessive/none
 
 ### 4. Body composition (if a goal)
 
@@ -55,7 +55,7 @@ If they tracked in the .xlsx, ask them to share the numbers or a screenshot.
 - Are you bored / excited / dreading anything?
 - Anything in your life next week that changes what's realistic?
 
-## How to read the data — decision rules
+## How to read the data
 
 Apply these rules in order. The first one that fires wins.
 
@@ -91,7 +91,7 @@ Apply these rules in order. The first one that fires wins.
 Be direct. Don't bury the call in qualifiers. Use this structure:
 
 ```
-📊 WEEK [N] CHECK-IN — [Client]
+📊 WEEK [N] CHECK-IN FOR [Client]
 
 WHAT HAPPENED
 - Sessions: [X of Y planned]
@@ -105,7 +105,7 @@ WHY: [1–2 sentences]
 
 THIS WEEK
 - [Concrete change to the lift or set/rep/load]
-- [Anything the client needs to do off the gym floor — sleep target, protein floor, etc.]
+- [Anything the client needs to do off the gym floor, sleep target, protein floor, etc.]
 
 NEXT CHECK-IN: [date, 7 days out]
 ```
@@ -117,7 +117,7 @@ Then update the tracker for next week: edit the program JSON that `program-desig
 Don't shame, but don't co-sign either. Shame makes clients hide data from you, and co-signing makes the goal drift. Re-anchor to the goal. Examples:
 
 - *"I was too busy"* → "What can you commit to this week that you'll actually do? Three 30-min sessions beats zero 60-min sessions."
-- *"I didn't feel like it"* → "Tell me what's going on. Motivation isn't a switch — there's usually something underneath. Sleep? Stress? Boredom with the program?"
+- *"I didn't feel like it"* → "Tell me what's going on. Motivation isn't a switch. There's usually something underneath. Sleep? Stress? Boredom with the program?"
 - *"It was easy"* → "Then we add load. What was the top set?"
 - *"My back hurt so I skipped"* → That's a flag, not a complaint. Ask details, decide regress or modify.
 
@@ -127,9 +127,17 @@ End every check-in with one specific question that the client has to answer, tie
 
 Their answer is their commitment. Reference it next week.
 
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a trend chart of the top lifts and bodyweight with this week marked, plus a stat tile for the call.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat summary (default), a Slack message to their accountability channel, and the updated tracker for next week in whatever format they already use. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
+
 ## What this skill does NOT do
 
 - Does not auto-push every week regardless of data
 - Does not re-design programs unless `RE-PROGRAM` was the call
-- Does not collect intake data again — assumes profile is current
+- Does not collect intake data again, assumes profile is current
 - Does not give nutrition advice beyond protein/sleep/hydration anchors

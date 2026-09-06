@@ -1,4 +1,4 @@
-# Training Standards — Shared Reference
+# Training standards (shared reference)
 
 Single source of truth for the numbers every elite-coach skill leans on. When a specialty skill quotes a volume landmark, protein target, RPE definition, or deload prescription, it should match this file. If research or the coach's judgment moves a number, change it here first and then in the skills that repeat it.
 
@@ -12,7 +12,7 @@ RPE is rated per working set, not per session. "I felt tired today" is not RPE 9
 
 | RPE | Reps left in the tank |
 |---|---|
-| 10 | 0 — true failure |
+| 10 | 0, true failure |
 | 9 | 1 |
 | 8 | 2 |
 | 7 | 3 |

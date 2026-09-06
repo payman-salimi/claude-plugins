@@ -1,4 +1,4 @@
-# Joint Angle Standards — Exercise Form Reference
+# Joint angle standards for exercise form
 
 Biomechanical reference values used by the form-correction skill. All angles in degrees, measured from 2D normalized landmarks (x, y plane). Z depth is noted where relevant but treated as supporting signal only.
 
@@ -45,7 +45,7 @@ Where A-B-C are three landmarks with B at the vertex. Angles are always 0–180�
 | Hip angle | 45–65° | Increases progressively | 170–180° |
 | Knee angle | 65–85° | Increases progressively | 170–180° |
 | Spine lean from vertical | 40–55° | Decreases as bar rises | 0–10° |
-| Hip rise rate | Hip and bar rise at equal rate — no early hip rise | — | — |
+| Hip rise rate | Hip and bar rise at equal rate, no early hip rise | n/a |, |
 
 **Early hip rise flag**: If hip angle increases by > 15° in the first 20% of the pull while knee angle increases < 5°, hips are rising too fast.
 
@@ -55,7 +55,7 @@ Where A-B-C are three landmarks with B at the vertex. Angles are always 0–180�
 |---|---|---|
 | Hip angle | 30–55° | 170–180° |
 | Knee angle | 55–80° | 170–180° |
-| Stance width | Feet outside shoulder width — landmark confirmation: ankle landmarks wider than shoulder landmarks | — |
+| Stance width | Feet outside shoulder width, landmark confirmation: ankle landmarks wider than shoulder landmarks | n/a |
 | Trunk lean | 20–40° (more upright than conventional) | 0–10° |
 
 ### Romanian / Stiff-leg
@@ -99,7 +99,7 @@ Where A-B-C are three landmarks with B at the vertex. Angles are always 0–180�
 | Measurement | Rack position | Lockout |
 |---|---|---|
 | Elbow angle | 80–95° | 165–175° |
-| Shoulder angle | 70–90° (elbows slightly in front of bar) | Arms by ears — shoulder/wrist x-coordinates aligned |
+| Shoulder angle | 70–90° (elbows slightly in front of bar) | Arms by ears, shoulder/wrist x-coordinates aligned |
 | Trunk lean | 0–10° backward lean acceptable at lockout | Same |
 
 **Lumbar extension warning**: Spine lean > 20° backward at lockout = using lumbar hyperextension to complete the rep. Rib flare + forward hip = the signature.
@@ -135,7 +135,7 @@ Where A-B-C are three landmarks with B at the vertex. Angles are always 0–180�
 | Measurement | Extended | Contracted |
 |---|---|---|
 | Elbow angle | 165–175° | 75–95° |
-| Shoulder retraction | Visible in screenshot — blade should retract at contraction | — |
+| Shoulder retraction | Visible in screenshot, blade should retract at contraction | n/a |
 
 ---
 
@@ -146,7 +146,7 @@ Where A-B-C are three landmarks with B at the vertex. Angles are always 0–180�
 | Front knee angle | 85–100° | 85–100° | 85–95° |
 | Rear knee angle | 85–100° (ideally just off floor) | 85–100° | 90–100° |
 | Trunk lean | 5–15° forward | 5–15° forward | 5–15° forward |
-| Front knee tracking | Knee over 2nd toe — no valgus | Same | Same |
+| Front knee tracking | Knee over 2nd toe, no valgus | Same | Same |
 
 **Knee over toe flag**: Front knee x-coordinate moves medially past the ankle x-coordinate = valgus collapse. Corrective: glute/hip strengthening + cue.
 
@@ -171,8 +171,8 @@ Asymmetry ≥ flag threshold = note it, don't alarm. Recommend single-leg / unil
 |---|---|---|
 | True side (90° from athlete) | Spine lean, hip angle, knee angle, ankle dorsiflexion | Best |
 | Front-facing | Knee valgus/varus, shoulder symmetry, lateral shift | Best for asymmetry |
-| Diagonal (45°) | Partial read on all — use with caution | Acceptable |
-| Behind athlete | Knee tracking, hip width — spine and hip angle unreliable | Poor for most |
+| Diagonal (45°) | Partial read on all, use with caution | Acceptable |
+| Behind athlete | Knee tracking, hip width, spine and hip angle unreliable | Poor for most |
 | Overhead | Not useful for standard lifting | Avoid |
 
 When side view is available: spine and sagittal plane angles are reliable.

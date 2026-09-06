@@ -1,11 +1,11 @@
 ---
 name: older-adults
-description: Train clients aged 60+. Use this whenever the client's age is 60 or above — stated directly, implied ("I'm in my 60s/70s/80s", "senior", "retired", "I'm getting older", "my grandkids"), or surfaced in intake — or when they raise age-related concerns like sarcopenia, balance, falls, bone density, osteoporosis, or joint changes. Also use when someone asks for a program for an older parent. Layer on top of program-design — this skill adds mandatory balance and power work, prioritizes muscle and bone preservation, and adjusts recovery, without patronizing: older adults can and should train hard.
+description: Train clients aged 60+. Use this whenever the client's age is 60 or above (stated directly, implied by "I'm in my 60s/70s/80s", "senior", "retired", "I'm getting older", "my grandkids", or surfaced in intake), or when they raise age-related concerns like sarcopenia, balance, falls, bone density, osteoporosis, or joint changes. Also use when someone asks for a program for an older parent. Layered on top of program-design, this skill adds mandatory balance and power work, prioritizes muscle and bone preservation, and adjusts recovery, without patronizing: older adults can and should train hard.
 ---
 
 # Older Adults
 
-Sarcopenia is the enemy. So is detraining. So is the assumption that older adults can't train hard. They can, and they should — the evidence on resistance training in the 60+ population is overwhelmingly positive for longevity, independence, fall prevention, and quality of life.
+Sarcopenia is the enemy. So is detraining. So is the assumption that older adults can't train hard. They can, and they should, the evidence on resistance training in the 60+ population is overwhelmingly positive for longevity, independence, fall prevention, and quality of life.
 
 The only reason to train someone differently because they're older is to respect:
 1. Recovery is slightly slower (more rest between hard sessions)
@@ -15,7 +15,7 @@ The only reason to train someone differently because they're older is to respect
 
 That's it. Programming is still strength training, with care for the above.
 
-## Hard rules — non-negotiable
+## Hard rules
 
 1. **Medical clearance required.** Cardiovascular events, falls, and asymptomatic conditions are more common at this age. PAR-Q clearance + recent doctor's visit is mandatory before pushing intensity.
 2. **Never assume frailty.** Test before you assume. A 70-year-old who's been active their whole life lifts more than most 30-year-olds.
@@ -33,7 +33,7 @@ That's it. Programming is still strength training, with care for the above.
 | Balance work optional | Balance work in every warm-up |
 | Eccentric tempo standard | Slightly longer eccentric (3–4 sec down) |
 | Recovery: 48 hrs | Recovery: 48–72 hrs after a hard session |
-| 3 sets x 8–12 hypertrophy | 3 sets x 8–12 still works — well |
+| 3 sets x 8–12 hypertrophy | 3 sets x 8–12 still works, well |
 | Power work optional | Power work mandatory |
 
 ## Programming priorities, in order
@@ -134,7 +134,7 @@ These are not optional. Joint range of motion preserves function.
 
 ### Cardiovascular conditions
 
-- Get specific clearance — what's the cap on heart rate? Any meds (beta blockers) that change HR response?
+- Get specific clearance, what's the cap on heart rate? Any meds (beta blockers) that change HR response?
 - Warm up longer (10–15 min)
 - Build conditioning gradually
 - Watch for signs: chest pain, dizziness, severe SOB → stop, evaluate
@@ -158,13 +158,21 @@ These are not optional. Joint range of motion preserves function.
 
 ## The motivation framing
 
-Older adults are often dismissed or babied. Don't. They came to a coach for a reason — they want to be capable. Speak to that.
+Older adults are often dismissed or babied. Don't. They came to a coach for a reason. They want to be capable. Speak to that.
 
-> "Strength training is the closest thing to a fountain of youth that exists. We're going to keep you strong, balanced, and capable so you can do everything you want to do for the next 30 years. You're not too old to lift hard — you're old enough to know to lift smart. Let's get to work."
+> "Strength training is the closest thing to a fountain of youth that exists. We're going to keep you strong, balanced, and capable so you can do everything you want to do for the next 30 years. You're not too old to lift hard. You're old enough to know to lift smart. Let's get to work."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a session structure card showing where balance, power, and strength work sit in each day.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default), a printed-friendly Doc or PDF (many clients in this group prefer paper), and the tracker. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not patronize or assume the client is fragile
 - Does not skip strength work in favor of "senior fitness" pablum
 - Does not ignore medical clearance requirements
-- Does not assume all older adults are the same — a 65-year-old marathoner and an 80-year-old who hasn't trained in decades are entirely different program builds
+- Does not assume all older adults are the same, a 65-year-old marathoner and an 80-year-old who hasn't trained in decades are entirely different program builds

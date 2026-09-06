@@ -1,11 +1,11 @@
 ---
 name: fat-loss
-description: Programming specialty for fat loss — preserve muscle and strength while driving a sustainable caloric deficit through training and lifestyle. Use this whenever the client's goal is losing weight or fat — "lose fat", "drop body fat", "cut", "lean out", "lose X pounds", "get shredded", "fat loss", "weight loss", "drop weight", "fit into my old jeans", "get ready for a wedding/beach" — even when they phrase it as a number on the scale rather than "fat loss". Layer on top of program-design — this skill sets the cardio/strength split, volume and intensity caps, and calorie/protein anchors. If they also want to build muscle at the same time, body-recomp takes the lead instead.
+description: Programming specialty for fat loss that preserves muscle and strength while driving a sustainable caloric deficit through training and lifestyle. Use this whenever the client's goal is losing weight or fat ("lose fat", "drop body fat", "cut", "lean out", "lose X pounds", "get shredded", "fat loss", "weight loss", "drop weight", "fit into my old jeans", "get ready for a wedding/beach"), even when they phrase it as a number on the scale rather than "fat loss". Layered on top of program-design, this skill sets the cardio/strength split, volume and intensity caps, and calorie/protein anchors. If they also want to build muscle at the same time, body-recomp takes the lead instead.
 ---
 
 # Fat Loss
 
-The mistake most fat-loss programs make: they turn into cardio programs and abandon strength. The client loses weight — and a lot of it is muscle. They end up "skinny fat" with worse body composition than they started.
+The mistake most fat-loss programs make: they turn into cardio programs and abandon strength. The client loses weight, and a lot of it is muscle. They end up "skinny fat" with worse body composition than they started.
 
 Do this instead: **train for strength, eat for fat loss.** The deficit comes from food and a moderate dose of cardio. Strength training preserves the muscle that makes the lower body weight actually look better.
 
@@ -17,7 +17,7 @@ Do this instead: **train for strength, eat for fat loss.** The deficit comes fro
 4. **Sleep, stress, and adherence beat training and macros.** Most fat-loss failures are adherence, not metabolism.
 5. **The deficit should be moderate.** 0.5–1.0% bodyweight per week is the sustainable rate. Faster than that = muscle loss + rebound risk.
 
-## Calorie deficit math (high level — refer to RD or nutrition-coach for precision)
+## Calorie deficit math (high level, refer to an RD or nutrition-coach for precision)
 
 - Maintenance: bodyweight (kg) × 30–35 kcal for moderate activity
 - Aggressive cut (advanced lifter, low BF%): 25–30% deficit (e.g., 750 cal off maintenance)
@@ -35,14 +35,14 @@ Do this instead: **train for strength, eat for fat loss.** The deficit comes fro
 
 In a cut, the goal of strength training is **muscle retention**, not aggressive overload. Most programs should:
 
-- Keep volume moderate (10–15 hard sets/muscle/week — not the 18–22 of a hypertrophy phase)
-- Keep intensity high enough to maintain (RPE 7–8 on compounds — same loads, slightly fewer total sets)
-- Avoid pushing PRs deep into a cut — it eats recovery you don't have
-- Maintain frequency (don't drop sessions to "save energy" — drop volume per session instead)
+- Keep volume moderate (10–15 hard sets/muscle/week, not the 18–22 of a hypertrophy phase)
+- Keep intensity high enough to maintain (RPE 7–8 on compounds, same loads, slightly fewer total sets)
+- Avoid pushing PRs deep into a cut. It eats recovery you don't have
+- Maintain frequency (don't drop sessions to "save energy", drop volume per session instead)
 
 Translate to a 4-day program:
 
-**Day 1 — Upper**
+**Day 1, Upper**
 - Bench press 3x6 @ RPE 7
 - Bent-over row 3x6
 - Incline DB press 3x8
@@ -50,16 +50,16 @@ Translate to a 4-day program:
 - Lateral raise 2x12
 - Tricep pushdown 2x10
 
-**Day 2 — Lower**
+**Day 2, Lower**
 - Squat 3x6 @ RPE 7
 - RDL 3x8
 - Leg press 2x10
 - Leg curl 2x12
 - Calf raise 3x12
 
-**Day 3 — Cardio (Z2 or moderate intervals)**
+**Day 3, Cardio (Z2 or moderate intervals)**
 
-**Day 4 — Upper**
+**Day 4, Upper**
 - Incline press 3x8
 - Pull-up 3x6–10
 - DB shoulder press 3x8
@@ -67,15 +67,15 @@ Translate to a 4-day program:
 - Curl 2x12
 - Skull crusher 2x10
 
-**Day 5 — Lower**
+**Day 5, Lower**
 - Front squat 3x8
 - Hip thrust 3x10
 - Lunge 2x10/leg
 - Leg curl 2x12
 
-**Day 6 — Cardio (Z2)**
+**Day 6, Cardio (Z2)**
 
-**Day 7 — Rest**
+**Day 7, Rest**
 
 This is fewer total sets than a hypertrophy block, but enough to preserve muscle. Compounds stay loaded.
 
@@ -85,9 +85,9 @@ Cardio adds to the deficit without crushing recovery if dosed right.
 
 ### Mix to use
 
-- **Zone 2 (steady, conversational)** — 60–70% max HR, can talk in full sentences. Builds aerobic base, low recovery cost. 30–60 min per session.
-- **Zone 4 intervals** — 4–6 min hard / 2–3 min easy. Higher cal burn per minute, higher recovery cost. 20–30 min total.
-- **Walking** — the underrated tool. 10,000–12,000 steps/day baseline can drive 200–400 cal/day at zero recovery cost.
+- **Zone 2 (steady, conversational)**, 60–70% max HR, can talk in full sentences. Builds aerobic base, low recovery cost. 30–60 min per session.
+- **Zone 4 intervals**, 4–6 min hard / 2–3 min easy. Higher cal burn per minute, higher recovery cost. 20–30 min total.
+- **Walking**, the underrated tool. 10,000–12,000 steps/day baseline can drive 200–400 cal/day at zero recovery cost.
 
 ### Weekly target
 
@@ -139,7 +139,7 @@ Don't cut indefinitely. Reverse out of a cut by adding ~100 cal/week back to mai
 
 ### Beginners
 
-True novices can lose fat AND build muscle simultaneously (the "newbie gains" window). Run hypertrophy programming with a slight deficit (10–15%) — they get both.
+True novices can lose fat AND build muscle simultaneously (the "newbie gains" window). Run hypertrophy programming with a slight deficit (10–15%). They get both.
 
 ### Advanced / lean clients
 
@@ -161,7 +161,7 @@ Cut at slower rate (0.25–0.5% bodyweight/week). Protein floor at the top of th
 
 Cuts are mentally hard. Build accountability:
 - Pre-set the duration: "12 weeks. We'll review at week 6."
-- Plan for travel, social events, holidays — give them a "maintenance day" framework
+- Plan for travel, social events, holidays, give them a "maintenance day" framework
 - Manage hunger: high-volume foods (vegetables, lean protein), water, fiber
 - Manage sleep: sleep loss = hunger, low willpower, poor recovery
 
@@ -172,11 +172,19 @@ When they hit a stall:
 
 ## Communication to the client
 
-> "Two things matter here: keep your strength, keep showing up. The scale will follow if your food, your protein, your sleep, and your steps line up. We're not turning this into a cardio grind — strength training is what makes the body composition actually look good when the weight comes off. Trust the process. We check in weekly, we adjust if we need to."
+> "Two things matter here: keep your strength, keep showing up. The scale will follow if your food, your protein, your sleep, and your steps line up. We're not turning this into a cardio grind. Strength training is what makes the body composition actually look good when the weight comes off. Trust the process. We check in weekly, we adjust if we need to."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a projected bodyweight line at the target rate with the review checkpoints marked.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default), a Google Sheet or Excel tracker with the weekly weight, tape, and steps columns, and a Slack check-in cadence if they use Slack. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not prescribe specific macros (refer to RD or nutrition-coach skill)
-- Does not run very-low-calorie crash diets — they cost muscle, strength, and adherence, and the weight comes back
+- Does not run very-low-calorie crash diets. They cost muscle, strength, and adherence, and the weight comes back
 - Does not abandon strength work for cardio
 - Does not work alongside hypertrophy goals at full intensity (use `body-recomp` if both are wanted)

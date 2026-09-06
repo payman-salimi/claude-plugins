@@ -1,11 +1,11 @@
 ---
 name: hypertrophy
-description: Programming specialty for muscle gain. Use this whenever the client's goal is building muscle — "gain muscle", "get bigger", "build size", "put on mass", "hypertrophy", "lean bulk", "bulk", "muscle gain", "bodybuilding", "I want to look bigger", "build my arms/shoulders/legs/chest/back", "fill out my shirt" — or any goal that amounts to growth, even if phrased casually. Layer on top of program-design — this skill sets volume landmarks, intensity, frequency, and exercise selection optimized for hypertrophy. If they also want to lose fat at the same time, body-recomp takes the lead instead.
+description: Programming specialty for muscle gain. Use this whenever the client's goal is building muscle ("gain muscle", "get bigger", "build size", "put on mass", "hypertrophy", "lean bulk", "bulk", "muscle gain", "bodybuilding", "I want to look bigger", "build my arms/shoulders/legs/chest/back", "fill out my shirt"), or any goal that amounts to growth, even if phrased casually. Layered on top of program-design, this skill sets volume landmarks, intensity, frequency, and exercise selection optimized for hypertrophy. If they also want to lose fat at the same time, body-recomp takes the lead instead.
 ---
 
 # Hypertrophy
 
-Muscle growth has three drivers: **mechanical tension**, **metabolic stress**, and **muscle damage** — in roughly that order of importance. Mechanical tension is by far the largest. Train to maximize it without burying the client in fatigue.
+Muscle growth has three drivers: **mechanical tension**, **metabolic stress**, and **muscle damage**, in roughly that order of importance. Mechanical tension is by far the largest. Train to maximize it without burying the client in fatigue.
 
 ## The volume answer
 
@@ -27,14 +27,14 @@ A "hard set" = within 0–3 reps of failure (RPE 7+).
 Each muscle group benefits from **2–3 sessions per week**. This spreads volume, allows intensity to stay high per set, and drives more total weekly stimulus than smashing one muscle once per week.
 
 Implications for splits:
-- **Upper/Lower 4x/week** — each muscle hit 2x. Default for most.
-- **Push/Pull/Legs 6x/week** — each muscle hit 2x. Good for advanced hypertrophy.
-- **Full body 3x/week** — each muscle hit 3x but with less per-session volume. Best for intermediates.
-- **Bro split (chest day, back day, etc.)** — each muscle hit 1x. Works for advanced who absolutely max volume per session, but generally suboptimal.
+- **Upper/Lower 4x/week**, each muscle hit 2x. Default for most.
+- **Push/Pull/Legs 6x/week**, each muscle hit 2x. Good for advanced hypertrophy.
+- **Full body 3x/week**, each muscle hit 3x but with less per-session volume. Best for intermediates.
+- **Bro split (chest day, back day, etc.)**, each muscle hit 1x. Works for advanced who absolutely max volume per session, but generally suboptimal.
 
 ## Intensity & rep ranges
 
-Hypertrophy works across a wide rep range — **6 to 30 reps** all build muscle as long as proximity to failure is sufficient. But practical sweet spots:
+Hypertrophy works across a wide rep range, **6 to 30 reps** all build muscle as long as proximity to failure is sufficient. But practical sweet spots:
 
 | Rep range | Best for |
 |---|---|
@@ -45,9 +45,9 @@ Hypertrophy works across a wide rep range — **6 to 30 reps** all build muscle 
 
 Use a mix. Compounds in the lower range, accessories higher.
 
-Cap RPE at 8–9 for most working sets. RPE 10 (true failure) sparingly — once or twice per week per muscle, max. Failure cooks recovery.
+Cap RPE at 8–9 for most working sets. RPE 10 (true failure) sparingly, once or twice per week per muscle, max. Failure cooks recovery.
 
-## Exercise selection — the right tool for each muscle
+## Pick the right exercise for each muscle
 
 Pick exercises by **biomechanical fit to the target muscle**, not tradition:
 
@@ -78,7 +78,7 @@ Pick exercises by **biomechanical fit to the target muscle**, not tradition:
 
 ### Hamstrings
 - Romanian deadlift (hip-dominant)
-- Leg curl, lying or seated (knee-dominant — both biases needed)
+- Leg curl, lying or seated (knee-dominant, both biases needed)
 - Stiff-leg deadlift
 - Glute-ham raise
 
@@ -97,10 +97,10 @@ Use 2–3 different exercises per muscle group per week to hit different fiber r
 
 ## Tempo & technique
 
-- **Slow, controlled eccentric** (2–3 sec down) — drives mechanical tension and time under tension
-- **Pause at stretch** (1 sec) — increases tension at peak length, where most growth happens
-- **Concentric: explosive intent** but controlled — don't bounce
-- **Full ROM** — partials have limited place; full stretch matters
+- **Slow, controlled eccentric** (2–3 sec down), drives mechanical tension and time under tension
+- **Pause at stretch** (1 sec), increases tension at peak length, where most growth happens
+- **Concentric: explosive intent** but controlled, don't bounce
+- **Full ROM**, partials have limited place; full stretch matters
 
 Mind-muscle connection works. Cue the target muscle. Slow it down on the eccentric to feel the muscle, especially for upper-body and isolation work.
 
@@ -111,26 +111,26 @@ Mind-muscle connection works. Cue the target muscle. Slow it down on the eccentr
 - Isolation work (curls, lateral raises, leg extensions): 60–90 sec
 - Drop sets / rest-pause / metabolic finishers: 30–45 sec
 
-Don't rush rest. Recovery between sets allows the next set to be productive — short rest in compound work bleeds intensity for no benefit.
+Don't rush rest. Recovery between sets allows the next set to be productive. Short rest in compound work bleeds intensity for no benefit.
 
 ## Cardio for hypertrophy
 
 The minimum effective dose:
 - 2 sessions/week of Zone 2 (20–30 min) for cardiovascular health
 - Optional 1 short interval session (10–15 min) for VO2max
-- Don't add more — it eats into recovery for muscle growth
+- Don't add more. It eats into recovery for muscle growth
 
 If the client is also targeting fat loss alongside hypertrophy, bias toward Z2 over HIIT and read `body-recomp`.
 
 ## Calorie surplus
 
-Hypertrophy is a building goal — building requires food. Target a **modest surplus** of 200–300 cal/day above maintenance. Aggressive bulking (500+ surplus) puts on more fat than muscle and is rarely worth the cleanup.
+Hypertrophy is a building goal, and building requires food. Target a **modest surplus** of 200–300 cal/day above maintenance. Aggressive bulking (500+ surplus) puts on more fat than muscle and is rarely worth the cleanup.
 
-Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor that — even if calories shift, protein floors don't.
+Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor that. Even if calories shift, protein floors don't.
 
 ## Sample 4-day upper/lower split
 
-**Day 1 — Upper (heavy)**
+**Day 1, Upper (heavy)**
 - Bench press 4x6 @ RPE 8
 - Bent-over row 4x6 @ RPE 8
 - Incline DB press 3x10
@@ -139,7 +139,7 @@ Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor
 - Bicep curl 3x10
 - Tricep pushdown 3x12
 
-**Day 2 — Lower (heavy)**
+**Day 2, Lower (heavy)**
 - Squat 4x6 @ RPE 8
 - RDL 3x8
 - Leg press 3x10
@@ -147,9 +147,9 @@ Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor
 - Standing calf raise 4x10
 - Plank 3x30 sec
 
-**Day 3 — Rest** (or Z2 cardio)
+**Day 3, Rest** (or Z2 cardio)
 
-**Day 4 — Upper (volume)**
+**Day 4, Upper (volume)**
 - Incline barbell press 4x10 @ RPE 7–8
 - Pull-up 4x6–10
 - Dumbbell shoulder press 3x10
@@ -158,7 +158,7 @@ Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor
 - Hammer curl 3x12
 - Skull crusher 3x10
 
-**Day 5 — Lower (volume)**
+**Day 5, Lower (volume)**
 - Front squat 4x8
 - Hip thrust 3x10
 - Walking lunge 3x10/leg
@@ -166,13 +166,13 @@ Protein: **1.6–2.2 g/kg bodyweight per day**. Spread across 3–5 meals. Floor
 - Seated calf raise 3x15
 - Cable abs 3x15
 
-**Day 6 — Rest** (or Z2 cardio)
+**Day 6, Rest** (or Z2 cardio)
 
-**Day 7 — Rest**
+**Day 7, Rest**
 
 That's 14–18 hard sets per major muscle group per week. Adjust higher if recovery is great.
 
-## Progressive overload model — double progression
+## Progress with double progression
 
 Within each set range, progress by:
 1. Hit the top of the rep range across all working sets at RPE ≤ 8
@@ -194,9 +194,17 @@ Run hypertrophy blocks in 4–6 week cycles:
 
 This keeps progressive overload going across blocks, not just within them.
 
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to the volume ramp across the block (hard sets per muscle per week).
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default), the Excel tracker or Google Sheet, and an Artifact page. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
+
 ## What this skill does NOT do
 
-- Does not magically build muscle without protein and sleep — flag those gaps
+- Does not magically build muscle without protein and sleep, flag those gaps
 - Does not chase volume past productive ranges
-- Does not assume all body parts respond the same — adjust volume distribution to weak points
+- Does not assume all body parts respond the same, adjust volume distribution to weak points
 - Does not run a hypertrophy block while the client is in a heavy fat-loss deficit (read `body-recomp` instead)

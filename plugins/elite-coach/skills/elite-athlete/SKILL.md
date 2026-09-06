@@ -1,15 +1,15 @@
 ---
 name: elite-athlete
-description: Train highly conditioned, advanced clients — competitive athletes, advanced powerlifters/bodybuilders, multi-year consistent lifters with plateau-resistant baselines. Use this whenever the client says "elite", "advanced", "competitive", "I powerlift", "I compete", "national level", "meet prep", "peaking", "I've been training 5+ years", quotes lifts that are clearly advanced (roughly 1.5x bodyweight squat for women, 2x for men), or asks for block periodization, RPE-based programming, or a peaking block — even if they never use the word elite. Layer on top of program-design — this skill brings periodization, specificity, peaking blocks, and elite-level recovery prescription, and first verifies the client is actually advanced rather than intermediate.
+description: Train highly conditioned, advanced clients: competitive athletes, advanced powerlifters and bodybuilders, and multi-year consistent lifters with plateau-resistant baselines. Use this whenever the client says "elite", "advanced", "competitive", "I powerlift", "I compete", "national level", "meet prep", "peaking", "I've been training 5+ years", quotes lifts that are clearly advanced (roughly 1.5x bodyweight squat for women, 2x for men), or asks for block periodization, RPE-based programming, or a peaking block, even if they never use the word elite. Layered on top of program-design, this skill brings periodization, specificity, peaking blocks, and elite-level recovery prescription, and first verifies the client is actually advanced rather than intermediate.
 ---
 
 # Elite Athlete
 
-This client doesn't need motivation, exercise basics, or hand-holding. They need precision. Bring expert-level programming, dialed periodization, and high-information communication. Skip the explanations of why squats matter — they know.
+This client doesn't need motivation, exercise basics, or hand-holding. They need precision. Bring expert-level programming, dialed periodization, and high-information communication. Skip the explanations of why squats matter, they know.
 
 ## Markers of "elite"
 
-Use this to confirm — if they don't fit, they may actually be intermediate and trying on the label:
+Use this to confirm. If they don't fit, they may actually be intermediate and trying on the label:
 
 - 4+ years of consistent strength training
 - Compound lifts at advanced thresholds:
@@ -17,7 +17,7 @@ Use this to confirm — if they don't fit, they may actually be intermediate and
   - Bench: ≥ 1.5x BW (M), ≥ 1x BW (F)
   - Deadlift: ≥ 2.5x BW (M), ≥ 2x BW (F)
 - Or competitive standing in their sport (powerlifter, bodybuilder, runner, weightlifter, athlete)
-- Diminishing returns — they've earned their plateaus through hard, smart training
+- Diminishing returns. They've earned their plateaus through hard, smart training
 
 If they don't fit, they're intermediate. Be honest with them. Tell them their gains aren't yet on the elite asymptote and program accordingly with `program-design` defaults.
 
@@ -34,7 +34,7 @@ Generic programming stops working. Every block has a specific intent:
 
 Pick the block based on stated goal and competition (or assessment) date.
 
-### 2. Periodization model — pick one and commit
+### 2. Pick one periodization model and commit
 
 **Linear periodization**: hypertrophy → strength → peak. Best for athletes peaking for one event.
 
@@ -53,7 +53,7 @@ Elite athletes know what RPE 8 feels like. Use it. Prescribe like:
 - "Squat: 5x3 @ RPE 8, leave 2 in the tank on the top set, drop 5–10% if RPE 9 hits earlier"
 - Not "squat: 5x3 @ 250 lbs"
 
-This builds in adaptation to daily readiness — non-negotiable at elite level.
+This builds in adaptation to daily readiness, non-negotiable at elite level.
 
 ### 4. Volume management
 
@@ -109,8 +109,8 @@ Don't over-explain basics. Match their vocabulary.
 
 If sport is the goal, cardio prescription is sport-specific. Otherwise:
 
-- 1–2 Z2 sessions/week (45–90 min walks, easy bike, easy row) — supports work capacity, doesn't interfere with strength
-- 0–1 high-intensity intervals/week — depending on phase. Cut during peaking blocks.
+- 1–2 Z2 sessions/week (45–90 min walks, easy bike, easy row), supports work capacity, doesn't interfere with strength
+- 0–1 high-intensity intervals/week, depending on phase. Cut during peaking blocks.
 
 ## Goal-specific layering
 
@@ -122,15 +122,23 @@ If the elite client also wants:
 
 ## Re-programming cadence
 
-Elites get a new block every 4–6 weeks. Don't run the same program for 12 weeks expecting progress — at this level, novelty and structure both matter for adaptation.
+Elites get a new block every 4–6 weeks. Don't run the same program for 12 weeks expecting progress, at this level, novelty and structure both matter for adaptation.
 
 ## Communication to the client
 
 > "I'm treating you as a peer. I'll prescribe in RPE and percentages, run blocks with specific intent, and I expect honest readiness reporting. If a session calls for RPE 8 and you can't get there, tell me. If you blow past it on a light day, also tell me. Programming is a feedback loop."
 
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a block periodization timeline running to the meet or assessment date.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat block (default), a Google Sheet or Excel tracker with RPE and percentage columns, and an Artifact dashboard for the block. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
+
 ## What this skill does NOT do
 
 - Does not assume the client is genuinely elite without verification (lifts, history, results)
 - Does not water down programming
-- Does not skip recovery prescription — at this level it's the differentiator
+- Does not skip recovery prescription, at this level it's the differentiator
 - Does not work for novices pretending to be advanced (defer back to `program-design` defaults)

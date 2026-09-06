@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercise Form Analyzer — Elite Coach</title>
+  <title>Exercise Form Analyzer by Elite Coach</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -329,7 +329,7 @@
       <div class="section-label">2. Exercise</div>
       <div class="field-group">
         <select id="exerciseSelect">
-          <option value="">— Select exercise —</option>
+          <option value="">Select exercise</option>
           <optgroup label="Lower body">
             <option value="back_squat_low_bar">Back Squat (Low Bar)</option>
             <option value="back_squat_high_bar">Back Squat (High Bar)</option>
@@ -372,7 +372,7 @@
     <div>
       <div class="section-label">Status</div>
       <div class="status-bar" id="statusBar">
-        Ready — upload a video to begin.
+        Ready. Upload a video to begin.
       </div>
       <div style="margin-top: 8px;">
         <div class="progress-wrap">
@@ -404,7 +404,7 @@
     </div>
 
     <div class="frames-strip" id="framesStrip" style="display:none">
-      <h3>Key Frames — click to inspect · screenshot each for Claude</h3>
+      <h3>Key frames (click to inspect, screenshot each for Claude)</h3>
       <div class="frames-row" id="framesRow"></div>
     </div>
 
@@ -416,7 +416,7 @@
 </main>
 
 <script type="module">
-// ─── MediaPipe — static ESM import (avoids file:// CORS issue with script tags) ──
+// ─── MediaPipe static ESM import (avoids file:// CORS issue with script tags) ──
 import { PoseLandmarker, FilesetResolver }
   from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs";
 
@@ -543,7 +543,7 @@ async function loadMediaPipe() {
       ...opts, baseOptions: { modelAssetPath: MODEL_URL, delegate: "GPU" },
     });
   } catch {
-    // GPU delegate unavailable — fall back to CPU
+    // GPU delegate unavailable, fall back to CPU
     poseLandmarker = await PoseLandmarker.createFromOptions(fs, {
       ...opts, baseOptions: { modelAssetPath: MODEL_URL, delegate: "CPU" },
     });
@@ -973,7 +973,7 @@ analyzeBtn.addEventListener("click", async () => {
 
     framesStrip.style.display = "block";
     setProgress(100);
-    setStatus(`✅ Done — ${frames.length} frames analyzed, ${keyFrames.length} key frames selected.`, "done");
+    setStatus(`✅ Done. ${frames.length} frames analyzed, ${keyFrames.length} key frames selected.`, "done");
     exportBtn.disabled = false;
 
   } catch (err) {

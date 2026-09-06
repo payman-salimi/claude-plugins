@@ -1,6 +1,6 @@
 ---
 name: beginner-foundations
-description: Train true novices — clients who have never lifted weights, are returning after 2+ years off, or are intimidated by the gym. Use this whenever the client says "I'm new", "never lifted before", "starting from zero", "I haven't trained in years", "I'm a beginner", "I don't know what I'm doing", "intimidated by the gym", "first time", or their training history is clearly minimal even if they never call themselves a beginner. Layer on top of program-design — this skill replaces fancy splits with a simple full-body linear-progression template that drives fast progress for the first 6–12 months. Not for someone with a solid base who's only been off a few months; program-design defaults handle them.
+description: Train true novices (clients who have never lifted weights, are returning after 2+ years off, or are intimidated by the gym). Use this whenever the client says "I'm new", "never lifted before", "starting from zero", "I haven't trained in years", "I'm a beginner", "I don't know what I'm doing", "intimidated by the gym", "first time", or their training history is clearly minimal even if they never call themselves a beginner. Layered on top of program-design, this skill replaces fancy splits with a simple full-body linear-progression template that drives fast progress for the first 6–12 months. Not for someone with a solid base who's only been off a few months; program-design defaults handle them.
 ---
 
 # Beginner Foundations
@@ -9,7 +9,7 @@ The most common reason new lifters quit is overwhelm. The second is injury from 
 
 ## The novice opportunity
 
-True novices have a once-in-a-lifetime advantage: **linear progression works for months**. Every session, more weight on the bar. This window closes — but for now, capture it. Don't waste it on fancy splits and accessory soup. The big lifts are the program.
+True novices have a once-in-a-lifetime advantage: **linear progression works for months**. Every session, more weight on the bar. This window closes, but for now, capture it. Don't waste it on fancy splits and accessory soup. The big lifts are the program.
 
 ## Programming principles
 
@@ -38,7 +38,7 @@ For the first 8–12 weeks, run **3 sets of 5 reps** for compound lifts (or 3x8�
 
 Why 3x5: sweet spot of strength and skill. Why not 5x5 right away: too much volume early; recovery is the limiter.
 
-### 4. Linear progression — the magic
+### 4. Linear progression is the magic
 
 After every successful session, **add weight** to the lift:
 
@@ -46,7 +46,7 @@ After every successful session, **add weight** to the lift:
 - Dumbbell variations: smallest jump available (often +5 lb total = +2.5 per dumbbell)
 - Accessories: when top of rep range hit at all sets, add weight
 
-When they fail to hit 3x5 at a given weight: re-attempt next session. Fail twice in a row: drop 10% and ramp back. This will happen. It's not a setback — it's how progression works.
+When they fail to hit 3x5 at a given weight: re-attempt next session. Fail twice in a row: drop 10% and ramp back. This will happen. It's not a setback. It's how progression works.
 
 ### 5. Warm-up: short and reliable
 
@@ -55,11 +55,11 @@ When they fail to hit 3x5 at a given weight: re-attempt next session. Fail twice
 - Dynamic warm-up: 5 each of leg swings, arm circles, walking lunges, world's greatest stretch
 - Lift-specific warm-up sets (bar, then 50%, 70%, 90% of working weight x 3–5 reps)
 
-That's the warm-up. Not a 25-minute mobility routine — they don't need it yet, and it eats into time they could spend lifting.
+That's the warm-up. Not a 25-minute mobility routine. They don't need it yet, and it eats into time they could spend lifting.
 
 ### 6. No cardio interference (yet)
 
-For the first 8 weeks, optional 1–2 walks of 30 minutes/week. That's it. Don't pile cardio on a beginner who's already adapting to lifting — recovery is the bottleneck. Cardio comes back in once strength is moving consistently.
+For the first 8 weeks, optional 1–2 walks of 30 minutes/week. That's it. Don't pile cardio on a beginner who's already adapting to lifting. Recovery is the bottleneck. Cardio comes back in once strength is moving consistently.
 
 ### 7. Session length: 45–60 min
 
@@ -67,9 +67,9 @@ A novice does not need 90-minute sessions. Three lifts at 3x5 with proper rest (
 
 ### 8. Tracking: the most important habit
 
-Write everything down. Every set. Every rep. Every weight. The .xlsx tracker from `program-design` is for this. The act of tracking is what makes linear progression work — they can see exactly what to lift today.
+Write everything down. Every set. Every rep. Every weight. The .xlsx tracker from `program-design` is for this. The act of tracking is what makes linear progression work. They can see exactly what to lift today.
 
-## Common beginner pitfalls — get ahead of them
+## Get ahead of common beginner pitfalls
 
 ### Pitfall: chasing programs they saw online
 
@@ -97,7 +97,7 @@ Two missed sessions doesn't mean restarting from zero. Re-enter the program at t
 
 Strength training without enough food = no progress. Tell them:
 - Eat protein at every meal: 1.6–2.2 g per kg bodyweight per day (roughly 0.7–1 g per lb)
-- Don't try to lose weight aggressively in the first 12 weeks — focus on getting strong
+- Don't try to lose weight aggressively in the first 12 weeks, focus on getting strong
 - Sleep 7+ hours
 
 ### Pitfall: confused by gym etiquette / equipment
@@ -128,7 +128,7 @@ This reduces the intimidation that makes them not show up.
 - Dead bug 3x10
 - (optional) Tricep pushdown 2x10
 
-**Schedule:** A, B, A one week. B, A, B the next. (Alternating because deadlifts only happen 1x/week — they're heavy and recovery-intensive.)
+**Schedule:** A, B, A one week. B, A, B the next. (Alternating because deadlifts only happen 1x/week. They're heavy and recovery-intensive.)
 
 **Progression:** add weight every session that all sets x reps were completed. Stall twice in a row → deload 10%, ramp back.
 
@@ -140,11 +140,19 @@ After 12 weeks, reassess. Move to an intermediate template (4-day upper/lower or
 
 ## Communication to the client
 
-> "I want you to leave here in 6 months looking back at today and not recognizing yourself. The plan is simple — three days a week, five lifts, add weight every session. Track everything. Show up. The progress you're going to see in the first three months is the best return on training time you'll ever get in your life. Don't waste it on a complicated plan."
+> "I want you to leave here in 6 months looking back at today and not recognizing yourself. The plan is simple: three days a week, five lifts, add weight every session. Track everything. Show up. The progress you're going to see in the first three months is the best return on training time you'll ever get in your life. Don't waste it on a complicated plan."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to the A/B workout grid and the add-weight rule as a small stepper.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default), the Excel tracker or Google Sheet for logging every set, and an Artifact page for the gym. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not run elaborate splits for novices
-- Does not recommend supplements (basic nutrition only — protein, sleep, food adequacy)
+- Does not recommend supplements (basic nutrition only, protein, sleep, food adequacy)
 - Does not prescribe heavy cardio in the first weeks
-- Does not assume "beginner" = "weak" — beginners can lift heavier than they think, just safely and with progression
+- Does not assume "beginner" = "weak", beginners can lift heavier than they think, just safely and with progression

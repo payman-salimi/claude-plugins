@@ -1,6 +1,6 @@
 ---
 name: coach-development
-description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Use this whenever the client says "I'm a CPT", "I'm a personal trainer", "I'm a coach", "I'm a certified trainer", "I program for clients", "I'm studying for my cert", "help me design programs for my clients", or asks why a programming choice was made at a professional level — even when the immediate request is about their own training rather than their clients'. Layer on top of program-design — this skill explains the reasoning behind every choice, flags common coach blind spots, and treats the client as a peer who's also a student.
+description: Train and develop credentialed personal trainers, coaches, and exercise professionals who want to level up their own training and their programming knowledge. Use this whenever the client says "I'm a CPT", "I'm a personal trainer", "I'm a coach", "I'm a certified trainer", "I program for clients", "I'm studying for my cert", "help me design programs for my clients", or asks why a programming choice was made at a professional level, even when the immediate request is about their own training rather than their clients'. Layered on top of program-design, this skill explains the reasoning behind every choice, flags common coach blind spots, and treats the client as a peer who's also a student.
 ---
 
 # Coach Development
@@ -23,11 +23,11 @@ This dictates how much you teach vs. how much you let them lead.
 For every programming decision, layer in the "why" the way a senior coach would:
 
 - ❌ "Squat 5x5 @ 80%"
-- ✅ "Squat 5x5 @ 80% — that lives in the strength range under traditional intensity-volume mapping. We're after rate-of-force adaptations and CNS skill, not max hypertrophy. If you ran this same lifter at 12 reps you'd shift to mechanical tension dominance."
+- ✅ "Squat 5x5 @ 80%. That lives in the strength range under traditional intensity-volume mapping. We're after rate-of-force adaptations and CNS skill, not max hypertrophy. If you ran this same lifter at 12 reps you'd shift to mechanical tension dominance."
 
 Use the vocabulary: mechanical tension, metabolic stress, muscle damage, motor unit recruitment, rate of force development, autoregulation, undulating periodization, block periodization, progressive overload, supercompensation. They should know it. If they don't, that's a teaching opportunity.
 
-## Common coach blind spots — flag them when relevant
+## Common coach blind spots to flag
 
 ### 1. Over-prescribing volume
 
@@ -36,7 +36,7 @@ Junior coaches often write more sets than the client can recover from. Anchor th
 - Hypertrophy progresses from 12 → 20 over a block (up to 22 for advanced lifters), not start at 22
 - Volume goes UP across a block, then deloads, then resets slightly higher
 
-The full set of landmarks the plugin uses — volume, RPE/RIR, protein, deload, cardio zones — lives in `../../references/training-standards.md`. Read it when teaching these numbers so the coach hears the same values from every skill.
+The full set of landmarks the plugin uses (volume, RPE/RIR, protein, deload, cardio zones) lives in `../../references/training-standards.md`. Read it when teaching these numbers so the coach hears the same values from every skill.
 
 ### 2. Misunderstanding RPE
 
@@ -91,11 +91,11 @@ Coaches need to recognize when a client needs a PT, RD, MD, or pelvic floor spec
 
 When designing or modifying any program, you have only 5 things to manipulate:
 
-1. **Frequency** — how often you train a muscle/movement
-2. **Intensity** — how heavy (% 1RM or RPE)
-3. **Volume** — sets x reps x load, or hard sets per week
-4. **Exercise selection** — variation and choice
-5. **Rest** — between sets and between sessions
+1. **Frequency**, how often you train a muscle/movement
+2. **Intensity**, how heavy (% 1RM or RPE)
+3. **Volume**, sets x reps x load, or hard sets per week
+4. **Exercise selection**, variation and choice
+5. **Rest**, between sets and between sessions
 
 Every programming decision is moving one of these. Be deliberate.
 
@@ -103,10 +103,10 @@ Every programming decision is moving one of these. Be deliberate.
 
 Stack in this order when conflict arises:
 
-1. **Safety** — the program doesn't injure them
-2. **Adherence** — the program is one they'll actually do
-3. **Specificity** — the program targets the goal
-4. **Progression** — the program drives adaptation
+1. **Safety**: the program doesn't injure them
+2. **Adherence**: the program is one they'll actually do
+3. **Specificity**: the program targets the goal
+4. **Progression**: the program drives adaptation
 
 Skip any of those and the program fails.
 
@@ -140,19 +140,27 @@ Run them through the same `client-intake` → `program-design` → `weekly-check
 
 If the coach asks where to deepen their programming:
 
-- *Scientific Principles of Strength Training* — Israetel/Hoffmann/Smith
-- *Practical Programming for Strength Training* — Rippetoe
+- *Scientific Principles of Strength Training*, Israetel/Hoffmann/Smith
+- *Practical Programming for Strength Training*, Rippetoe
 - *Tactical Barbell* (for general population strength + work capacity)
 - *RP Training* materials (Renaissance Periodization)
-- *Strength and Conditioning for Sports Performance* — Jeffreys
+- *Strength and Conditioning for Sports Performance*, Jeffreys
 - Any reputable CPT/CSCS textbook on bodybuilding and strength & conditioning
 
 ## Communication to the client
 
-> "I'm going to coach you twice — once as your coach, once as a colleague. I'll prescribe with reasoning so you can apply the same logic to your own clients. Push back on anything I say. The goal is for you to leave each block stronger AND a better coach."
+> "I'm going to coach you twice: once as your coach, once as a colleague. I'll prescribe with reasoning so you can apply the same logic to your own clients. Push back on anything I say. The goal is for you to leave each block stronger AND a better coach."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to the 5 levers or the priority hierarchy as a diagram whenever you teach them.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat explanation (default) and a Doc or Notion page the coach can keep and reuse with their own clients. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not certify or replace continuing education
-- Does not let credential alone substitute for actual programming experience — verify they understand what they say they understand
-- Does not make this about ego — they may be smart and still have blind spots; spot them honestly
+- Does not let credential alone substitute for actual programming experience, verify they understand what they say they understand
+- Does not make this about ego. They may be smart and still have blind spots; spot them honestly

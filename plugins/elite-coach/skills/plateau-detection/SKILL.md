@@ -1,11 +1,11 @@
 ---
 name: plateau-detection
-description: Diagnose why a client has stalled and prescribe the smallest change that will break the plateau. Use this whenever progress has stopped — "stuck", "plateau", "stopped progressing", "lifts haven't moved", "weight isn't changing", "I'm stalled", "no progress in weeks", "hit a wall" — and also when the client asks indirectly: "is this program still working?", "should I switch programs?", "why isn't the scale moving?", or a weekly-checkin shows the same numbers three weeks running. Layer on top of program-design — this skill works through adherence, recovery, nutrition, and stimulus in order, changes one variable at a time, and only escalates to a full re-program if the cause requires it.
+description: Diagnose why a client has stalled and prescribe the smallest change that will break the plateau. Use this whenever progress has stopped ("stuck", "plateau", "stopped progressing", "lifts haven't moved", "weight isn't changing", "I'm stalled", "no progress in weeks", "hit a wall"), and also when the client asks indirectly: "is this program still working?", "should I switch programs?", "why isn't the scale moving?", or a weekly-checkin shows the same numbers three weeks running. Layered on top of program-design, this skill works through adherence, recovery, nutrition, and stimulus in order, changes one variable at a time, and only escalates to a full re-program if the cause requires it.
 ---
 
 # Plateau Detection
 
-A plateau is a signal, not a sentence. Progress in training is non-linear, and stalling is part of the loop — but stalls have causes, and the causes are diagnosable.
+A plateau is a signal, not a sentence. Progress in training is non-linear, and stalling is part of the loop, but stalls have causes, and the causes are diagnosable.
 
 The job here is to ask the right questions, find the actual cause, and prescribe the smallest effective change. Don't blow up a program because of a 2-week stall when the cause is just under-sleeping.
 
@@ -44,7 +44,7 @@ Recovery debt looks like a plateau but isn't. Sleep <6 hrs avg = plateau. Fix th
 
 ### 3. Nutrition
 
-- Goal-aligned calorie target — actually being hit?
+- Goal-aligned calorie target, actually being hit?
 - Protein at the prescribed floor (1.6+ g/kg for hypertrophy, 2.0+ for fat loss/recomp)?
 - Recent change in eating patterns (travel, holidays, meal-prep collapse)?
 
@@ -60,7 +60,7 @@ If 1–3 are clean, the program may be the issue. Check:
 
 **Variation staleness**: same exercises for 8+ weeks at the same volume? Body has fully adapted to the stimulus.
 
-**Volume too high**: counterintuitively, sometimes the issue is *too much* volume — recovery is the limiter, not stimulus.
+**Volume too high**: counterintuitively, sometimes the issue is *too much* volume. Recovery is the limiter, not stimulus.
 
 ### 5. Goal mismatch
 
@@ -71,9 +71,9 @@ Is the client running the right program for the goal? Common mismatches:
 
 ### 6. Genuine plateau (rare)
 
-If the above are all clean, you may have hit an actual training plateau — programming has stopped producing adaptation. This is the only case that warrants a structural change to the program.
+If the above are all clean, you may have hit an actual training plateau. Programming has stopped producing adaptation. This is the only case that warrants a structural change to the program.
 
-## The fixes — by cause
+## The fix for each cause
 
 ### If adherence is the issue
 
@@ -93,14 +93,14 @@ If the above are all clean, you may have hit an actual training plateau — prog
 
 ### If nutrition is the issue
 
-- Have them log everything for 5 days — actual intake, not estimated
+- Have them log everything for 5 days, actual intake, not estimated
 - Adjust calories or protein based on what's actually happening
-- For fat loss stalls: NEAT may have dropped — push step count back up
+- For fat loss stalls: NEAT may have dropped, push step count back up
 - Refer to RD or nutrition-coach skill for precision
 
 ### If training stimulus is the issue
 
-Pick **one** of these — don't change everything at once:
+Pick **one** of these, don't change everything at once:
 
 **Add load via different rep range**: client stuck at 5x5 squats? Run 4x8 for 4 weeks, then back to 3x5. New stimulus.
 
@@ -118,21 +118,21 @@ Pick **one** of these — don't change everything at once:
 
 ### If goal-program mismatch
 
-Re-run `program-design` with the layered specialty skills aligned to the actual goal. Don't try to patch a wrong program — replace it.
+Re-run `program-design` with the layered specialty skills aligned to the actual goal. Don't try to patch a wrong program, replace it.
 
 ### If true plateau (rare)
 
 Major structural change:
 - Switch periodization model (linear → undulating, undulating → block)
-- Run a "specialization cycle" — one block focused on bringing up the stuck lift, holding everything else
+- Run a "specialization cycle", one block focused on bringing up the stuck lift, holding everything else
 - Take a strategic 1-week off (full rest), then reintroduce
 
 ## The diagnostic conversation
 
-Don't just throw fixes at the client. Walk them through the diagnostic out loud — they need to see the reasoning so they understand the why.
+Don't just throw fixes at the client. Walk them through the diagnostic out loud. They need to see the reasoning so they understand the why.
 
 ```
-🔍 PLATEAU DIAGNOSTIC — [Client name]
+🔍 PLATEAU DIAGNOSTIC FOR [Client name]
 
 WHAT'S STALLED
 - [Lift/metric] hasn't moved since [date]
@@ -183,9 +183,17 @@ Time for a deload, possibly a maintenance block, then back to building. Read `ma
 
 Slowest progress curve in fitness. 4 weeks of no visible change is normal. Don't react to it. Read `body-recomp`.
 
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a flowchart of the diagnostic order with the cause that fired highlighted and the rejected branches visible.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat diagnostic (default), a Doc if they want to share it with a coach, and an updated tracker when the fix changes the plan. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
+
 ## What this skill does NOT do
 
 - Does not auto-rebuild the program at the first stall
 - Does not make multiple changes at once (one variable at a time)
 - Does not assume genetic limit until adherence, recovery, and nutrition are confirmed clean
-- Does not work without honest data — if the client won't track, diagnostics are guesses
+- Does not work without honest data. If the client won't track, diagnostics are guesses

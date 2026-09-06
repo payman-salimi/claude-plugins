@@ -1,11 +1,11 @@
 ---
 name: maintenance
-description: Programming specialty for maintaining current strength, muscle, and conditioning with the minimum effective dose — for clients who've reached a level they're happy with, or whose life is too busy to push. Use this whenever the client says "maintain", "hold what I have", "stay in shape", "I don't want to lose what I built", "between cuts and bulks", "off-season", "I'm happy where I'm at", "I only have 2–3 short sessions a week right now", "crazy quarter at work / new baby, just don't want to slide", or any goal that amounts to holding rather than gaining. Layer on top of program-design — this skill prescribes reduced volume and frequency while keeping intensity high. A client who wants to progress but has stalled needs plateau-detection, not this.
+description: Programming specialty for maintaining current strength, muscle, and conditioning with the minimum effective dose, for clients who have reached a level they're happy with, or whose life is too busy to push. Use this whenever the client says "maintain", "hold what I have", "stay in shape", "I don't want to lose what I built", "between cuts and bulks", "off-season", "I'm happy where I'm at", "I only have 2–3 short sessions a week right now", "crazy quarter at work / new baby, just don't want to slide", or any goal that amounts to holding rather than gaining. Layered on top of program-design, this skill prescribes reduced volume and frequency while keeping intensity high. A client who wants to progress but has stalled needs plateau-detection, not this.
 ---
 
 # Maintenance
 
-Maintenance is underrated. Most clients don't need to be in growth mode forever — and constantly chasing PRs is a fast track to burnout, injury, and overtraining.
+Maintenance is underrated. Most clients don't need to be in growth mode forever, and constantly chasing PRs is a fast track to burnout, injury, and overtraining.
 
 The good news: **maintaining what you've built takes a lot less than building it.** Minimum effective dose is real, and substantial.
 
@@ -34,7 +34,7 @@ That's it. The whole hour-and-a-half-six-days-a-week schedule can compress to 3 
 
 ## Intensity rules
 
-- **Keep intensity HIGH** — RPE 7–9 on working sets. This is the lever you cannot drop.
+- **Keep intensity HIGH**, RPE 7–9 on working sets. This is the lever you cannot drop.
 - Volume can drop. Frequency can drop. **Intensity preserves muscle and strength.** Lift like you mean it on each set, even if you're doing fewer.
 
 ## A 3-day maintenance template
@@ -91,7 +91,7 @@ Cardio in maintenance has cardiovascular and metabolic benefits independent of b
 
 ## Calorie target
 
-**Maintenance calories** — bodyweight (kg) × 30–35 for moderate activity, adjust based on actual scale stability.
+**Maintenance calories**, bodyweight (kg) × 30–35 for moderate activity, adjust based on actual scale stability.
 
 If weight is drifting up: small reduction.
 If drifting down: small increase.
@@ -126,11 +126,19 @@ After 4–12 weeks of maintenance, decide the next phase:
 
 ## Communication to the client
 
-> "Maintenance is a real training phase. Three sessions a week, lift heavy for fewer sets, stay sharp on the big lifts, keep cardio rolling, eat at maintenance. You'll hold everything you built — and probably feel less beat up than you have in a while. We can ride this for as long as it serves you. When you're ready for the next push, we'll know."
+> "Maintenance is a real training phase. Three sessions a week, lift heavy for fewer sets, stay sharp on the big lifts, keep cardio rolling, eat at maintenance. You'll hold everything you built, and probably feel less beat up than you have in a while. We can ride this for as long as it serves you. When you're ready for the next push, we'll know."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a before and after volume comparison showing what stays and what drops.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default) and a lightweight tracker (Excel or Google Sheet) with only the few sets that matter. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not run high-volume or peaking blocks (read `hypertrophy` or `elite-athlete`)
 - Does not drop intensity (intensity is the maintenance lever)
 - Does not eliminate cardio
-- Does not last forever — eventually transition into the next phase intentionally
+- Does not last forever, eventually transition into the next phase intentionally

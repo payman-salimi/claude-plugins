@@ -1,13 +1,13 @@
 ---
 name: injury-prep
-description: Train clients with non-surgical chronic or acute musculoskeletal issues — low back pain, knee pain, shoulder impingement, hip impingement, neck/upper-trap tightness, and other common joint complaints. Use this whenever pain or an old injury comes up anywhere in the conversation — "back pain", "my knees hurt", "tweaked", "flared up", "my back is bad", "I have an injury", "bulging disc", "tennis elbow", "rotator cuff issues", "it hurts when I squat" — even as an aside during intake, a check-in, or a form review. Layer on top of program-design — this skill swaps aggravating movements for tolerable alternatives, sets pain-aware loading rules, and prescribes prehab work, while making clear it is not a diagnosis. If the joint has had surgery, use post-knee-surgery (knee) or refer to the surgeon's protocol instead.
+description: Train clients with non-surgical chronic or acute musculoskeletal issues such as low back pain, knee pain, shoulder impingement, hip impingement, neck and upper-trap tightness, and other common joint complaints. Use this whenever pain or an old injury comes up anywhere in the conversation ("back pain", "my knees hurt", "tweaked", "flared up", "my back is bad", "I have an injury", "bulging disc", "tennis elbow", "rotator cuff issues", "it hurts when I squat"), even as an aside during intake, a check-in, or a form review. Layered on top of program-design, this skill swaps aggravating movements for tolerable alternatives, sets pain-aware loading rules, and prescribes prehab work, while making clear it is not a diagnosis. If the joint has had surgery, use post-knee-surgery (knee) or refer to the surgeon's protocol instead.
 ---
 
 # Injury Prep
 
 Train people with bodies that already hurt. The job here is to keep them training around the issue, not to diagnose or fix the issue. That's what a physical therapist is for. Make that disclaimer once, clearly, then get to work.
 
-## Hard rules — non-negotiable
+## Hard rules
 
 1. **Pain that radiates, is sharp, or is worsening = stop and refer to PT/physician.** Do not program around new sharp pain.
 2. **Pain ≤ 3/10 during a movement is workable.** Pain 4–6/10 = regress the movement. Pain 7+ = remove it from the program. (This is the plugin-wide pain scale; it's also in `../../references/training-standards.md`.)
@@ -32,7 +32,7 @@ Train people with bodies that already hurt. The job here is to keep them trainin
 - Hip thrusts, glute bridges
 - Goblet squats, split squats
 - Pull-ups, chest-supported rows (no spinal load)
-- Carries (suitcase, farmers — light, focus on bracing)
+- Carries (suitcase, farmers, light, focus on bracing)
 
 **Prehab to add 2–3x/week:**
 - Cat-cow, 8 reps
@@ -58,7 +58,7 @@ Train people with bodies that already hurt. The job here is to keep them trainin
 - Step-ups (focus on driving through heel)
 - Glute bridges, hip thrusts
 - Reverse lunges (less knee shear than forward)
-- Spanish squats (band-resisted) — gold standard for patellar tendon
+- Spanish squats (band-resisted), gold standard for patellar tendon
 - Leg curls (hamstring strength reduces knee shear)
 
 **Prehab 2–3x/week:**
@@ -130,7 +130,7 @@ When `program-design` is building the workout:
 
 Always say it once, clearly:
 
-> "I'm going to design around your [back / knee / shoulder]. This isn't a diagnosis — for that, see a PT. What I can do is keep you training while you sort out the underlying issue. Two rules: pain at 4 out of 10 or higher during a lift, we modify it. Pain that radiates or gets sharper, you stop and message your doctor."
+> "I'm going to design around your [back / knee / shoulder]. This isn't a diagnosis. For that, see a PT. What I can do is keep you training while you sort out the underlying issue. Two rules: pain at 4 out of 10 or higher during a lift, we modify it. Pain that radiates or gets sharper, you stop and message your doctor."
 
 Then build the program.
 
@@ -142,6 +142,14 @@ A movement progresses (more load, deeper range, less regression) when:
 - Recovery between sessions doesn't show new aggravation
 
 Otherwise hold.
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a swap table (aggravating movement, replacement, why) so the client can scan it at the gym.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default) and a Doc or PDF they can bring to their PT so the two plans line up. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 

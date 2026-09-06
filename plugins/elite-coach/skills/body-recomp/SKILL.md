@@ -1,17 +1,17 @@
 ---
 name: body-recomp
-description: Programming specialty for clients who want to build muscle AND lose fat at the same time — body recomposition. Use this whenever the client states both goals together or a goal that implies both — "build muscle and lose fat", "get lean and strong", "recomp", "I want to look better", "tone up", "get toned", "drop body fat without losing muscle", "stay the same weight but change my body" — even if they don't know the word recomp. Layer on top of program-design — this skill manages the conflicting demands of growth and deficit, sets honest expectations about who can recomp, and structures training and nutrition for the slower but real result. If the goal is only fat loss use fat-loss; only muscle gain (including "lean bulk") use hypertrophy.
+description: Programming specialty for clients who want to build muscle AND lose fat at the same time (body recomposition). Use this whenever the client states both goals together or a goal that implies both ("build muscle and lose fat", "get lean and strong", "recomp", "I want to look better", "tone up", "get toned", "drop body fat without losing muscle", "stay the same weight but change my body"), even if they don't know the word recomp. Layered on top of program-design, this skill manages the conflicting demands of growth and deficit, sets honest expectations about who can recomp, and structures training and nutrition for the slower but real result. If the goal is only fat loss use fat-loss; only muscle gain (including "lean bulk") use hypertrophy.
 ---
 
 # Body Recomposition
 
 The honest truth: **simultaneous muscle gain and fat loss is hard at most experience levels.** It works dramatically for some populations and slowly for others. Set expectations correctly before programming.
 
-## Who can recomp — and how fast
+## Who can recomp, and how fast
 
 | Population | Recomp potential | Realistic rate |
 |---|---|---|
-| Untrained beginners | Excellent — "newbie gains" | Significant change in 12–24 weeks |
+| Untrained beginners | Excellent, "newbie gains" | Significant change in 12–24 weeks |
 | Returning lifters (after long break) | Very good | Strong recovery of past muscle while losing fat |
 | Overweight clients new to strength | Excellent | Both happen simultaneously and visibly |
 | Intermediate, lean (~15% BF M / ~22% F) | Slow but possible | Months of subtle change |
@@ -27,16 +27,16 @@ For everyone else, recomp is real and worth pursuing.
 ### 1. Maintenance calories or very small deficit
 
 Body recomp lives at the edge of caloric balance:
-- **Beginners and overweight clients**: small deficit (10–15% below maintenance) — they recomp easily even in a slight deficit
-- **Intermediates**: maintenance ± 100 cal — toggle between slight surplus on training days, slight deficit on rest days
-- **Advanced**: maintenance — recomp is so slow at this level that any deficit costs muscle gain
+- **Beginners and overweight clients**: small deficit (10–15% below maintenance). They recomp easily even in a slight deficit
+- **Intermediates**: maintenance ± 100 cal, toggle between slight surplus on training days, slight deficit on rest days
+- **Advanced**: maintenance. Recomp is so slow at this level that any deficit costs muscle gain
 
 ### 2. High protein
 
 This is the non-negotiable:
-- **2.0–2.4 g/kg bodyweight per day** — higher than cutting, higher than bulking
+- **2.0–2.4 g/kg bodyweight per day**, higher than cutting, higher than bulking
 - Spread across 4–5 meals, 0.4 g/kg per meal
-- Protein has the highest thermic effect of any macro AND is the substrate for muscle growth — both pillars served by one nutrient
+- Protein has the highest thermic effect of any macro AND is the substrate for muscle growth, both pillars served by one nutrient
 
 ## Training: bias toward hypertrophy programming
 
@@ -52,7 +52,7 @@ Each muscle hit 2–3x per week. Upper/lower 4x or PPL 6x both work.
 
 ### Intensity
 
-Working sets at RPE 7–8. Don't push to RPE 10 — recovery is tighter when calories are limited, and pushing to failure costs you.
+Working sets at RPE 7–8. Don't push to RPE 10. Recovery is tighter when calories are limited, and pushing to failure costs you.
 
 ### Exercise selection
 
@@ -66,7 +66,7 @@ Mostly 6–12. Occasional 5s on compounds for strength preservation. Occasional 
 
 ## Sample 4-day recomp template
 
-**Day 1 — Upper (heavy bias)**
+**Day 1, Upper (heavy bias)**
 - Bench press 4x6 @ RPE 8
 - Pull-up or weighted pull-up 4x6
 - Overhead press 3x8
@@ -75,7 +75,7 @@ Mostly 6–12. Occasional 5s on compounds for strength preservation. Occasional 
 - Curl 2x10
 - Tricep pushdown 2x12
 
-**Day 2 — Lower (heavy bias)**
+**Day 2, Lower (heavy bias)**
 - Squat 4x6 @ RPE 8
 - RDL 3x8
 - Bulgarian split squat 3x8/leg
@@ -83,9 +83,9 @@ Mostly 6–12. Occasional 5s on compounds for strength preservation. Occasional 
 - Calf raise 3x12
 - Plank 3x30 sec
 
-**Day 3 — Z2 cardio (45 min)** + walking
+**Day 3, Z2 cardio (45 min)** + walking
 
-**Day 4 — Upper (volume bias)**
+**Day 4, Upper (volume bias)**
 - Incline DB press 4x10
 - Bent-over row 4x8
 - Lat pulldown 3x10
@@ -94,7 +94,7 @@ Mostly 6–12. Occasional 5s on compounds for strength preservation. Occasional 
 - Hammer curl 2x12
 - Skull crusher 2x10
 
-**Day 5 — Lower (volume bias)**
+**Day 5, Lower (volume bias)**
 - Front squat 4x8
 - Hip thrust 3x10
 - Walking lunge 3x10/leg
@@ -102,13 +102,13 @@ Mostly 6–12. Occasional 5s on compounds for strength preservation. Occasional 
 - Hamstring curl 3x12
 - Hanging leg raise 3x10
 
-**Day 6 — Optional Z2 + walking**
+**Day 6, Optional Z2 + walking**
 
-**Day 7 — Rest**
+**Day 7, Rest**
 
 ## Cardio for recomp
 
-Moderate dose — not as heavy as a pure cut, but more than a pure hypertrophy phase:
+Moderate dose, not as heavy as a pure cut, but more than a pure hypertrophy phase:
 
 - 2x Z2 sessions of 30–45 min
 - 1x light interval session of 15–20 min
@@ -121,7 +121,7 @@ This adds enough to the deficit without blocking recovery from lifting.
 The scale doesn't tell the whole story for recomp. Track multiple things:
 
 - **Weight** (5–7 day average): may stay flat or move very slowly. That's expected and good.
-- **Tape measurements**: waist, hip, chest, arms — every 2 weeks. The waist comes down, arms/chest go up. That's the real signal.
+- **Tape measurements**: waist, hip, chest, arms, every 2 weeks. The waist comes down, arms/chest go up. That's the real signal.
 - **Photos**: weekly, same lighting, same pose. Recomp shows in photos before it shows on the scale.
 - **Strength on big lifts**: must be moving up or holding. Drop in strength = under-eating.
 - **Body fat estimate** (DEXA, calipers, BIA): every 4–8 weeks. Trends matter more than single numbers.
@@ -160,7 +160,15 @@ A practical model for non-beginners:
 
 ## Communication to the client
 
-> "Recomp works, but it's the slowest path. We're going to lift like you're trying to build muscle, eat at or just under maintenance, and hit protein hard. The scale isn't going to tell you what's happening — the photos and the lifts will. Trust the process for 12 weeks before judging it. If you want faster results, we pick one goal — gain or lose — and chase it directly. I can support either call."
+> "Recomp works, but it's the slowest path. We're going to lift like you're trying to build muscle, eat at or just under maintenance, and hit protein hard. The scale isn't going to tell you what's happening. The photos and the lifts will. Trust the process for 12 weeks before judging it. If you want faster results, we pick one goal, gain or lose, and chase it directly. I can support either call."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a two-line chart with waist trending down and lifts trending up while the scale stays flat.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default) and a Google Sheet or Excel tracker with waist, photos, and lift columns, since the scale is not the signal here. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
@@ -168,4 +176,4 @@ A practical model for non-beginners:
 - Does not work without high protein and consistent training
 - Does not run long-term cuts (that's `fat-loss`)
 - Does not run aggressive bulking (that's `hypertrophy`)
-- Does not skip strength tracking — losing strength = losing the recomp
+- Does not skip strength tracking, losing strength = losing the recomp

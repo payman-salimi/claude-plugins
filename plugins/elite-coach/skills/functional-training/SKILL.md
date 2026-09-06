@@ -1,6 +1,6 @@
 ---
 name: functional-training
-description: Programming specialty for clients who want functional training — movement quality, mobility, work capacity, real-world strength — rather than bodybuilding. Use this whenever the client says "functional", "functional fitness", "I want to move better", "real-world strength", "athletic", "I don't want to be a bodybuilder", "I just want to be able to do things", "everyday strength", "movement-based training", or describes a real-world capability goal (hiking, carrying kids, a physical job, recreational sport, getting up off the floor easily) without a physique or strength-number target. Layer on top of program-design — this skill structures training around the seven movement patterns, mobility, conditioning, and unilateral / multi-planar work, with heavy compound lifting still at the core.
+description: Programming specialty for clients who want functional training (movement quality, mobility, work capacity, real-world strength) rather than bodybuilding. Use this whenever the client says "functional", "functional fitness", "I want to move better", "real-world strength", "athletic", "I don't want to be a bodybuilder", "I just want to be able to do things", "everyday strength", "movement-based training", or describes a real-world capability goal (hiking, carrying kids, a physical job, recreational sport, getting up off the floor easily) without a physique or strength-number target. Layered on top of program-design, this skill structures training around the seven movement patterns, mobility, conditioning, and unilateral / multi-planar work, with heavy compound lifting still at the core.
 ---
 
 # Functional Training
@@ -16,9 +16,9 @@ The term "functional training" gets abused. It can mean anything from "BOSU ball
 5. Joint mobility and connective tissue resilience
 6. Power / explosive capacity
 
-It does NOT mean balance balls, gimmicky equipment, or random circuits. It also does NOT mean ignoring strength — the strongest functional athletes lift heavy.
+It does NOT mean balance balls, gimmicky equipment, or random circuits. It also does NOT mean ignoring strength, the strongest functional athletes lift heavy.
 
-## Hard rules — non-negotiable
+## Hard rules
 
 1. **Functional ≠ unstructured.** Programs still progress, still track, still have specific intent.
 2. **Heavy lifting is functional.** A 2x bodyweight deadlift makes you functional. Don't deprioritize compounds.
@@ -29,33 +29,33 @@ It does NOT mean balance balls, gimmicky equipment, or random circuits. It also 
 
 Programming through movement patterns instead of muscles:
 
-1. **Squat pattern** — vertical force, knee/hip flex
-2. **Hinge pattern** — hip-dominant, posterior chain
-3. **Push pattern** — vertical and horizontal pushing
-4. **Pull pattern** — vertical and horizontal pulling
-5. **Lunge / single-leg** — unilateral, frontal/sagittal
-6. **Carry** — loaded gait, anti-rotation, anti-flexion
-7. **Rotation / anti-rotation** — transverse plane
+1. **Squat pattern**, vertical force, knee/hip flex
+2. **Hinge pattern**, hip-dominant, posterior chain
+3. **Push pattern**, vertical and horizontal pushing
+4. **Pull pattern**, vertical and horizontal pulling
+5. **Lunge / single-leg**, unilateral, frontal/sagittal
+6. **Carry**, loaded gait, anti-rotation, anti-flexion
+7. **Rotation / anti-rotation**, transverse plane
 
-Every functional program should hit all 7 in a week. Carries and rotation work are most often skipped — don't skip them.
+Every functional program should hit all 7 in a week. Carries and rotation work are most often skipped, don't skip them.
 
 ## Loading principles
 
 Functional training still uses progressive overload, but through:
 
-- **Heavy compound work** — squat, deadlift, press, pull-up at moderate-to-high intensity
-- **Unilateral loading** — single-leg, single-arm, asymmetric (one heavy DB held while doing a movement)
-- **Carries and tempo carries** — loaded walking is among the most underrated tools
-- **Time under tension** — slow eccentrics and isometrics for tendon and connective tissue health
+- **Heavy compound work**, squat, deadlift, press, pull-up at moderate-to-high intensity
+- **Unilateral loading**, single-leg, single-arm, asymmetric (one heavy DB held while doing a movement)
+- **Carries and tempo carries**, loaded walking is among the most underrated tools
+- **Time under tension**, slow eccentrics and isometrics for tendon and connective tissue health
 
 ## Conditioning component (work capacity)
 
 Functional clients usually want conditioning to translate to real-world activity (sport, hiking, work). Programming:
 
-- **Z2 cardio** 2x/week (45–60 min) — aerobic base
-- **Intervals / tempo work** 1x/week — VO2max
+- **Z2 cardio** 2x/week (45–60 min), aerobic base
+- **Intervals / tempo work** 1x/week, VO2max
 - **Glycolytic conditioning** (kettlebell circuits, sled work, complexes) 1–2x/week
-- **Movement-based finishers** — sled push, farmer carry, Turkish get-up complexes
+- **Movement-based finishers**, sled push, farmer carry, Turkish get-up complexes
 
 Mix steady-state, intervals, and short power output to build a complete engine.
 
@@ -71,7 +71,7 @@ Train mobility, don't just stretch passively. Loaded ROM, end-range strength, an
 
 ## A 4-day functional template
 
-**Day 1 — Lower / Push focus**
+**Day 1, Lower / Push focus**
 - Warm-up: 10 min flow (mobility + activation)
 - A. Trap bar deadlift 5x5 @ RPE 7–8
 - B. Bulgarian split squat 3x8/leg (single-leg, sagittal)
@@ -80,7 +80,7 @@ Train mobility, don't just stretch passively. Loaded ROM, end-range strength, an
 - E. Sled push 4x20 yards (work capacity)
 - Cool-down: 5 min hip mobility
 
-**Day 2 — Upper / Pull focus**
+**Day 2, Upper / Pull focus**
 - Warm-up
 - A. Pull-up (or weighted) 5x5 @ RPE 7–8
 - B. Single-arm DB row 3x8/side (unilateral, anti-rotation)
@@ -89,12 +89,12 @@ Train mobility, don't just stretch passively. Loaded ROM, end-range strength, an
 - E. Farmer carry 3x40 sec
 - Cool-down
 
-**Day 3 — Conditioning + mobility**
+**Day 3, Conditioning + mobility**
 - Warm-up: 10 min mobility flow
 - 30–45 min Zone 2 cardio (rower, bike, run, ruck)
 - 10 min mobility cool-down
 
-**Day 4 — Full body / power**
+**Day 4, Full body / power**
 - Warm-up
 - A. Med ball slam 4x5 (power, anti-extension)
 - B. Goblet squat 3x10
@@ -104,16 +104,16 @@ Train mobility, don't just stretch passively. Loaded ROM, end-range strength, an
 - F. Tabata sled push 8x20 sec hard / 10 sec rest
 - Cool-down
 
-**Day 5 — Optional Z2 + mobility**
+**Day 5, Optional Z2 + mobility**
 
-**Day 6/7 — Rest**
+**Day 6/7, Rest**
 
 ## Tools that earn their place
 
 - Barbell (squat, deadlift, press, row)
 - Kettlebell (swing, get-up, complexes, single-arm work)
 - Dumbbells (asymmetric loading, single-arm everything)
-- Sled (push, pull, drag — phenomenal conditioning)
+- Sled (push, pull, drag, phenomenal conditioning)
 - Pull-up bar
 - Cable / band (rotational work, anti-rotation)
 - Med balls (slams, throws, rotational power)
@@ -127,7 +127,7 @@ Train mobility, don't just stretch passively. Loaded ROM, end-range strength, an
 - Vibration plates
 - Most "functional fitness" gimmicks marketed as such
 
-If unstable surfaces are programmed, it's for specific balance / rehab purposes — not as a default.
+If unstable surfaces are programmed, it's for specific balance / rehab purposes, not as a default.
 
 ## How functional differs from hypertrophy and strength specialty
 
@@ -142,7 +142,7 @@ If unstable surfaces are programmed, it's for specific balance / rehab purposes 
 | No rotation | Minimal | Required rotation |
 | No mobility | Some | Required |
 
-Functional training will produce strength gains and some hypertrophy as side effects — but those aren't the goal.
+Functional training will produce strength gains and some hypertrophy as side effects, but those aren't the goal.
 
 ## Layering with other goals
 
@@ -152,15 +152,23 @@ Functional clients often *also* want:
 - Aging well → layer with `older-adults`
 - Beginner status → layer with `beginner-foundations` first, then graduate to functional programming after 8–12 weeks of foundation strength
 
-Pure functional + hypertrophy is unusual — recommend they pick a primary lens.
+Pure functional + hypertrophy is unusual, recommend they pick a primary lens.
 
 ## Communication to the client
 
-> "Functional means we're training you to be able to do real-world things — pick stuff up, carry it, throw it, sprint, climb, get up off the ground, hold position under load. That requires real strength, real conditioning, and real mobility — none of it gimmicky. We're going to lift heavy on the basics, work unilateral and rotational every week, build conditioning that actually transfers, and protect your joints. You'll get strong AND athletic. That's the deal."
+> "Functional means we're training you to be able to do real-world things: pick stuff up, carry it, throw it, sprint, climb, get up off the ground, hold position under load. That requires real strength, real conditioning, and real mobility, and none of it is gimmicky. We're going to lift heavy on the basics, work unilateral and rotational every week, build conditioning that actually transfers, and protect your joints. You'll get strong AND athletic. That's the deal."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to the seven movement patterns mapped onto the week's sessions.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default), the Excel tracker or Google Sheet, and an Artifact page. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not waste sessions on unstable-surface gimmicks
 - Does not skip heavy compound lifting
 - Does not turn into a "circuit class" with no progression
-- Does not work for clients whose actual goal is bodybuilding — those should run `hypertrophy`
+- Does not work for clients whose actual goal is bodybuilding, those should run `hypertrophy`

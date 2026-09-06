@@ -1,4 +1,4 @@
-# MediaPipe Pose Landmarker — Integration Reference
+# MediaPipe Pose Landmarker integration reference
 
 Technical reference for the pose-analyzer.html tool. Describes the MediaPipe model used, landmark schema, angle computation, and export format.
 
@@ -7,9 +7,9 @@ Technical reference for the pose-analyzer.html tool. Describes the MediaPipe mod
 ## Model
 
 **Package**: `@mediapipe/tasks-vision` v0.10.14 (pinned in the tool; loaded as an ES module so it works from `file://`)  
-**Model**: `pose_landmarker_lite` (float16) — balance of speed and accuracy; runs in browser via WASM, GPU delegate with CPU fallback  
-**Inference mode**: `IMAGE` — each video frame processed independently  
-**Running mode**: client-side only — no data leaves the browser  
+**Model**: `pose_landmarker_lite` (float16), balance of speed and accuracy; runs in browser via WASM, GPU delegate with CPU fallback  
+**Inference mode**: `IMAGE`, each video frame processed independently  
+**Running mode**: client-side only, no data leaves the browser  
 **CDN**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs`  
 **WASM path**: `https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm`  
 **Model file**: `https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task`
@@ -18,10 +18,10 @@ Technical reference for the pose-analyzer.html tool. Describes the MediaPipe mod
 
 ## Browser requirements
 
-- **Chrome 90+** (recommended) — full WebAssembly + WebGL GPU support
-- **Firefox 90+** — works, CPU only (no GPU delegate)
-- **Safari** — may block WASM from CDN on local file:// pages; serve via `python3 -m http.server` if issues occur
-- **Edge** — same as Chrome
+- **Chrome 90+** (recommended), full WebAssembly + WebGL GPU support
+- **Firefox 90+**, works, CPU only (no GPU delegate)
+- **Safari**, may block WASM from CDN on local file:// pages; serve via `python3 -m http.server` if issues occur
+- **Edge**, same as Chrome
 
 For local file usage (double-click to open), Chrome with `--allow-file-access-from-files` flag is most reliable if CDN WASM fails to load.
 
@@ -36,8 +36,8 @@ MediaPipe outputs normalized coordinates (0.0–1.0 relative to frame dimensions
 | 0 | nose | head position, gaze proxy |
 | 1–4 | eye landmarks | head alignment |
 | 5–8 | ear landmarks | head rotation |
-| 9 | mouth_left | — |
-| 10 | mouth_right | — |
+| 9 | mouth_left | n/a |
+| 10 | mouth_right | n/a |
 | **11** | **left_shoulder** | spine angle, shoulder angle, push/pull analysis |
 | **12** | **right_shoulder** | same |
 | **13** | **left_elbow** | elbow angle |
@@ -45,11 +45,11 @@ MediaPipe outputs normalized coordinates (0.0–1.0 relative to frame dimensions
 | **15** | **left_wrist** | wrist-over-elbow alignment, bar path |
 | **16** | **right_wrist** | same |
 | 17 | left_pinky | hand detail |
-| 18 | right_pinky | — |
-| 19 | left_index | — |
-| 20 | right_index | — |
-| 21 | left_thumb | — |
-| 22 | right_thumb | — |
+| 18 | right_pinky | n/a |
+| 19 | left_index | n/a |
+| 20 | right_index | n/a |
+| 21 | left_thumb | n/a |
+| 22 | right_thumb | n/a |
 | **23** | **left_hip** | hip angle, pelvis tracking |
 | **24** | **right_hip** | same |
 | **25** | **left_knee** | knee angle |
@@ -64,10 +64,10 @@ MediaPipe outputs normalized coordinates (0.0–1.0 relative to frame dimensions
 **Bold** = landmarks used for angle computation in the analyzer.
 
 Each landmark has:
-- `x` — horizontal (0 = left edge, 1 = right edge of frame)
-- `y` — vertical (0 = top, 1 = bottom of frame)  
-- `z` — estimated depth (relative to hip midpoint; negative = in front of plane)
-- `visibility` — confidence score 0.0–1.0 (< 0.5 = landmark likely occluded)
+- `x`, horizontal (0 = left edge, 1 = right edge of frame)
+- `y`, vertical (0 = top, 1 = bottom of frame)  
+- `z`, estimated depth (relative to hip midpoint; negative = in front of plane)
+- `visibility`, confidence score 0.0–1.0 (< 0.5 = landmark likely occluded)
 
 ---
 
@@ -137,7 +137,7 @@ The analyzer selects up to 7 frames to export (duplicates collapse when two labe
 
 ```json
 {
-  "exercise": "string — user-selected or typed",
+  "exercise": "string, user-selected or typed",
   "cameraAngle": "side | front | diagonal | unknown",
   "videoInfo": {
     "filename": "string",
@@ -191,8 +191,8 @@ The `landmarks` array in each key frame contains all 33 points. `screenshotIndex
 
 **Single-person**: The tool uses `numPoses: 1`. If two people are in frame, only the closest/most prominent person is analyzed.
 
-**Frame rate**: The tool samples at 5 fps. Fast explosive movements (Olympic lifts, jumps) may miss peak positions between samples. For plyometric analysis, use slow-motion video (120+ fps original) — the tool will still sample at 5 fps but the source video will have captured the peak.
+**Frame rate**: The tool samples at 5 fps. Fast explosive movements (Olympic lifts, jumps) may miss peak positions between samples. For plyometric analysis, use slow-motion video (120+ fps original), the tool will still sample at 5 fps but the source video will have captured the peak.
 
-**Model accuracy**: `pose_landmarker_lite` trades some accuracy for speed. For wrist and foot landmarks especially, visibility and position can drift under occlusion or extreme angles. Use `pose_landmarker_full` if the lite model shows unreliable results — swap the model URL in the HTML tool.
+**Model accuracy**: `pose_landmarker_lite` trades some accuracy for speed. For wrist and foot landmarks especially, visibility and position can drift under occlusion or extreme angles. Use `pose_landmarker_full` if the lite model shows unreliable results, swap the model URL in the HTML tool.
 
 **Full model URL**: `https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task`

@@ -1,13 +1,13 @@
 ---
 name: prenatal-postpartum
-description: Train pregnant clients (any trimester) and postpartum clients (vaginal or C-section delivery, from week 0 through 12+ months). Use this whenever pregnancy or a recent birth comes up in any form — "I'm pregnant", "expecting", "second trimester", "I just had a baby", "postpartum", "post-baby", "after giving birth", "X weeks/months postpartum", "trying to conceive", "diastasis recti", "pelvic floor", "leaking when I jump", "C-section", "breastfeeding" — even when the client's stated goal is something else like fat loss or getting back to lifting. Layer on top of program-design — this skill enforces OB/midwife clearance, bans and substitutes movements by phase, manages diastasis and pelvic floor, and structures the return to training.
+description: Train pregnant clients (any trimester) and postpartum clients (vaginal or C-section delivery, from week 0 through 12+ months). Use this whenever pregnancy or a recent birth comes up in any form ("I'm pregnant", "expecting", "second trimester", "I just had a baby", "postpartum", "post-baby", "after giving birth", "X weeks/months postpartum", "trying to conceive", "diastasis recti", "pelvic floor", "leaking when I jump", "C-section", "breastfeeding"), even when the client's stated goal is something else like fat loss or getting back to lifting. Layered on top of program-design, this skill enforces OB/midwife clearance, bans and substitutes movements by phase, manages diastasis and pelvic floor, and structures the return to training.
 ---
 
 # Prenatal & Postpartum Training
 
-This is the highest-stakes specialty in the plugin. You are training someone whose body is doing something extraordinary. The bias is conservative: keep her training, keep her safe, keep her connected to her body. Strength gains are not the priority — capability, recovery, and confidence are.
+This is the highest-stakes specialty in the plugin. You are training someone whose body is doing something extraordinary. The bias is conservative: keep her training, keep her safe, keep her connected to her body. Strength gains are not the priority. Capability, recovery, and confidence are.
 
-## Hard rules — non-negotiable
+## Hard rules
 
 1. **Medical clearance required.** No moderate-to-high intensity training during pregnancy without OB/midwife clearance. No return to anything beyond walking and breathing work for at least 6 weeks postpartum (8+ for C-section), and only with clearance.
 2. **No supine work after the first trimester.** Lying flat on the back can compress the inferior vena cava. Use incline bench (15–30°) or side-lying alternatives.
@@ -15,7 +15,7 @@ This is the highest-stakes specialty in the plugin. You are training someone who
 4. **Stop immediately and call OB if any of:** vaginal bleeding, fluid leakage, regular painful contractions, dizziness, headache, chest pain, calf pain/swelling, decreased fetal movement.
 5. **Coning of the abdomen during a movement = stop that movement.** That's a diastasis recti warning sign.
 
-## Pregnancy — by trimester
+## Pregnancy by trimester
 
 ### First trimester (weeks 1–13)
 
@@ -27,10 +27,10 @@ This is the highest-stakes specialty in the plugin. You are training someone who
 
 ### Second trimester (weeks 14–27)
 
-- Remove all supine work — switch to incline benches.
+- Remove all supine work, switch to incline benches.
 - Reduce ROM on squats if belly limits depth.
 - Replace conventional deadlift with sumo or trap bar (room for the belly).
-- Heart rate is no longer a strict cap (old 140 bpm rule is outdated) — use RPE and the talk test. She should be able to hold a conversation.
+- Heart rate is no longer a strict cap (old 140 bpm rule is outdated), use RPE and the talk test. She should be able to hold a conversation.
 - No prone work (lying face down). Switch belly-up to side-lying or seated.
 - Avoid jumping, twisting under load, contact sports.
 
@@ -40,7 +40,7 @@ This is the highest-stakes specialty in the plugin. You are training someone who
 - Substitute movements as the belly grows: incline DB press > flat bench, supported single-leg work > unsupported.
 - Walking, swimming, stationary bike are golden.
 - Add: pelvic floor breathing (inhale to expand ribs and pelvic floor, exhale to gently contract pelvic floor on exertion), birth-prep mobility (deep squats with support, hip mobility).
-- Rest periods longer. Listen to fatigue — extra rest day is a feature.
+- Rest periods longer. Listen to fatigue, extra rest day is a feature.
 
 ### Cues to drill all pregnancy
 
@@ -49,21 +49,21 @@ This is the highest-stakes specialty in the plugin. You are training someone who
 - "Zip up from the pelvic floor" before exerting
 - No breath holding
 
-## Postpartum — by phase
+## Postpartum by phase
 
 ### Weeks 0–6 (or 0–8 C-section): Recovery only
 
 - No structured training program. The pelvic floor, abdominal wall, and (after a C-section) the incision are still healing, and loading them early is how prolapse and hernia happen.
-- Walking — short, slow, build daily duration as energy allows.
-- Diaphragmatic breathing (5–10 min/day) — the foundation of everything that comes back.
-- Pelvic floor connection (gentle Kegels with proper inhale-relax / exhale-engage timing — not just clenches)
+- Walking, short, slow, build daily duration as energy allows.
+- Diaphragmatic breathing (5–10 min/day), the foundation of everything that comes back.
+- Pelvic floor connection (gentle Kegels with proper inhale-relax / exhale-engage timing, not just clenches)
 - Glute bridges with ribcage-pelvis alignment (week 2+, no pain)
 
 ### Weeks 6–12: Return-to-training assessment + foundation
 
 After OB clearance, assess before programming:
 
-**Diastasis recti check** (or have her self-check or see a pelvic floor PT — strongly recommend this):
+**Diastasis recti check** (or have her self-check or see a pelvic floor PT, strongly recommend this):
 - Lie on back, knees bent. Place fingers above and below navel. Lift head slightly. Feel for gap width and depth. >2 finger gap or significant doming → see a pelvic floor PT before progressive loading.
 
 **Pelvic floor check** (red flags requiring PT):
@@ -95,7 +95,7 @@ If recovery has gone smoothly and pelvic floor + core are tracking well:
 ### Months 6–12
 
 - Most clients can return to ~90–100% of pre-pregnancy training capacity if the foundation was rebuilt.
-- Continue pelvic floor maintenance work — don't drop it.
+- Continue pelvic floor maintenance work, don't drop it.
 - Watch for signs of relapse: leakage, pressure, separation under load. These mean back off and reassess.
 
 ## Banned during pregnancy and early postpartum (no exceptions)
@@ -115,7 +115,7 @@ If recovery has gone smoothly and pelvic floor + core are tracking well:
 - Goblet squat, box squat
 - Incline DB press
 - Cable row, banded row
-- Pull-ups (with care for diastasis — cue ribs down)
+- Pull-ups (with care for diastasis, cue ribs down)
 - Walking, swimming, stationary bike
 
 ## How to integrate into program-design
@@ -125,17 +125,25 @@ If recovery has gone smoothly and pelvic floor + core are tracking well:
 3. Apply the trimester or postpartum-phase rules above
 4. Always include 5–10 min of breath/pelvic floor work in the warm-up
 5. Cap intensity per phase
-6. Re-evaluate every 2–4 weeks — pregnancy/postpartum bodies change quickly
+6. Re-evaluate every 2–4 weeks, pregnancy/postpartum bodies change quickly
 
 ## Communication to the client
 
 Set expectations clearly:
 
-> "Right now, the goal is **capability** — to feel strong, connected, and recovered. Not PRs. We'll keep you training in the safest, most useful way at every phase, and when you're ready to push again, we will. Your job: tell me about anything new — leakage, pressure, heaviness, pain, anything from your OB. Those are signals, not interruptions."
+> "Right now, the goal is **capability**: feeling strong, connected, and recovered. Not PRs. We'll keep you training in the safest, most useful way at every phase, and when you're ready to push again, we will. Your job: tell me about anything new, leakage, pressure, heaviness, pain, anything from your OB. Those are signals, not interruptions."
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a trimester or postpartum-phase timeline with the client's current position and what changes at each step.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default) and a Doc or PDF to share with their OB, midwife, or pelvic floor PT. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not replace OB/midwife or pelvic floor PT
 - Does not push aggressive fat loss during breastfeeding
 - Does not run heavy strength programs in the first 12 weeks postpartum
-- Does not assume the client knows pelvic floor mechanics — always teach the breath
+- Does not assume the client knows pelvic floor mechanics, always teach the breath

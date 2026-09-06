@@ -1,13 +1,13 @@
 ---
 name: post-knee-surgery
-description: Train clients returning to strength training after knee surgery — ACL reconstruction, meniscus repair or meniscectomy, total knee replacement (TKR), patellar tendon repair, MCL/LCL repair. Use this whenever a knee surgery is mentioned at any point — "ACL surgery", "knee replacement", "meniscus surgery", "torn ACL", "I had knee surgery", "post-op knee", "ACL recovery", "return to lifting after knee", "cleared by my PT" — including surgeries a year or more ago that still shape what the knee tolerates. Layer on top of program-design — this skill phases progression strictly by post-op timeline and physical-therapist clearance and substitutes banned movements until the surgical window allows them. Non-surgical knee pain belongs to injury-prep instead.
+description: Train clients returning to strength training after knee surgery: ACL reconstruction, meniscus repair or meniscectomy, total knee replacement (TKR), patellar tendon repair, or MCL/LCL repair. Use this whenever a knee surgery is mentioned at any point ("ACL surgery", "knee replacement", "meniscus surgery", "torn ACL", "I had knee surgery", "post-op knee", "ACL recovery", "return to lifting after knee", "cleared by my PT"), including surgeries a year or more ago that still shape what the knee tolerates. Layered on top of program-design, this skill phases progression strictly by post-op timeline and physical-therapist clearance and substitutes banned movements until the surgical window allows them. Non-surgical knee pain belongs to injury-prep instead.
 ---
 
 # Post-Knee Surgery
 
 Returning a client to training after knee surgery is **a partnership with their physical therapist, not a replacement for one**. Your job is to bridge from PT clinic exercises to real strength and conditioning while respecting the surgical timeline. Never override the PT.
 
-## Hard rules — non-negotiable
+## Hard rules
 
 1. **No programming without PT clearance.** The PT has seen the surgical report, the graft, and the joint; you haven't. If the client has not been formally discharged or cleared for strength work, refer them back to their PT and offer upper-body and non-operated-leg work in the meantime.
 2. **Surgical timelines control everything.** Tissue healing has a biological clock. ACL grafts take 9–12 months minimum to remodel. Meniscus repairs can take 4–6 months. Don't rush biology.
@@ -21,17 +21,17 @@ Returning a client to training after knee surgery is **a partnership with their 
 
 The big one. Timeline-driven.
 
-**Weeks 0–6 (PT phase 1 — coach not involved yet):**
+**Weeks 0–6 (PT phase 1, coach not involved yet):**
 - Quad activation, ROM restoration, swelling control. Done in clinic.
 - Coach does not program here.
 
-**Weeks 6–12 (PT phase 2 — coach in coordination):**
+**Weeks 6–12 (PT phase 2, coach in coordination):**
 - Continue PT. Coach can layer in unaffected upper-body and core work.
 - Bilateral squats with no load to body weight, partial ROM, only with PT clearance
 - No single-leg loading on the operated side
 - Stationary bike, no resistance, building duration
 
-**Weeks 12–20 (PT phase 3 — strength rebuilding):**
+**Weeks 12–20 (PT phase 3, strength rebuilding):**
 - Bilateral squats progressing to goblet squats
 - Leg press (bilateral, controlled ROM)
 - Leg curls (hamstring strength is critical for ACL)
@@ -49,7 +49,7 @@ The big one. Timeline-driven.
 - Full strength training with caution on max-effort single-leg work
 - Sport-specific training begins
 - Cutting, deceleration, jumping in controlled progressions
-- **No return to cutting sports without RTS testing (hop tests, IKDC, etc.)** — that's PT/MD's call
+- **No return to cutting sports without RTS testing (hop tests, IKDC, etc.)**. That's the PT's and MD's call
 
 ### Meniscus repair vs. meniscectomy
 
@@ -61,11 +61,11 @@ The big one. Timeline-driven.
 - Bilateral squats only initially, progressing to single-leg at month 3 (repair) or week 6 (meniscectomy)
 - Bike, swim, elliptical for cardio
 - Avoid running until cleared
-- Watch for swelling — that's the meniscus complaining
+- Watch for swelling. That's the meniscus complaining
 
 ### Total Knee Replacement (TKR)
 
-**Older client population, often.** Goal: restore independence and basic strength. Don't think of this client as a returning athlete — think of them as rebuilding capacity.
+**Older client population, often.** Goal: restore independence and basic strength. Don't think of this client as a returning athlete, think of them as rebuilding capacity.
 
 **Months 0–3:** PT only. Coach not involved.
 
@@ -80,12 +80,12 @@ The big one. Timeline-driven.
 - Progress load on bilateral movements
 - Add single-leg progressions slowly
 - Walking → power walking
-- No high-impact for at least 12 months — the prosthesis benefits from low-impact loading
+- No high-impact for at least 12 months, the prosthesis benefits from low-impact loading
 
 **Lifelong:**
 - Maintain quad and glute strength
 - Keep movement varied
-- Most TKR patients should not run regularly — bike, walk, swim, row instead
+- Most TKR patients should not run regularly, bike, walk, swim, row instead
 
 ### Patellar tendon repair
 
@@ -139,15 +139,23 @@ Stationary bike is your best friend for the first 3–6 months post-op for any k
 
 ## Communication to the client
 
-> "We're going to rebuild this knee carefully. Your PT calls the shots on what you're cleared for — I program around their progressions. Two things from you: (1) tell me anything your PT says, every appointment. (2) Tell me about swelling, pain, or instability after sessions. Those are signals, not setbacks. We'll get you back, and we'll get you back stronger than the surgery left you."
+> "We're going to rebuild this knee carefully. Your PT calls the shots on what you're cleared for. I program around their progressions. Two things from you: (1) tell me anything your PT says, every appointment. (2) Tell me about swelling, pain, or instability after sessions. Those are signals, not setbacks. We'll get you back, and we'll get you back stronger than the surgery left you."
 
 ## Long-term goal
 
-Most ACL clients can return to full strength training and even sport by 9–12 months. Most meniscus and TKR clients can return to consistent strength work indefinitely with care. The operated knee should not be a permanent fragility — it should be a permanent reminder to train smart.
+Most ACL clients can return to full strength training and even sport by 9–12 months. Most meniscus and TKR clients can return to consistent strength work indefinitely with care. The operated knee should not be a permanent fragility, it should be a permanent reminder to train smart.
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a post-op timeline for their surgery type showing the current phase and the next clearance gate.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat plan (default) and a Doc or PDF to share with their PT and surgeon, since the PT sets the gates. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
 - Does not replace the surgeon or PT
 - Does not run the early post-op phase (that's PT's job)
 - Does not skip biological healing timelines under any pressure
-- Does not assume all knee surgeries are the same — each has its own timeline
+- Does not assume all knee surgeries are the same, each has its own timeline

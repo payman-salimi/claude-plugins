@@ -1,6 +1,6 @@
 ---
 name: program-design
-description: Master programming skill. Takes a completed intake plus the relevant specialty lenses and produces a concrete, periodized weekly program — split, exercises, sets/reps/RPE, rest, cardio prescription, deload schedule — as both a markdown plan and an Excel tracker. Use this whenever a client asks for actual programming ("build my program", "give me a plan", "design my week", "what should I do at the gym", "make my training plan", "new block", "rebuild my plan"), even if they only describe a goal and expect you to fill in the workouts. Run client-intake first if profile data is missing. Layer in every specialty skill that fits the client (injury-prep, hypertrophy, fat-loss, beginner-foundations, prenatal-postpartum, post-knee-surgery, older-adults, elite-athlete, body-recomp, maintenance, functional-training, coach-development) rather than writing generic programming.
+description: Master programming skill. Takes a completed intake plus the relevant specialty lenses and produces a concrete, periodized weekly program (split, exercises, sets/reps/RPE, rest, cardio prescription, deload schedule) as both a markdown plan and an Excel tracker. Use this whenever a client asks for actual programming ("build my program", "give me a plan", "design my week", "what should I do at the gym", "make my training plan", "new block", "rebuild my plan"), even if they only describe a goal and expect you to fill in the workouts. Run client-intake first if profile data is missing. Layer in every specialty skill that fits the client (injury-prep, hypertrophy, fat-loss, beginner-foundations, prenatal-postpartum, post-knee-surgery, older-adults, elite-athlete, body-recomp, maintenance, functional-training, coach-development) rather than writing generic programming.
 ---
 
 # Program Design
@@ -16,7 +16,7 @@ This is the engine. Intake produced the picture of the client; this skill produc
 
 ## Layering specialty skills
 
-The specialty skills are not standalone — they're modifiers on top of this engine. Read the client's situation and pull the right ones:
+The specialty skills are not standalone. They're modifiers on top of this engine. Read the client's situation and pull the right ones:
 
 | Client situation | Layer in |
 |---|---|
@@ -35,7 +35,7 @@ The specialty skills are not standalone — they're modifiers on top of this eng
 | Stalled progress diagnosed | `plateau-detection` |
 | Client sends lifting video or asks about technique | `form-correction` |
 
-You can layer multiple — e.g., a postpartum client with a low-back issue who wants to lose fat: `prenatal-postpartum` + `injury-prep` + `fat-loss` all apply.
+You can layer multiple, e.g., a postpartum client with a low-back issue who wants to lose fat: `prenatal-postpartum` + `injury-prep` + `fat-loss` all apply.
 
 When two lenses disagree on a number (volume, protein, deload cadence), the more conservative one wins, and the shared reference at `../../references/training-standards.md` (relative to this skill; the plugin's `references/` folder) is the tiebreaker. Read it when you need to reconcile numbers; the defaults below already match it.
 
@@ -58,11 +58,11 @@ Decide the ratio explicitly. Common defaults:
 
 | Goal | Resistance / Cardio split |
 |---|---|
-| Pure hypertrophy | 80 / 20 — minimum cardio for health (2x 20–30 min Z2/wk) |
-| Body recomp | 65 / 35 — strength priority, modest cardio for deficit |
-| Fat loss | 55 / 45 — strength preserves muscle, cardio drives deficit |
+| Pure hypertrophy | 80 / 20, minimum cardio for health (2x 20–30 min Z2/wk) |
+| Body recomp | 65 / 35, strength priority, modest cardio for deficit |
+| Fat loss | 55 / 45, strength preserves muscle, cardio drives deficit |
 | Maintenance | 60 / 40 |
-| Endurance / sport | 30 / 70 — strength is supportive |
+| Endurance / sport | 30 / 70, strength is supportive |
 | Functional / health | 50 / 50 |
 
 Cardio modalities to mix in: Zone 2 (steady, conversational pace), Zone 4–5 intervals, sport-specific, walking. Default mix: 1–2 Z2 sessions + 1 interval session per week unless contraindicated.
@@ -80,10 +80,10 @@ Pick based on frequency and goal. Examples:
 ### 4. Exercise selection rules
 
 For each session, in order:
-1. **One main compound** (squat, deadlift, press, row, hinge variant) — 3–5 sets, lower reps (3–8), longer rest (2–4 min)
-2. **One secondary compound** — 3–4 sets, 6–12 reps
-3. **2–4 accessories** for muscle groups undertrained by 1+2 — 3 sets, 8–15 reps
-4. **Optional finisher** — metabolic/conditioning, 5–15 min
+1. **One main compound** (squat, deadlift, press, row, hinge variant), 3–5 sets, lower reps (3–8), longer rest (2–4 min)
+2. **One secondary compound**, 3–4 sets, 6–12 reps
+3. **2–4 accessories** for muscle groups undertrained by 1+2, 3 sets, 8–15 reps
+4. **Optional finisher**, metabolic/conditioning, 5–15 min
 
 If the client has injuries or restrictions, the specialty skill replaces banned movements with regressions before this skill writes the workout.
 
@@ -110,19 +110,19 @@ Pick one and tell the client which:
 ### 7. Deload schedule
 
 - Beginner: every 8–12 weeks or as needed
-- Intermediate: every 4–6 weeks, 1 deload week (50–60% volume, ~70% intensity — same movements, less of them, so skill stays sharp while fatigue clears)
+- Intermediate: every 4–6 weeks, 1 deload week (50–60% volume, ~70% intensity, same movements, less of them, so skill stays sharp while fatigue clears)
 - Advanced: every 3–5 weeks, planned
 
-## The output — TWO formats every time
+## The output comes in two formats every time
 
 ### Format 1: Markdown in chat
 
 Use this layout for every session you prescribe. Consistency matters here: the client learns to read the plan at a glance, and `weekly-checkin` relies on the same structure when it edits the block.
 
 ```
-🏋️ [WORKOUT NAME] — Week [N], Day [N]
+🏋️ [WORKOUT NAME], Week [N], Day [N]
 
-GOAL OF TODAY'S SESSION: [1 sentence — e.g., "Build squat strength + posterior chain volume"]
+GOAL OF TODAY'S SESSION: [1 sentence, e.g., "Build squat strength + posterior chain volume"]
 
 WARM-UP (X min)
 - Exercise | sets x reps or duration
@@ -164,7 +164,7 @@ Within a session: **strength before cardio**, unless the goal is sport-specific 
 
 ## Recovery prescription
 
-Always include — even if the client doesn't ask:
+Always include, even if the client doesn't ask:
 - **Sleep target**: 7–9 hours, prioritize consistency over total
 - **Protein**: 1.4–1.8 g/kg/day for general health, 1.6–2.2 for hypertrophy, 2.0–2.4 for fat loss or body recomp (a deficit raises the floor because the body has fewer calories to spare muscle)
 - **Hydration**: ~35 mL/kg/day baseline + 500 mL per hour of training
@@ -179,8 +179,16 @@ After writing the program:
 
 Never deliver a program and disappear. Always pin the next check-in.
 
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to a weekly calendar grid of sessions and cardio with a small block timeline that marks the deload week.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the Excel tracker (default), a Google Sheet when they want to share with a coach or partner, and an Artifact page they can open on a phone at the gym; add a Doc or PDF only if they mention printing or a physician. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
+
 ## What this skill does NOT do
 
 - Does not skip layered specialty skills (an injured client gets `injury-prep` rules baked in, not generic programming)
-- Does not invent client data — if intake is missing fields, hand back to `client-intake`
+- Does not invent client data, if intake is missing fields, hand back to `client-intake`
 - Does not re-program every week. Programs run in 3–6 week blocks; weekly tweaks come from `weekly-checkin`

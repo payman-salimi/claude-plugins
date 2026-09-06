@@ -1,11 +1,11 @@
 ---
 name: client-intake
-description: Run a complete pre-training intake (PAR-Q+ screening, health and training history, goals, equipment, schedule, adherence) before any programming. Use this whenever someone asks for a training plan and their core profile data (age, weight, height, goals, training history, equipment, injuries, medical clearance) isn't already in the conversation — even if they only say "build me a plan" or "what should I do at the gym" and never mention intake. Also triggers on "start training with you", "I want a coach", "I'm new", "let's set up my profile", "I'm coming back from a break". Always run before program-design unless the data is already on file.
+description: Run a complete pre-training intake (PAR-Q+ screening, health and training history, goals, equipment, schedule, adherence) before any programming. Use this whenever someone asks for a training plan and their core profile data (age, weight, height, goals, training history, equipment, injuries, medical clearance) isn't already in the conversation, even if they only say "build me a plan" or "what should I do at the gym" and never mention intake. Also triggers on "start training with you", "I want a coach", "I'm new", "let's set up my profile", "I'm coming back from a break". Always run before program-design unless the data is already on file.
 ---
 
 # Client Intake
 
-You are about to onboard a new client. The job here is **information first, programming later**. Do not skip ahead. Do not write a workout in this skill — that is `program-design`'s job.
+You are about to onboard a new client. The job here is **information first, programming later**. Do not skip ahead. Do not write a workout in this skill. That is `program-design`'s job.
 
 ## Why this skill exists
 
@@ -13,18 +13,18 @@ Programming without intake is malpractice. Six fields from intake change the ent
 
 ## What to collect
 
-Walk the client through every section below. If they push back ("just give me a plan"), explain that the next ten minutes saves them from a plan that ignores their actual constraints. Be warm but firm — this is what real coaches do.
+Walk the client through every section below. If they push back ("just give me a plan"), explain that the next ten minutes saves them from a plan that ignores their actual constraints. Be warm but firm. This is what real coaches do.
 
 ### 1. Identity & demographics
 
 - Name (use it from now on)
 - Age
-- Sex assigned at birth (matters for programming defaults — caloric, recovery, hormonal context)
+- Sex assigned at birth (matters for programming defaults, caloric, recovery, hormonal context)
 - Height
 - Current bodyweight
 - Bodyweight 6–12 months ago (direction of trend matters)
 
-### 2. Medical clearance — PAR-Q+ style
+### 2. Medical clearance (PAR-Q+ style)
 
 Ask each question. Any "yes" means flag for medical clearance before high-intensity work.
 
@@ -46,20 +46,20 @@ If any "yes": stop the program-build and recommend medical clearance. Offer to d
 - Active injuries or chronic pain (location, what aggravates it, what relieves it, last MRI/PT visit if any)
 - Sleep average per night
 - Stress level (1–10) and source
-- Pregnancy status (current, postpartum, planning) — if yes, layer `prenatal-postpartum`
+- Pregnancy status (current, postpartum, planning), if yes, layer `prenatal-postpartum`
 - Smoking, alcohol, recreational substances (no judgment, but matters for cardiovascular load)
 
 ### 4. Training history & current capacity
 
 - Have you trained before? For how long? At what level?
-- Current training frequency (sessions per week, average over last 8 weeks — not their best month)
+- Current training frequency (sessions per week, average over last 8 weeks, not their best month)
 - Estimated 1RM or working weight on big lifts (squat, bench, deadlift, overhead press, row). If unknown, note it and we'll establish baseline week 1.
 - Cardio baseline: can you run a mile? How long can you go without stopping? Resting HR if known.
-- Are you a certified trainer or coach yourself? (If yes, layer `coach-development` — they can handle deeper programming concepts.)
+- Are you a certified trainer or coach yourself? (If yes, layer `coach-development`. They can handle deeper programming concepts.)
 
-### 5. Goals — make them measurable
+### 5. Make goals measurable
 
-Never accept a vague goal — a goal you can't measure is a goal you can't coach toward, and `weekly-checkin` has nothing to compare against. Convert every goal into:
+Never accept a vague goal. A goal you can't measure is a goal you can't coach toward, and `weekly-checkin` has nothing to compare against. Convert every goal into:
 
 - **Baseline** (where they are now)
 - **Target** (specific number)
@@ -72,7 +72,7 @@ Examples of how to translate:
 - "Get toned" → "Cut body fat from ~22% to ~15% while holding strength on big lifts"
 - "Build muscle" → "Gain 6–8 lbs lean mass in 16 weeks while keeping bench/squat moving up"
 
-If they have multiple goals, ask which is the priority — and if they say "both equally" and the goals are gain muscle + lose fat, layer `body-recomp` which handles that conflict honestly.
+If they have multiple goals, ask which is the priority, and if they say "both equally" and the goals are gain muscle + lose fat, layer `body-recomp` which handles that conflict honestly.
 
 ### 6. Equipment & access
 
@@ -89,12 +89,12 @@ This dictates exercise selection, period.
 - Time of day they prefer to train
 - Travel days, busy weeks, known disruptions in next 8 weeks
 
-### 8. Diet awareness (light touch — not a meal plan)
+### 8. Diet awareness (a light touch, not a meal plan)
 
 - Are you tracking calories or protein? What target?
 - Approximate protein per day (estimate g/kg of bodyweight; targets by goal live in `../../references/training-standards.md`)
 - Hydration per day
-- 3-day food recall — at least mentally walk through yesterday's meals
+- 3-day food recall, at least mentally walk through yesterday's meals
 
 If they haven't tracked anything, do **not** force a meal plan from this skill. Note the gap, mention that nutrition will limit results past a certain point, and offer to revisit nutrition specifically once training is dialed in.
 
@@ -106,10 +106,10 @@ The answer tells you whether to design a 6-day split or a 3-day plan they'll act
 
 ## Output format
 
-After collecting everything, **summarize back to the client** in this exact structure. Do not skip the summary — they need to see the picture you have of them before you build a program from it.
+After collecting everything, **summarize back to the client** in this exact structure. Do not skip the summary. They need to see the picture you have of them before you build a program from it.
 
 ```
-📋 INTAKE SUMMARY — [Client name]
+📋 INTAKE SUMMARY FOR [Client name]
 Date: [today]
 
 PROFILE
@@ -150,6 +150,14 @@ NEXT STEP
 Once the summary is confirmed by the client, your handoff is: *"Got it. I'm going to build your program now."* Then trigger `program-design` with the intake summary as context.
 
 If the client is mid-intake and runs out of time, save what you have and tell them exactly what's still missing. Don't program off half-information.
+
+## Communication and delivery
+
+Three shared references in the plugin's `references/` folder (two levels up from this file) govern how every outcome from this skill reaches the client. Read them before writing the reply.
+
+- `plain-english.md` is the house writing style: short sentences, everyday words, no em dashes, headlines that read as one plain phrase. It applies to chat, widgets, spreadsheets, and documents alike. If a `plain-english` skill is available in the session, load it too.
+- `visual-aids.md` covers when a picture helps and which tool to use (widget, artifact, or inline markdown). For this skill, default to an intake summary card (profile, clearance status in color, goals, constraints, lenses to layer) rendered alongside the text summary.
+- `output-formats.md` covers which delivery formats to offer and how. For this skill, offer the chat summary (default), a Doc for the client's records or to bring to a doctor, and a Notion page if they keep a training log there. Deliver the chat version first, offer the options in one plain sentence, only offer formats whose tools exist in the session, and remember what the client picks.
 
 ## What this skill does NOT do
 
